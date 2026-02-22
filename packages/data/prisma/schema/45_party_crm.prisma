@@ -1,0 +1,551 @@
+enum PartyRoleType {
+  CUSTOMER
+  SUPPLIER
+  EMPLOYEE
+  CONTACT
+  STUDENT
+  GUARDIAN
+  @@schema("crm")
+}
+
+enum PartyKind {
+  INDIVIDUAL
+  ORGANIZATION
+  @@schema("crm")
+}
+
+enum PartyRelationshipType {
+  WORKS_FOR
+  SUBSIDIARY_OF
+  PARTNER_OF
+  @@schema("crm")
+}
+
+enum LeadStatus {
+  NEW
+  QUALIFIED
+  DISQUALIFIED
+  CONVERTED
+  @@schema("crm")
+}
+
+enum LeadSource {
+  WEB_FORM
+  MANUAL
+  IMPORT
+  REFERRAL
+  OTHER
+  @@schema("crm")
+}
+
+enum ContactPointType {
+  EMAIL
+  PHONE
+  SOCIAL
+  @@schema("crm")
+}
+
+enum AddressType {
+  BILLING
+  @@schema("crm")
+}
+
+enum DealStatus {
+  OPEN
+  WON
+  LOST
+  @@schema("crm")
+}
+
+enum ActivityType {
+  NOTE
+  TASK
+  CALL
+  MEETING
+  COMMUNICATION
+  SYSTEM_EVENT
+  @@schema("crm")
+}
+
+enum ActivityStatus {
+  OPEN
+  COMPLETED
+  CANCELED
+  @@schema("crm")
+}
+
+enum ActivityRecordSource {
+  MANUAL
+  SYSTEM
+  INTEGRATION
+  @@schema("crm")
+}
+
+enum CommunicationDirection {
+  INBOUND
+  OUTBOUND
+  @@schema("crm")
+}
+
+enum CommunicationLifecycleStatus {
+  LOGGED
+  DRAFT
+  QUEUED
+  SENT
+  DELIVERED
+  READ
+  FAILED
+  @@schema("crm")
+}
+
+enum ChannelCategory {
+  EMAIL
+  MESSAGING
+  SOCIAL
+  INTERNAL
+  @@schema("crm")
+}
+
+enum PartyLifecycleStatus {
+  LEAD
+  ACTIVE
+  PAUSED
+  ARCHIVED
+  @@schema("crm")
+}
+
+enum AccountStatus {
+  ACTIVE
+  INACTIVE
+  PROSPECT
+  @@schema("crm")
+}
+
+enum CrmAccountType {
+  CUSTOMER
+  VENDOR
+  PARTNER
+  OTHER
+  @@schema("crm")
+}
+
+// CrmAccountProfile stores CRM-specific fields only
+// Identity/contact/address data lives in Party + ContactPoint + Address
+model CrmAccountProfile {
+  id          String          @id @default(cuid())
+  tenantId    String
+  partyId     String          @unique // FK to Party (canonical identity) - unique for 1:1
+  accountType CrmAccountType  @default(CUSTOMER)
+  status      AccountStatus   @default(ACTIVE)
+  industry    String?         // CRM-specific sales segmentation field
+  ownerUserId String?         // Sales owner
+  notes       String?         // CRM-specific notes
+  createdAt   DateTime        @default(now()) @db.Timestamptz(6)
+  updatedAt   DateTime        @updatedAt @db.Timestamptz(6)
+
+  party Party @relation(fields: [partyId], references: [id], onDelete: Cascade)
+
+  @@unique([tenantId, partyId]) // One profile per party
+  @@index([tenantId])
+  @@index([tenantId, status])
+  @@index([tenantId, accountType])
+  @@index([tenantId, ownerUserId])
+  @@schema("crm")
+}
+
+model Party {
+  id              String               @id @default(cuid())
+  tenantId        String
+  displayName     String
+  vatId           String?
+  notes           String?
+  tags            String[]             @default([])
+  kind            PartyKind            @default(INDIVIDUAL)
+  firstName       String?
+  lastName        String?
+  organizationName String?
+  jobTitle        String?
+  department      String?
+  industry        String?
+  website         String?
+  size            String?
+  lifecycleStatus PartyLifecycleStatus @default(LEAD)
+  archivedAt      DateTime?            @db.Timestamptz(6)
+  archivedByUserId String?
+  createdAt       DateTime             @default(now()) @db.Timestamptz(6)
+  updatedAt       DateTime             @updatedAt @db.Timestamptz(6)
+
+  contactPoints ContactPoint[]
+  addresses     Address[]
+  roles         PartyRole[]
+  deals         Deal[]
+  activities    Activity[]
+  relationshipsFrom PartyRelationship[] @relation("FromParty")
+  relationshipsTo   PartyRelationship[] @relation("ToParty")
+  companyDeals      Deal[]              @relation("DealCompany")
+  lifecycleHistory PartyLifecycleTransition[]
+  enrollments      SequenceEnrollment[]
+  crmAccountProfile CrmAccountProfile?  // Optional CRM account profile
+
+  @@index([tenantId, displayName])
+  @@index([tenantId, archivedAt])
+  @@index([tenantId])
+  @@schema("crm")
+}
+
+model PartyRole {
+  id       String       @id @default(cuid())
+  tenantId String
+  partyId  String
+  role     PartyRoleType
+
+  party Party @relation(fields: [partyId], references: [id], onDelete: Cascade)
+
+  @@unique([tenantId, partyId, role], name: "tenantId_partyId_role")
+  @@index([tenantId, role])
+  @@schema("crm")
+}
+
+model ContactPoint {
+  id        String           @id @default(cuid())
+  tenantId  String
+  partyId   String
+  type      ContactPointType
+  value     String
+  platform  String?
+  label     String?
+  isPrimary Boolean          @default(false)
+  createdAt DateTime         @default(now()) @db.Timestamptz(6)
+  updatedAt DateTime         @updatedAt @db.Timestamptz(6)
+
+  party Party @relation(fields: [partyId], references: [id], onDelete: Cascade)
+
+  @@unique([tenantId, partyId, type, value], name: "tenantId_partyId_type_value", map: "tenantId_partyId_type_value")
+  @@index([tenantId, partyId, type, isPrimary])
+  @@schema("crm")
+}
+
+model Address {
+  id         String      @id @default(cuid())
+  tenantId   String
+  partyId    String
+  type       AddressType
+  line1      String
+  line2      String?
+  city       String?
+  postalCode String?
+  country    String?
+  createdAt  DateTime    @default(now()) @db.Timestamptz(6)
+  updatedAt  DateTime    @updatedAt @db.Timestamptz(6)
+
+  party Party @relation(fields: [partyId], references: [id], onDelete: Cascade)
+
+  @@unique([tenantId, partyId, type], name: "tenantId_partyId_type_address")
+  @@index([tenantId, type])
+  @@schema("crm")
+}
+
+model Deal {
+  id                String     @id @default(cuid())
+  tenantId          String
+  title             String
+  partyId           String
+  companyId         String? // Organization
+  stageId           String
+  amountCents       Int?
+  currency          String     @db.VarChar(3) @default("EUR")
+  expectedCloseDate DateTime?  @db.Date
+  probability       Int?
+  status            DealStatus @default(OPEN)
+  ownerUserId       String?
+  notes             String?
+  tags              String[]   @default([])
+  wonAt             DateTime?  @db.Timestamptz(6)
+  lostAt            DateTime?  @db.Timestamptz(6)
+  lostReason        String?
+  createdAt         DateTime   @default(now()) @db.Timestamptz(6)
+  updatedAt         DateTime   @updatedAt @db.Timestamptz(6)
+
+  party             Party                 @relation(fields: [partyId], references: [id], onDelete: Cascade)
+  company           Party?                @relation("DealCompany", fields: [companyId], references: [id])
+  activities        Activity[]
+  stageTransitions  DealStageTransition[]
+  aiSnapshots       DealAiSnapshot[]
+
+  @@index([tenantId, status])
+  @@index([tenantId, partyId])
+  @@index([tenantId, ownerUserId])
+  @@index([tenantId, stageId])
+  @@index([tenantId, createdAt])
+  @@schema("crm")
+}
+
+model DealAiSnapshot {
+  id           String   @id @default(cuid())
+  tenantId     String
+  workspaceId  String
+  dealId       String
+  kind         String
+  generatedAt  DateTime @db.Timestamptz(6)
+  payloadJson  Json
+  version      String
+  ttlExpiresAt DateTime @db.Timestamptz(6)
+  createdAt    DateTime @default(now()) @db.Timestamptz(6)
+
+  deal Deal @relation(fields: [dealId], references: [id], onDelete: Cascade)
+
+  @@index([tenantId, workspaceId, dealId, kind, generatedAt(sort: Desc)])
+  @@index([tenantId, workspaceId, kind, ttlExpiresAt])
+  @@schema("crm")
+}
+
+model Activity {
+  id               String         @id @default(cuid())
+  tenantId         String
+  type             ActivityType
+  subject          String
+  body             String?
+  channelKey       String?
+  direction        CommunicationDirection?
+  communicationStatus CommunicationLifecycleStatus?
+  activityDate     DateTime?      @db.Timestamptz(6)
+  ownerId          String?
+  recordSource     ActivityRecordSource?
+  recordSourceDetails Json?
+  toRecipients     Json?
+  ccRecipients     Json?
+  participants     Json?
+  threadKey        String?
+  externalThreadId String?
+  externalMessageId String?
+  providerKey      String?
+  errorCode        String?
+  errorMessage     String?
+  rawProviderPayload Json?
+  attachments      Json?
+  messageDirection String? // deprecated legacy alias
+  messageTo        String?
+  openUrl          String?
+  partyId          String?
+  dealId           String?
+  dueAt            DateTime?      @db.Timestamptz(6)
+  completedAt      DateTime?      @db.Timestamptz(6)
+  status           ActivityStatus @default(OPEN)
+  
+  // Engagement Fields
+  outcome          String?        // e.g. "Connected", "Voicemail", "No Answer"
+  durationSeconds  Int?
+  location         String?        // For meetings
+  attendees        Json?          // For meetings
+  metadata         Json?          // Flexible extension
+  
+  assignedToUserId String?
+  createdByUserId  String?
+  createdAt        DateTime       @default(now()) @db.Timestamptz(6)
+  updatedAt        DateTime       @updatedAt @db.Timestamptz(6)
+
+  party Party? @relation(fields: [partyId], references: [id], onDelete: Cascade)
+  deal  Deal?  @relation(fields: [dealId], references: [id], onDelete: Cascade)
+  webhookEvents CommunicationWebhookEvent[]
+
+  @@index([tenantId, partyId, createdAt])
+  @@index([tenantId, dealId, createdAt])
+  @@index([tenantId, assignedToUserId, status])
+  @@index([tenantId, channelKey, direction, communicationStatus])
+  @@index([tenantId, externalMessageId])
+  @@index([tenantId, activityDate])
+  @@index([tenantId, createdAt])
+  @@schema("crm")
+}
+
+model ChannelRegistry {
+  key                String          @id
+  displayName        String
+  category           ChannelCategory
+  capabilities       Json
+  defaultProviderKey String?
+  enabled            Boolean         @default(true)
+  createdAt          DateTime        @default(now()) @db.Timestamptz(6)
+  updatedAt          DateTime        @updatedAt @db.Timestamptz(6)
+
+  @@schema("crm")
+}
+
+model CommunicationWebhookEvent {
+  id                String   @id @default(cuid())
+  tenantId          String
+  providerKey       String
+  channelKey        String
+  externalMessageId String
+  eventType         String
+  eventTimestamp    DateTime @db.Timestamptz(6)
+  payload           Json
+  receivedAt        DateTime @default(now()) @db.Timestamptz(6)
+  activityId        String?
+
+  activity Activity? @relation(fields: [activityId], references: [id], onDelete: SetNull)
+
+  @@unique([tenantId, providerKey, externalMessageId, eventType, eventTimestamp], map: "crm_webhook_event_dedupe")
+  @@index([tenantId, externalMessageId, eventTimestamp])
+  @@index([tenantId, providerKey, channelKey])
+  @@schema("crm")
+}
+
+model DealStageTransition {
+  id                   String   @id @default(cuid())
+  tenantId             String
+  dealId               String
+  fromStageId          String?
+  toStageId            String
+  transitionedByUserId String?
+  transitionedAt       DateTime @default(now()) @db.Timestamptz(6)
+
+  deal Deal @relation(fields: [dealId], references: [id], onDelete: Cascade)
+
+  @@index([tenantId, dealId, transitionedAt])
+  @@schema("crm")
+}
+
+model PipelineConfig {
+  id         String   @id @default(cuid())
+  tenantId   String   @unique
+  stagesJson String
+  createdAt  DateTime @default(now()) @db.Timestamptz(6)
+  updatedAt  DateTime @updatedAt @db.Timestamptz(6)
+  @@schema("crm")
+}
+
+model PartyLifecycleTransition {
+  id                   String               @id @default(cuid())
+  tenantId             String
+  partyId              String
+  fromStatus           PartyLifecycleStatus?
+  toStatus             PartyLifecycleStatus
+  reason               String?
+  changedByUserId      String?
+  changedAt            DateTime             @default(now()) @db.Timestamptz(6)
+
+  party Party @relation(fields: [partyId], references: [id], onDelete: Cascade)
+
+  @@index([tenantId, partyId, changedAt])
+  @@schema("crm")
+}
+
+model PartyRelationship {
+  id        String                @id @default(cuid())
+  tenantId  String
+  fromPartyId String
+  toPartyId   String
+  type        PartyRelationshipType
+  title       String?
+  
+  fromParty Party @relation("FromParty", fields: [fromPartyId], references: [id], onDelete: Cascade)
+  toParty   Party @relation("ToParty", fields: [toPartyId], references: [id], onDelete: Cascade)
+
+  @@index([tenantId, fromPartyId])
+  @@index([tenantId, toPartyId])
+  @@unique([tenantId, fromPartyId, toPartyId, type])
+  @@schema("crm")
+}
+
+model Lead {
+  id               String     @id @default(cuid())
+  tenantId         String
+  source           LeadSource @default(MANUAL)
+  status           LeadStatus @default(NEW)
+  firstName        String?
+  lastName         String?
+  companyName      String?
+  email            String?
+  phone            String?
+  ownerUserId      String?
+  convertedDealId  String?
+  convertedPartyId String?
+  notes            String?
+  createdAt        DateTime   @default(now()) @db.Timestamptz(6)
+  updatedAt        DateTime   @updatedAt @db.Timestamptz(6)
+
+  @@index([tenantId, email])
+  @@schema("crm")
+
+  enrollments SequenceEnrollment[]
+}
+
+enum SequenceStepType {
+  EMAIL_AUTO
+  EMAIL_MANUAL
+  CALL
+  TASK
+  @@schema("crm")
+}
+
+enum SequenceStatus {
+  ACTIVE
+  PAUSED
+  COMPLETED
+  ARCHIVED
+  @@schema("crm")
+}
+
+enum EnrollmentStatus {
+  ACTIVE
+  PAUSED
+  COMPLETED
+  CANCELED
+  @@schema("crm")
+}
+
+model Sequence {
+  id            String   @id @default(cuid())
+  tenantId      String
+  name          String
+  ownerUserId   String?
+  description   String?
+  createdAt     DateTime @default(now()) @db.Timestamptz(6)
+  updatedAt     DateTime @updatedAt @db.Timestamptz(6)
+
+  steps       SequenceStep[]
+  enrollments SequenceEnrollment[]
+
+  @@index([tenantId])
+  @@schema("crm")
+}
+
+model SequenceStep {
+  id              String           @id @default(cuid())
+  tenantId        String
+  sequenceId      String
+  stepOrder       Int
+  type            SequenceStepType
+  dayDelay        Int              @default(0)
+  templateSubject String?
+  templateBody    String?
+  
+  sequence Sequence @relation(fields: [sequenceId], references: [id], onDelete: Cascade)
+
+  @@index([tenantId, sequenceId])
+  @@schema("crm")
+}
+
+model SequenceEnrollment {
+  id              String           @id @default(cuid())
+  tenantId        String
+  sequenceId      String
+  leadId          String?
+  partyId         String?
+  currentStepOrder Int              @default(1)
+  status          EnrollmentStatus @default(ACTIVE)
+  nextExecutionAt DateTime?        @db.Timestamptz(6)
+  createdAt       DateTime         @default(now()) @db.Timestamptz(6)
+  updatedAt       DateTime         @updatedAt @db.Timestamptz(6)
+
+  sequence Sequence @relation(fields: [sequenceId], references: [id], onDelete: Cascade)
+  lead     Lead?    @relation(fields: [leadId], references: [id])
+  party    Party?   @relation(fields: [partyId], references: [id])
+
+  @@index([tenantId, sequenceId])
+  @@index([tenantId, leadId])
+  @@index([tenantId, partyId])
+  @@index([tenantId, nextExecutionAt])
+  @@schema("crm")
+}

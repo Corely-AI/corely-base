@@ -1,0 +1,1599 @@
+{
+  "common": {
+    "active": "Active",
+    "inactive": "Inactive",
+    "suspended": "Suspended",
+    "activate": "Activate",
+    "deactivate": "Deactivate",
+    "lead": "Lead",
+    "paused": "Paused",
+    "archived": "Archived",
+    "appName": "Corely One ERP",
+    "tagline": "Run your business, end-to-end.",
+    "loading": "Loading...",
+    "select": "Select",
+    "optional": "Optional",
+    "save": "Save",
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "edit": "Edit",
+    "create": "Create",
+    "search": "Search",
+    "filter": "Filter",
+    "export": "Export",
+    "import": "Import",
+    "back": "Back",
+    "next": "Next",
+    "confirm": "Confirm",
+    "close": "Close",
+    "logout": "Log out",
+    "viewAll": "View all",
+    "comingSoon": "Coming soon",
+    "noResults": "No results found",
+    "selectDate": "Select date",
+    "noTopic": "No topic",
+    "error": "Something went wrong",
+    "success": "Success",
+    "currency": "EUR",
+    "locale": "en-DE",
+    "view": "View",
+    "status": "Status",
+    "unknown": "Unknown",
+    "currencies": {
+      "eur": "Euro",
+      "usd": "US Dollar",
+      "gbp": "British Pound",
+      "chf": "Swiss Franc"
+    },
+    "reset": "Reset",
+    "name": "Name",
+    "email": "Email",
+    "phone": "Phone",
+    "notes": "Notes",
+    "details": "Details",
+    "open": "Open",
+    "closed": "Closed",
+    "tags": "Tags",
+    "noTags": "No tags added.",
+    "for": "For",
+    "draft": "Draft",
+    "createdAt": "Created {{date}}",
+    "empty": "Empty",
+    "amount": "Amount",
+    "copy": "Copy",
+    "type": "Type",
+    "description": "Description",
+    "date": "Date",
+    "noteOptional": "Note (Optional)",
+    "saveChanges": "Save Changes",
+    "saving": "Saving...",
+    "subject": "Subject",
+    "message": "Message",
+    "attachments": "Attachments",
+    "changeStatus": "Change status",
+    "current": "Current",
+    "action": "Action",
+    "statusAuditTrail": "History of status changes is recorded.",
+    "confirmAction": "Confirm action",
+    "confirmMessage": "Are you sure you want to proceed?",
+    "reason": "Reason",
+    "reasonPlaceholder": "Enter reason...",
+    "badge": "Badge",
+    "moreActions": "More actions",
+    "dangerZone": "Danger zone",
+    "goBack": "Go back",
+    "phoneShort": "Phone",
+    "emailShort": "Email",
+    "website": "Website",
+    "bank": "Bank",
+    "iban": "IBAN",
+    "default": "Default",
+    "copyLink": "Copy Link",
+    "add": "Add",
+    "created": "Created",
+    "updated": "Updated",
+    "notSet": "Not set",
+    "done": "Done",
+    "customFields": "Custom fields"
+  },
+  "actions": {
+    "takeAttendance": "Take Attendance",
+    "markDone": "Mark Done",
+    "assignPayer": "Assign Payer",
+    "viewInvoice": "View"
+  },
+  "list": {
+    "searchPlaceholder": "Search...",
+    "sort": "Sort",
+    "filters": "Filters",
+    "filtersDescription": "Filter the list by selecting specific criteria.",
+    "clearAll": "Clear all",
+    "noActiveFilters": "No active filters",
+    "addFilter": "Add filter",
+    "applyFilters": "Apply filters",
+    "noResults": "No items found."
+  },
+  "nav": {
+    "dashboard": "Dashboard",
+    "portfolio": "Portfolio",
+    "rentals": {
+      "properties": "Properties"
+    },
+    "quotes": "Quotes",
+    "clients": "Clients",
+    "tax": {
+      "overview": "Overview",
+      "filings": "Filings",
+      "payments": "Payments",
+      "documents": "Documents",
+      "settings": "Tax Settings"
+    },
+    "assistant": "Assistant",
+    "expenses": "Expenses",
+    "invoices": "Invoices",
+    "tenants": "Tenants",
+    "groups": {
+      "core": "Core",
+      "sales": "Sales",
+      "purchasing": "Purchasing",
+      "inventory": "Inventory",
+      "finance": "Finance",
+      "settings": "Settings",
+      "platform": "Platform",
+      "tax": "Tax",
+      "education": "Education",
+      "other": "Other"
+    },
+    "customers": "Customers",
+    "students": "Students",
+    "salesQuotes": "Sales Quotes",
+    "salesOrders": "Sales Orders",
+    "salesInvoices": "Sales Invoices",
+    "salesCopilot": "Sales Copilot",
+    "salesSettings": "Sales Settings",
+    "purchaseOrders": "Purchase Orders",
+    "vendorBills": "Vendor Bills",
+    "purchasingSettings": "Purchasing Settings",
+    "purchasingCopilot": "Purchasing Copilot",
+    "settings": "Settings",
+    "projects": "Projects",
+    "accounting": "Accounting",
+    "inventory": "Inventory",
+    "inventoryProducts": "Inventory - Products",
+    "inventoryWarehouses": "Inventory - Warehouses",
+    "inventoryStock": "Inventory - Stock",
+    "inventoryDocuments": "Inventory - Documents",
+    "inventoryReorder": "Inventory - Reorder",
+    "inventoryCopilot": "Inventory - Copilot",
+    "catalogItems": "Catalog Items",
+    "importShipments": "Shipments",
+    "suppliers": "Suppliers",
+    "automation": "Automation",
+    "documents": "Documents",
+    "cms": {
+      "posts": "CMS Posts",
+      "comments": "CMS Comments"
+    },
+    "hr": "HR",
+    "workspace": "Workspace Settings",
+    "profile": "Profile & Account",
+    "members": "Team Management",
+    "roles": "Roles & Permissions",
+    "paymentMethods": "Payment Methods",
+    "taxSettings": "Tax Settings",
+    "cashManagement": "Cash Management",
+    "issues": "Issues",
+    "crmDeals": "Deals",
+    "crmActivities": "Activities",
+    "crmSequences": "Sequences",
+    "classes": "Classes",
+    "programs": "Programs",
+    "teacherDashboard": "Teacher Dashboard",
+    "classSessions": "Sessions",
+    "classBilling": "Class Billing",
+    "website": "Website",
+    "platform": "Platform"
+  },
+  "featureFlags": {
+    "app": {
+      "core": {
+        "enabled": "Core"
+      },
+      "platform": {
+        "enabled": "Platform"
+      },
+      "invoices": {
+        "enabled": "Invoices"
+      },
+      "crm": {
+        "enabled": "CRM"
+      },
+      "portfolio": {
+        "enabled": "Portfolio"
+      },
+      "issues": {
+        "enabled": "Issues"
+      },
+      "cms": {
+        "enabled": "CMS"
+      },
+      "expenses": {
+        "enabled": "Expenses"
+      },
+      "parties": {
+        "enabled": "Parties"
+      },
+      "ai-copilot": {
+        "enabled": "AI Copilot"
+      },
+      "tax": {
+        "enabled": "Tax"
+      },
+      "cash-management": {
+        "enabled": "Cash Management"
+      },
+      "sales": {
+        "enabled": "Sales"
+      },
+      "workspaces": {
+        "enabled": "Workspaces"
+      },
+      "purchasing": {
+        "enabled": "Purchasing"
+      },
+      "rentals": {
+        "enabled": "Rentals"
+      },
+      "website": {
+        "enabled": "Website"
+      }
+    }
+  },
+  "issues": {
+    "title": "Issues",
+    "reportTitle": "Report New Issue",
+    "unassigned": "Unassigned",
+    "description": {
+      "empty": "No description provided."
+    },
+    "createdAt": "Created {{date}}",
+    "status": {
+      "change": "Change status",
+      "update": "Update status",
+      "updated": "Status updated successfully",
+      "updateFailed": "Failed to update status",
+      "resolved": "Issue resolved",
+      "resolveFailed": "Failed to resolve issue",
+      "reopened": "Issue reopened",
+      "reopenFailed": "Failed to reopen issue"
+    },
+    "actions": {
+      "resolve": "Resolve",
+      "reopen": "Reopen"
+    },
+    "fields": {
+      "title": "Title",
+      "priority": "Priority",
+      "description": "Description",
+      "siteType": "Site Type",
+      "siteIdOptional": "Site ID (Optional)",
+      "customerIdOptional": "Customer ID (Optional)",
+      "manufacturerIdOptional": "Manufacturer ID (Optional)",
+      "transcriptOptional": "Voice Note Transcript (Optional)",
+      "site": "Site",
+      "assignee": "Assignee"
+    },
+    "placeholders": {
+      "priority": "Select priority",
+      "siteType": "Select site type"
+    },
+    "priority": {
+      "low": "Low",
+      "medium": "Medium",
+      "high": "High",
+      "urgent": "Urgent"
+    },
+    "siteTypes": {
+      "field": "Field",
+      "customer": "Customer",
+      "manufacturer": "Manufacturer"
+    },
+    "statuses": {
+      "NEW": "New",
+      "TRIAGED": "Triaged",
+      "IN_PROGRESS": "In Progress",
+      "WAITING": "Waiting",
+      "RESOLVED": "Resolved",
+      "CLOSED": "Closed",
+      "REOPENED": "Reopened"
+    },
+    "attachments": {
+      "title": "Attachments",
+      "images": "Images",
+      "addImages": "Add Images",
+      "takePicture": "Take Picture",
+      "audio": "Audio Recordings",
+      "voiceNote": "Voice Note",
+      "uploaded": "Uploaded attachments:",
+      "empty": "No attachments.",
+      "transcript": "Transcript: {{transcript}}"
+    },
+    "voiceNote": "Voice Note",
+    "startRecording": "Start Recording",
+    "stopRecording": "Stop Recording",
+    "submitting": "Submitting...",
+    "submit": "Submit Issue",
+    "speech": {
+      "liveTranscription": "Live transcription enabled",
+      "notAvailable": "Speech recognition not available in this browser"
+    },
+    "comments": {
+      "title": "Comments",
+      "addTitle": "Add Comment",
+      "add": "Add Comment",
+      "added": "Comment added",
+      "addFailed": "Failed to add comment",
+      "placeholder": "Write a comment...",
+      "empty": "No comments yet."
+    },
+    "activity": {
+      "title": "Activity History",
+      "empty": "No activity recorded."
+    },
+    "errors": {
+      "microphoneDenied": "Microphone access denied",
+      "cameraDenied": "Camera access denied",
+      "loadFailed": "Failed to load issue details"
+    }
+  },
+  "tax": {
+    "title": "Tax Center",
+    "subtitle": "Manage your tax profile, filings, and compliance",
+    "profile": {
+      "title": "Tax Profile",
+      "vatEnabled": "VAT/Sales Tax Registered",
+      "vatEnabledHelp": "Enable this if your business is registered for VAT or Sales Tax",
+      "country": "Tax Jurisdiction",
+      "countryHelp": "Select the primary country where your business is registered for tax",
+      "regime": "VAT Regime",
+      "usesAdvisor": "Use Tax Advisor / Bookkeeper",
+      "usesAdvisorHelp": "Enable if you work with an external professional for tax filings",
+      "vatIdOptional": "VAT/Tax ID (Optional)",
+      "filingFrequency": "Filing Frequency",
+      "accountingMethod": "Accounting Method",
+      "taxYearStartMonth": "Tax Year Start Month",
+      "localTaxOffice": "Local Tax Office",
+      "save": "Save Tax Profile"
+    },
+    "countries": {
+      "de": "Germany"
+    },
+    "regimes": {
+      "standardVat": "Standard VAT"
+    },
+    "filing": {
+      "quarterly": "Quarterly"
+    },
+    "accounting": {
+      "cashBasis": "Cash Basis",
+      "cashBasisHelp": "Revenue is recorded when cash is received",
+      "accrualBasisHelp": "Revenue is recorded when earned, regardless of when cash is received"
+    },
+    "placeholders": {
+      "vatId": "Enter your VAT ID (e.g., DE123456789)",
+      "month": "Select month",
+      "localTaxOffice": "Enter your local tax office name"
+    },
+    "consultant": {
+      "title": "Tax Consultant",
+      "save": "Save Consultant Info"
+    }
+  },
+  "cashManagement": {
+    "title": "Cash Management",
+    "registers": "Registers",
+    "newRegister": "New Register",
+    "addEntry": "Add Entry",
+    "dailyClose": "Daily Close"
+  },
+  "cash": {
+    "title": "Cash Management",
+    "subtitle": "Track registers, entries, and daily close",
+    "registers": {
+      "add": "Add Register",
+      "addTitle": "Create Register",
+      "namePlaceholder": "Register name",
+      "noLocation": "No location",
+      "currentBalance": "Current balance",
+      "empty": "No cash registers yet",
+      "created": "Register created",
+      "createFailed": "Failed to create register"
+    },
+    "detail": {
+      "cashIn": "Cash In",
+      "cashOut": "Cash Out",
+      "dailyCloses": "Daily Closes",
+      "updatedBalance": "Updated Balance",
+      "noEntriesFound": "No entries found",
+      "noDailyCloses": "No daily closes yet",
+      "addCashIn": "Add Cash In",
+      "addCashOut": "Add Cash Out",
+      "reasonPlaceholder": "Reason for entry...",
+      "confirmIn": "Confirm In",
+      "confirmOut": "Confirm Out",
+      "entryAdded": "Entry added",
+      "entryAddFailed": "Failed to add entry",
+      "invalidAmount": "Invalid amount"
+    },
+    "dailyClose": {
+      "title": "Daily Close",
+      "reconcile": "Reconcile: {{register}}",
+      "businessDate": "Business Date",
+      "expectedBalance": "Expected Balance",
+      "countedBalance": "Counted Balance",
+      "countedCash": "Counted Cash ({{currency}})",
+      "difference": "Difference",
+      "perfectMatch": "Perfect Match",
+      "discrepancyDetected": "Discrepancy Detected",
+      "differenceEntryNote": "A difference entry will be created automatically",
+      "notesPlaceholder": "Any notes about this close...",
+      "submitClose": "Submit Close",
+      "submitting": "Submitting...",
+      "submitted": "Daily close submitted",
+      "submitFailed": "Failed to close",
+      "enterCountedAmount": "Please enter counted amount"
+    }
+  },
+  "dashboard": {
+    "title": "Dashboard",
+    "welcome": "Welcome back",
+    "revenueThisMonth": "Revenue this month",
+    "outstandingInvoices": "Outstanding invoices",
+    "expensesThisMonth": "Expenses this month",
+    "quickActions": "Quick actions",
+    "recentActivity": "Recent activity",
+    "addExpense": "Add expense",
+    "createInvoice": "Create invoice",
+    "createQuote": "Create quote",
+    "openAssistant": "Open assistant",
+    "fromLastMonth": "from last month",
+    "invoicesPending": "invoices pending",
+    "expensesCount": "expenses this month",
+    "uploadReceipt": "Upload receipt with AI",
+    "generateWithAi": "Generate with AI",
+    "createNew": "Create new",
+    "askAnything": "Ask anything",
+    "manageTeam": "Manage team",
+    "inviteMembers": "Invite members",
+    "noInvoices": "No invoices yet",
+    "noExpenses": "No expenses yet",
+    "teacher": {
+      "welcome": "Teacher Dashboard",
+      "subtitle": "Your classes and tasks for today",
+      "allClasses": "All Classes",
+      "sessionsToday": "Sessions Today",
+      "sessionsThisWeek": "Sessions This Week",
+      "missingAttendance": "Missing Attendance",
+      "actionRequired": "Action required",
+      "unfinished": "Unfinished Sessions",
+      "studentsMissingPayer": "Students Missing Payer",
+      "unpaidInvoices": "Unpaid Invoices",
+      "overdue": "Overdue",
+      "upcomingSessions": "Upcoming Sessions",
+      "noUpcoming": "No upcoming sessions in this range",
+      "needsAttention": "Needs Attention",
+      "unfinishedSessions": "Unfinished Sessions",
+      "allCaughtUp": "All caught up!",
+      "noActions": "No pending actions require your attention."
+    }
+  },
+  "assistant": {
+    "title": "Assistant",
+    "subtitle": "Ask anything, extract receipts, generate invoices, or request quick summaries.",
+    "placeholder": "Ask anything...",
+    "emptyStateTitle": "How can I help you?",
+    "emptyStateDescription": "Ask anything, extract receipts, generate invoices, or request quick summaries.",
+    "awaitingInputs": "Awaiting your input...",
+    "approvalRequired": "Approval Required ({{toolName}})",
+    "approvalDescription": "The assistant wants to use the '{{toolName}}' tool. Do you want to allow this?",
+    "toolResult": "Result from {{toolName}}",
+    "toolFailed": "Tool {{toolName}} failed: {{reason}}",
+    "denied": "Denied by user",
+    "toolCall": "Running {{toolName}}...",
+    "send": "Send",
+    "sending": "Sending...",
+    "suggestions": {
+      "extractReceipt": {
+        "label": "Extract a receipt and create an expense",
+        "value": "I uploaded a receipt. Extract it and draft an expense."
+      },
+      "invoiceDraft": {
+        "label": "Generate an invoice draft",
+        "value": "Generate an invoice draft for ACME GmbH for this month."
+      },
+      "summarizeExpenses": {
+        "label": "Summarize my expenses",
+        "value": "Summarize my expenses for the last 30 days."
+      },
+      "taxGuidance": {
+        "label": "Tax guidance",
+        "value": "What can I deduct as a freelancer in Germany?"
+      }
+    },
+    "toolCards": {
+      "extractingReceipt": "Extracting receipt data...",
+      "creatingExpense": "Creating expense...",
+      "generatingInvoice": "Generating invoice draft...",
+      "issuingInvoice": "Issuing invoice..."
+    },
+    "disclaimer": "This is not legal or tax advice. Please consult a tax professional for specific guidance.",
+    "confirmExpense": "Confirm expense details",
+    "invoicePreview": "Invoice preview",
+    "openExpense": "Open expense",
+    "openInvoice": "Open invoice",
+    "issueInvoice": "Issue invoice",
+    "userRole": "You",
+    "assistantRole": "Assistant",
+    "systemRole": "System"
+  },
+  "copilot": {
+    "title": "Assistant",
+    "placeholder": "Ask me anything...",
+    "confirmation": {
+      "title": "Approval Required",
+      "subtitle": "The assistant wants to use '{{toolName}}'. Do you want to allow this?"
+    },
+    "toolResult": "Result from {{toolName}}",
+    "toolFailed": "Tool {{toolName}} failed: {{reason}}",
+    "denied": "Denied by user",
+    "toolCall": "Running {{toolName}}...",
+    "roles": {
+      "user": "You",
+      "assistant": "Assistant"
+    },
+    "confidence": "{{percent}}% confidence",
+    "noStructuredOutput": "No structured data available",
+    "allowTool": "The assistant wants to use '{{toolName}}'. Do you want to allow this?"
+  },
+  "expenses": {
+    "title": "Expenses",
+    "addExpense": "Add expense",
+    "noExpenses": "No expenses yet",
+    "noExpensesDescription": "Start by adding your first expense or upload a receipt to the assistant.",
+    "merchant": "Merchant",
+    "date": "Date",
+    "amount": "Amount",
+    "category": "Category",
+    "vat": "VAT",
+    "project": "Project",
+    "receipt": "Receipt",
+    "notes": "Notes",
+    "categories": {
+      "office_supplies": "Office supplies",
+      "software": "Software",
+      "travel": "Travel",
+      "meals": "Meals",
+      "home_office": "Home office",
+      "education": "Education",
+      "hardware": "Hardware",
+      "phone_internet": "Phone/Internet",
+      "other": "Other"
+    }
+  },
+  "invoices": {
+    "title": "Invoices",
+    "createInvoice": "Create invoice",
+    "createNewInvoice": "Create New Invoice",
+    "noInvoices": "No invoices yet",
+    "noInvoicesDescription": "Create your first invoice to get started.",
+    "invoiceNumber": "Invoice #",
+    "invoiceNumberLabel": "Invoice number",
+    "customer": "Customer",
+    "billedTo": "Billed to",
+    "date": "Date",
+    "invoiceDate": "Invoice date",
+    "serviceDate": "Service date",
+    "dueDate": "Due date",
+    "amount": "Amount",
+    "statusLabel": "Status",
+    "items": "Items",
+    "description": "Description",
+    "quantity": "Quantity",
+    "rate": "Rate",
+    "subtotal": "Subtotal",
+    "vatAmount": "VAT",
+    "total": "Total",
+    "totalAmountNet": "Total amount (Net)",
+    "totalAmountGross": "Total amount (Gross)",
+    "paymentTerms": "Payment terms",
+    "notes": "Notes",
+    "notesPlaceholder": "Internal notes, not visible to customer...",
+    "terms": "Payment Terms",
+    "termsPlaceholder": "e.g. Please pay within 14 days...",
+    "addLine": "Add a line",
+    "units": {
+      "h": "h",
+      "day": "Day",
+      "piece": "Piece",
+      "service": "Service"
+    },
+    "generate": "Generate",
+    "creating": "Creating...",
+    "saving": "Saving...",
+    "selectDate": "Select date",
+    "selectDateRange": "Select date range",
+    "statuses": {
+      "draft": "Draft",
+      "issued": "Issued",
+      "sent": "Sent",
+      "paid": "Paid",
+      "overdue": "Overdue",
+      "canceled": "Canceled"
+    },
+    "badges": {
+      "OVERDUE": "Overdue",
+      "PARTIALLY_PAID": "Partially Paid",
+      "SENT_DELIVERY": "Sent"
+    },
+    "transitions": {
+      "ISSUED": "Issue Invoice",
+      "SENT": "Send to Customer",
+      "CANCELED": "Cancel Invoice"
+    },
+    "actions": {
+      "issue": "Issue invoice",
+      "send": "Send",
+      "resend": "Resend",
+      "record_payment": "Record Payment",
+      "download_pdf": "Download PDF",
+      "send_reminder": "Send reminder",
+      "duplicate": "Duplicate",
+      "export": "Export",
+      "view_audit": "View Audit Trail",
+      "cancel": "Cancel Invoice"
+    },
+    "pdf": {
+      "pendingTitle": "PDF is being prepared",
+      "pendingDescription": "We started generating the PDF. Please try again in a moment.",
+      "stillGeneratingTitle": "PDF is still generating",
+      "stillGeneratingDescription": "This can take longer under load. Please try again in a few seconds."
+    },
+    "notifications": {
+      "canceled": "Invoice canceled",
+      "duplicateSoon": "Duplicate feature coming soon",
+      "exportSoon": "Export feature coming soon",
+      "reminderSoon": "Reminder feature coming soon"
+    },
+    "wizard": {
+      "selectCustomer": "Select customer",
+      "addItems": "Add line items",
+      "review": "Review & create"
+    },
+    "notFound": "Invoice not found",
+    "backToList": "Back to list",
+    "notFoundDescription": "The invoice you are looking for does not exist or has been deleted.",
+    "titleWithNumber": "Invoice {{number}}",
+    "issued": "Invoice issued",
+    "canceled": "Invoice canceled",
+    "updated": "Invoice updated successfully",
+    "payments": {
+      "recordTitle": "Record Payment",
+      "recordDescription": "Enter the payment details for this invoice.",
+      "dueAmount": "Due amount: {{amount}}",
+      "notePlaceholder": "Describe the payment (e.g. Bank transfer, Cash, ...)",
+      "save": "Record Payment",
+      "recordFailed": "Failed to record payment",
+      "saveFailed": "Failed to save payment"
+    },
+    "errors": {
+      "downloadFailed": "Failed to download PDF",
+      "updateFailed": "Failed to update invoice",
+      "invalidAmount": "Invalid amount",
+      "actionFailed": "Action failed"
+    },
+    "footer": {
+      "taxDetails": "Tax Details",
+      "vatIdLabel": "VAT ID",
+      "taxNumberLabel": "Tax Number",
+      "addTaxDetails": "Add Tax Details",
+      "paymentMethod": "Payment Method",
+      "addPaymentMethod": "Add Payment Method",
+      "contactDetails": "Contact Details",
+      "addContactDetails": "Add Contact Details",
+      "taxDetailsDescription": "Your business tax information shown on the invoice.",
+      "contactDetailsDescription": "Your business contact information shown on the footer.",
+      "selectPaymentMethod": "Select payment method",
+      "selectPaymentMethodTitle": "Select your payment method",
+      "addNewPaymentMethod": "Add new payment method",
+      "selectedBankAccount": "Selected Bank Account"
+    },
+    "email": {
+      "title": "Send Invoice",
+      "subtitle": "Send this invoice by email with a link to the student portal.",
+      "to": "Recipient",
+      "toPlaceholder": "customer@example.com",
+      "subject": "Invoice {{number}} from {{brand}}",
+      "sendCopy": "Send me a copy",
+      "savedForFuture": "This email will be saved for {{name}}'s profile.",
+      "messagePlaceholder": "Add a personal note...",
+      "deliveryLabel": "Delivery",
+      "deliveryHint": "A student portal link will be included. The recipient can download the invoice PDF from the portal.",
+      "attachmentsHint": "The PDF invoice will be automatically attached.",
+      "attachmentName": "Invoice-{{number}}.pdf",
+      "attachmentFallback": "Invoice.pdf",
+      "sendTest": "Send test email",
+      "send": "Send Email",
+      "sending": "Sending...",
+      "sent": "Invoice email sent",
+      "sendFailed": "Failed to send invoice email"
+    },
+    "status": {
+      "updateFailed": "Failed to update status"
+    },
+    "loading": "Loading invoice..."
+  },
+  "customers": {
+    "title": "Customers",
+    "addCustomer": "Add customer",
+    "addNewClient": "Add new client",
+    "noCustomers": "No customers yet",
+    "noCustomersDescription": "Add your first customer to start creating invoices.",
+    "name": "Name",
+    "displayName": "Display Name",
+    "company": "Company",
+    "email": "Email",
+    "phone": "Phone",
+    "address": "Address",
+    "addressLine1": "Address Line 1",
+    "addressLine2": "Address Line 2",
+    "city": "City",
+    "postalCode": "Postal Code",
+    "country": "Country",
+    "vatId": "VAT ID",
+    "notes": "Notes",
+    "invoiceHistory": "Invoice history",
+    "totalRevenue": "Total revenue",
+    "basicInformation": "Basic Information",
+    "billingAddress": "Billing Address",
+    "placeholders": {
+      "displayName": "Company or person name",
+      "email": "customer@example.com",
+      "phone": "+49 30 12345678",
+      "vatId": "DE123456789",
+      "addressLine1": "Street and number",
+      "addressLine2": "Apartment, suite, etc. (optional)",
+      "city": "Berlin",
+      "postalCode": "10115",
+      "country": "Germany",
+      "notes": "Additional notes about this customer",
+      "status": "Select status"
+    },
+    "createDescription": "Create a new customer with basic contact and billing information.",
+    "selectCustomer": "Select a customer",
+    "searchCustomers": "Search by name, email, or VAT...",
+    "searchOrAdd": "Search customers or add a new one",
+    "addNewCustomer": "Add New Customer",
+    "noCustomersFound": "No customers found.",
+    "selectExisting": "Search existing clients or create a new one.",
+    "social": {
+      "title": "Social Profiles",
+      "add": "Add profile",
+      "empty": "No social profiles added."
+    }
+  },
+  "settings": {
+    "title": "Settings",
+    "profile": "Profile",
+    "business": "Business",
+    "tax": "Tax settings",
+    "invoiceSettings": "Invoice settings",
+    "language": "Language",
+    "theme": "Theme",
+    "name": "Name",
+    "email": "Email",
+    "businessName": "Business name",
+    "address": "Address",
+    "vatId": "VAT ID",
+    "defaultVatRate": "Default VAT rate",
+    "invoicePrefix": "Invoice prefix",
+    "invoiceNumberFormat": "Invoice number format",
+    "paymentTermsDays": "Payment terms (days)",
+    "themes": {
+      "light": "Light",
+      "dark": "Dark",
+      "system": "System"
+    },
+    "languages": {
+      "en": "English",
+      "de": "Deutsch",
+      "vi": "Tiếng Việt"
+    }
+  },
+  "time": {
+    "today": "Today",
+    "yesterday": "Yesterday",
+    "thisWeek": "This week",
+    "thisMonth": "This month",
+    "lastMonth": "Last month",
+    "thisYear": "This year",
+    "daysAgo": "{{count}} days ago",
+    "tomorrow": "Tomorrow",
+    "inDays": "in {{count}} days"
+  },
+  "dueDate": {
+    "today": "due today",
+    "inDays": "in {{count}} days",
+    "inDays_one": "in 1 day",
+    "overdue": "{{count}} days overdue",
+    "overdue_one": "1 day overdue"
+  },
+  "errors": {
+    "loadMenuFailed": "Failed to load menu"
+  },
+  "accounting": {
+    "entryStatus": {
+      "draft": "Draft",
+      "posted": "Posted",
+      "reversed": "Reversed"
+    },
+    "accountTypes": {
+      "asset": "Asset",
+      "liability": "Liability",
+      "equity": "Equity",
+      "income": "Income",
+      "expense": "Expense"
+    },
+    "accountSelect": {
+      "placeholder": "Select account...",
+      "searchPlaceholder": "Search accounts...",
+      "empty": "No account found."
+    },
+    "journalLines": {
+      "title": "Journal Lines",
+      "addLine": "Add Line",
+      "emptyMessage": "No lines yet. Click \"{{action}}\" to start.",
+      "account": "Account",
+      "type": "Type",
+      "debit": "Debit",
+      "credit": "Credit",
+      "memo": "Memo",
+      "memoOptional": "Optional memo",
+      "minimumLines": "Minimum 2 lines required",
+      "removeLine": "Remove line",
+      "totals": "Totals",
+      "imbalance": "Imbalance",
+      "balanced": "✓ Balanced"
+    },
+    "journalEntries": {
+      "title": "Journal Entries",
+      "subtitle": "View and manage all accounting transactions",
+      "newEntry": "New Entry",
+      "searchPlaceholder": "Search by memo or entry number...",
+      "allStatuses": "All Statuses",
+      "entries": "Entries",
+      "entriesFound": "{{count}} entries found",
+      "entriesFound_one": "{{count}} entry found",
+      "entriesFound_other": "{{count}} entries found",
+      "loading": "Loading entries...",
+      "emptyTitle": "No journal entries found",
+      "emptyAction": "Create your first entry",
+      "entryNumber": "Entry #",
+      "date": "Date",
+      "memo": "Memo",
+      "amount": "Amount",
+      "linesCount": "{{count}} lines",
+      "linesCount_one": "{{count}} line",
+      "linesCount_other": "{{count}} lines"
+    },
+    "chartOfAccounts": {
+      "title": "Chart of Accounts",
+      "subtitle": "Manage your ledger accounts",
+      "newAccount": "New Account",
+      "searchPlaceholder": "Search by code or name...",
+      "allTypes": "All Types",
+      "allStatuses": "All Status",
+      "activeOnly": "Active Only",
+      "inactiveOnly": "Inactive Only",
+      "accounts": "Accounts",
+      "accountsFound": "{{count}} accounts found",
+      "accountsFound_one": "{{count}} account found",
+      "accountsFound_other": "{{count}} accounts found",
+      "loading": "Loading accounts...",
+      "empty": "No accounts found matching your criteria",
+      "code": "Code",
+      "name": "Name",
+      "type": "Type",
+      "active": "Active",
+      "inactive": "Inactive"
+    },
+    "dashboard": {
+      "title": "Accounting",
+      "subtitle": "Manage your financial records and reports",
+      "newEntry": "New Entry",
+      "newEntryDescription": "Create journal entry",
+      "chartOfAccounts": "Chart of Accounts",
+      "activeAccounts": "Active accounts",
+      "journalEntries": "Journal Entries",
+      "totalEntries": "Total entries",
+      "reports": "Reports",
+      "reportsDescription": "View financial reports",
+      "recentEntries": "Recent Entries",
+      "recentEntriesDescription": "Latest journal entries",
+      "noEntries": "No entries yet. Create your first entry to get started.",
+      "viewAllEntries": "View All Entries",
+      "quickLinks": "Quick Links",
+      "quickLinksDescription": "Common accounting tasks",
+      "viewTrialBalance": "View Trial Balance",
+      "viewProfitLoss": "Profit & Loss Report",
+      "settings": "Accounting Settings"
+    },
+    "reports": {
+      "title": "Financial Reports",
+      "subtitle": "Access comprehensive reports to analyze your financial data",
+      "viewReport": "View Report",
+      "aboutTitle": "About Financial Reports",
+      "aboutLine1": "All reports are generated in real-time from your posted journal entries. Draft entries are not included in reports.",
+      "aboutLine2": "You can export reports to PDF or Excel formats, and use date range filters to analyze specific periods.",
+      "aboutLine3": "💡 AI-powered insights are available on each report to help you understand trends and anomalies.",
+      "trialBalance": {
+        "title": "Trial Balance",
+        "description": "Summary of all account balances to verify debits equal credits"
+      },
+      "generalLedger": {
+        "title": "General Ledger",
+        "description": "Detailed transaction history for individual accounts"
+      },
+      "profitLoss": {
+        "title": "Profit & Loss",
+        "description": "Income statement showing revenue, expenses, and net income"
+      },
+      "balanceSheet": {
+        "title": "Balance Sheet",
+        "description": "Snapshot of assets, liabilities, and equity at a specific date"
+      }
+    },
+    "setup": {
+      "title": "Set Up Accounting",
+      "subtitle": "Configure your accounting settings and chart of accounts to get started",
+      "basic": {
+        "title": "Basic Settings",
+        "description": "Configure your fundamental accounting preferences"
+      },
+      "baseCurrency": "Base Currency",
+      "selectCurrency": "Select currency",
+      "baseCurrencyHelp": "The primary currency for your accounting records",
+      "fiscalYearStart": "Fiscal Year Start",
+      "selectFiscalStart": "Select fiscal year start",
+      "fiscalStart": {
+        "jan1": "January 1st (Calendar Year)",
+        "apr1": "April 1st",
+        "jul1": "July 1st",
+        "oct1": "October 1st"
+      },
+      "fiscalYearHelp": "When your fiscal year begins (affects period generation)",
+      "periodLocking": "Enable Period Locking",
+      "periodLockingHelp": "Prevent posting entries to closed periods (recommended for production use)",
+      "chartOfAccountsTitle": "Chart of Accounts",
+      "chartOfAccountsDescription": "Choose a pre-built template to start with (you can add more accounts later)",
+      "templates": {
+        "minimal": {
+          "label": "Minimal (5 accounts)",
+          "description": "Basic setup for very simple accounting needs"
+        },
+        "freelancer": {
+          "label": "Freelancer (16 accounts)",
+          "description": "Ideal for independent contractors and consultants"
+        },
+        "smallBusiness": {
+          "label": "Small Business (35 accounts)",
+          "description": "Comprehensive setup for small businesses"
+        },
+        "standard": {
+          "label": "Standard (79 accounts) (Recommended)",
+          "description": "Full-featured chart of accounts for most businesses"
+        }
+      },
+      "next": {
+        "title": "What Happens Next",
+        "line1": "Your selected chart of accounts template will be created with all predefined accounts",
+        "line2": "12 monthly accounting periods will be generated for the current fiscal year",
+        "line3": "You can customize accounts, add new ones, and start creating journal entries",
+        "line4": "All financial reports will be available immediately"
+      },
+      "settingUp": "Setting up...",
+      "complete": "Complete Setup"
+    },
+    "validation": {
+      "accountRequired": "Account is required",
+      "amountPositive": "Amount must be positive",
+      "invalidDate": "Invalid date format",
+      "memoRequired": "Memo is required",
+      "minimumLines": "At least 2 lines are required",
+      "debitsEqualCredits": "Debits must equal credits",
+      "accountCodeRequired": "Account code is required",
+      "accountCodeMax": "Code must be 20 characters or less",
+      "accountCodeFormat": "Code must contain only uppercase letters, numbers, and hyphens",
+      "accountNameRequired": "Account name is required",
+      "accountNameMax": "Name must be 100 characters or less"
+    },
+    "toasts": {
+      "accountCreated": "Account \"{{name}}\" created successfully",
+      "accountCreateFailed": "Failed to create account: {{message}}",
+      "accountUpdated": "Account \"{{name}}\" updated successfully",
+      "accountUpdateFailed": "Failed to update account: {{message}}",
+      "journalEntryDraftCreated": "Draft journal entry created successfully",
+      "journalEntryCreateFailed": "Failed to create journal entry: {{message}}",
+      "journalEntryDraftUpdated": "Draft journal entry updated successfully",
+      "journalEntryUpdateFailed": "Failed to update journal entry: {{message}}",
+      "journalEntryPosted": "Journal entry {{entryNumber}} posted successfully",
+      "journalEntryPostFailed": "Failed to post journal entry: {{message}}",
+      "journalEntryReversed": "Entry reversed. Original: {{original}}, Reversal: {{reversal}}",
+      "journalEntryReverseFailed": "Failed to reverse journal entry: {{message}}",
+      "setupCompleted": "Accounting setup completed successfully",
+      "setupFailed": "Failed to set up accounting: {{message}}",
+      "settingsUpdated": "Accounting settings updated successfully",
+      "settingsUpdateFailed": "Failed to update settings: {{message}}",
+      "periodClosed": "Period {{name}} closed successfully",
+      "periodCloseFailed": "Failed to close period: {{message}}",
+      "periodReopened": "Period {{name}} reopened successfully",
+      "periodReopenFailed": "Failed to reopen period: {{message}}"
+    }
+  },
+  "auth": {
+    "signin": {
+      "title": "Sign in to your account",
+      "rememberMe": "Remember me",
+      "forgotPassword": "Forgot password?",
+      "cta": "Sign in",
+      "signingIn": "Signing in...",
+      "noAccount": "Don't have an account?"
+    },
+    "signup": {
+      "title": "Create your account",
+      "cta": "Sign up",
+      "creating": "Creating account...",
+      "hasAccount": "Already have an account?"
+    },
+    "forgot": {
+      "title": "Reset your password",
+      "subtitle": "Enter your email and we'll send you a reset link.",
+      "cta": "Send reset link",
+      "sending": "Sending link...",
+      "successMessage": "If an account exists for {{email}}, we've sent a password reset link.",
+      "backToLogin": "Back to sign in"
+    },
+    "reset": {
+      "title": "Set a new password",
+      "cta": "Update password",
+      "updating": "Updating password...",
+      "successToast": "Password updated",
+      "missingTokenTitle": "Missing reset token",
+      "missingTokenMessage": "The password reset link is invalid or incomplete.",
+      "requestNewLink": "Request a new link",
+      "confirmLabel": "Confirm password"
+    },
+    "fields": {
+      "email": "Email address",
+      "password": "Password"
+    },
+    "placeholders": {
+      "email": "Email address",
+      "password": "Password",
+      "passwordMin": "Minimum 6 characters"
+    },
+    "help": {
+      "passwordMin": "Password must be at least 6 characters long."
+    },
+    "errors": {
+      "loginFailed": "Invalid email or password",
+      "passwordLength": "Password must be at least 6 characters",
+      "passwordMismatch": "Passwords do not match",
+      "missingResetToken": "Reset token is missing",
+      "requestFailed": "Unable to send reset link",
+      "resetFailed": "Unable to reset password",
+      "signupFailed": "Failed to create account",
+      "networkError": "Network error. Please check if the server is running."
+    }
+  },
+  "forms": {
+    "submit": "Submit",
+    "repeater": {
+      "missingItemFields": "Missing repeater item fields",
+      "empty": "No rows added",
+      "row": "Row {{index}}",
+      "remove": "Remove",
+      "add": "Add row"
+    }
+  },
+  "portfolioPublic": {
+    "nav": {
+      "works": "Works",
+      "clients": "Clients",
+      "services": "Services",
+      "team": "Team",
+      "blog": "Blog"
+    },
+    "home": {
+      "welcome": "Welcome to",
+      "about": "About",
+      "featuredProjects": "Featured Projects",
+      "viewAll": "View all",
+      "trustedBy": "Trusted By"
+    },
+    "works": {
+      "title": "Works",
+      "subtitle": "A selection of my recent projects."
+    },
+    "project": {
+      "backToWorks": "Back to Works",
+      "links": "Project Links",
+      "liveDemo": "Live Demo",
+      "sourceCode": "Source Code",
+      "techStack": "Tech Stack"
+    },
+    "common": {
+      "contact": "Contact",
+      "contactMe": "Contact Me",
+      "viewDetails": "View Details"
+    },
+    "errors": {
+      "notFound": "Showcase Not Found",
+      "notFoundDesc": "The portfolio you are looking for does not exist or has not been published yet.",
+      "error": "Something went wrong",
+      "errorDesc": "We encountered an error loading this portfolio."
+    }
+  },
+  "crm": {
+    "activities": {
+      "title": "Activities",
+      "new": "New Activity",
+      "emptyTitle": "No activities found",
+      "emptyDescription": "Keep track of your interactions and tasks here."
+    },
+    "activity": {
+      "newTitle": "New Activity",
+      "newSubtitle": "Log a task, call, or meeting to keep your CRM updated.",
+      "create": "Create Activity",
+      "created": "Activity created successfully",
+      "createFailed": "Failed to create activity",
+      "subject": "Subject",
+      "subjectPlaceholder": "e.g. Follow up on proposal",
+      "type": "Activity Type",
+      "selectType": "Select type",
+      "dueAt": "Due Date & Time",
+      "dueDate": "Due Date",
+      "selectDate": "Select date",
+      "reminderHint": "The activity will be scheduled for this time.",
+      "dealIdOptional": "Link to Deal (Optional)",
+      "dealIdPlaceholder": "Enter Deal ID",
+      "partyIdOptional": "Link to Contact (Optional)",
+      "partyIdPlaceholder": "Enter Contact ID",
+      "linkRequiredHint": "Link this activity to a deal or contact for better context.",
+      "notesPlaceholder": "Add any details or outcomes here...",
+      "tipTitle": "Activity Tips",
+      "tipSubtitle": "How to stay organized",
+      "tipOne": "Log activities immediately to keep data fresh.",
+      "tipTwo": "Use descriptive subjects for quick reference.",
+      "tipThree": "Link to deals to see full history in the pipeline.",
+      "subjectRequired": "Subject is required",
+      "linkRequired": "Must be linked to either a deal or a contact",
+      "due": "Due {{date}}",
+      "statuses": {
+        "completed": "Completed",
+        "canceled": "Canceled",
+        "scheduled": "Scheduled"
+      },
+      "channel": "Channel",
+      "direction": "Direction",
+      "directionOutbound": "Outbound",
+      "directionInbound": "Inbound",
+      "communicationStatus": "Communication Status",
+      "communicationLogged": "Logged",
+      "communicationDraft": "Draft",
+      "types": {
+        "note": "Note",
+        "task": "Task",
+        "call": "Call",
+        "meeting": "Meeting",
+        "communication": "Communication",
+        "system_event": "System Event"
+      },
+      "addTitle": "Add Activity",
+      "addSubtitle": "Log a quick update or task",
+      "pickDate": "Pick a date",
+      "time": "Time",
+      "duration": "Duration (minutes)",
+      "durationPlaceholder": "Example: 15, 30, 60",
+      "outcome": "Outcome",
+      "selectOutcome": "Select outcome",
+      "location": "Location",
+      "locationPlaceholder": "Zoom link or physical location",
+      "outcomes": {
+        "connected": "Connected",
+        "voicemail": "Voicemail",
+        "noanswer": "No Answer",
+        "busy": "Busy",
+        "wrongnumber": "Wrong Number"
+      }
+    },
+    "timeline": {
+      "title": "Timeline",
+      "subtitle": "Activity and interaction history for this deal",
+      "empty": "No activity recorded yet.",
+      "due": "Due {{date}}",
+      "stage": "Moved to {{stage}}",
+      "channelMessage": "{{channel}} message",
+      "filters": {
+        "all": "All",
+        "notes": "Notes",
+        "calls": "Calls",
+        "meetings": "Meetings",
+        "tasks": "Tasks",
+        "communications": "Communications",
+        "stage": "Stages"
+      },
+      "duePrefix": "Due: "
+    },
+    "deals": {
+      "title": "Deals",
+      "new": "New Deal",
+      "emptyTitle": "No deals found",
+      "emptyDescription": "Start tracking your sales pipeline by creating your first deal.",
+      "noAmount": "No amount",
+      "stage": "Stage",
+      "status": {
+        "open": "Open",
+        "won": "Won",
+        "lost": "Lost"
+      },
+      "statuses": {
+        "open": "Open",
+        "won": "Won",
+        "lost": "Lost"
+      },
+      "newTitle": "New Deal",
+      "newSubtitle": "Create a new sales opportunity to track in your pipeline.",
+      "create": "Create Deal",
+      "created": "Deal created successfully",
+      "createFailed": "Failed to create deal",
+      "titleLabel": "Deal Title",
+      "titlePlaceholder": "e.g. Website Redesign for Acme Corp",
+      "customer": "Customer",
+      "customerPlaceholder": "Search or select a customer",
+      "customersLoading": "Loading customers...",
+      "customersHint": "Only customers with an active relationship can be linked to deals.",
+      "stagePlaceholder": "Select a stage",
+      "expectedCloseLabel": "Expected Close Date",
+      "selectDate": "Select a date",
+      "amount": "Deal Value",
+      "amountPlaceholder": "0.00",
+      "currency": "Currency",
+      "currencyPlaceholder": "Select currency",
+      "probabilityLabel": "Probability (%)",
+      "probabilityPlaceholder": "e.g. 50",
+      "notesPlaceholder": "Add any internal notes or context about this deal...",
+      "tagsPlaceholder": "e.g. urgent, high-value (comma separated)",
+      "pipelineTitle": "Pipeline Status",
+      "pipelineDescription": "This deal will be tracked in the following pipeline stages.",
+      "tipsTitle": "Deal Tips",
+      "tipsSubtitle": "Best practices for CRM",
+      "tipsOne": "Keep your deal titles descriptive yet concise.",
+      "tipsTwo": "Update the probability as the deal progresses through stages.",
+      "tipsThree": "Set a realistic expected close date for better forecasting.",
+      "quickActions": "Quick Actions",
+      "message": "Message",
+      "quickNote": "Quick Note",
+      "stages": {
+        "lead": "Lead",
+        "qualified": "Qualified",
+        "proposal": "Proposal",
+        "negotiation": "Negotiation",
+        "won": "Won",
+        "lost": "Lost"
+      },
+      "validation": {
+        "titleRequired": "Deal title is required",
+        "customerRequired": "Please select a customer",
+        "stageRequired": "Stage selection is required",
+        "amountNumber": "Amount must be a valid number",
+        "currencyRequired": "Currency is required",
+        "probabilityRange": "Probability must be between 0 and 100",
+        "probabilityValidation": "Probability must be between 0 and 100"
+      },
+      "deletedReason": "Deal deleted",
+      "loadFailed": "Failed to load deal",
+      "loadFailedHint": "We couldn't retrieve the deal details. Please try again.",
+      "backToDeals": "Back to Deals",
+      "markLostTitle": "Mark Deal as Lost",
+      "markLostDescription": "Please provide a reason why this deal was lost.",
+      "markLostPlaceholder": "e.g. Competitor won, Budget cut...",
+      "channelsLoading": "Loading channels...",
+      "noChannels": "No channels available",
+      "missingContactFields": "Missing contact information: {{fields}}",
+      "noteSubject": "Subject",
+      "noteDetails": "Note details...",
+      "addNote": "Add Note",
+      "markLost": "Mark Lost",
+      "deleteTitle": "Delete Deal",
+      "deleteDescription": "Are you sure you want to delete this deal? This action cannot be undone.",
+      "delete": "Delete",
+      "noNotes": "No notes added.",
+      "probability": "Prob. {{probability}}%",
+      "probabilityValue": "{{probability}}%",
+      "expectedClose": "Exp. {{date}}",
+      "expectedCloseTitle": "Expected Close",
+      "markWon": "Mark Won",
+      "edit": "Edit Deal",
+      "alreadyClosed": "Deal is already closed",
+      "relationships": "Relationships",
+      "party": "Linked Contact",
+      "owner": "Deal Owner",
+      "unassigned": "Unassigned"
+    },
+    "channel": {
+      "messageVia": "Message via {{channel}}",
+      "template": "Template",
+      "chooseTemplate": "Choose a template",
+      "subject": "Subject",
+      "message": "Message",
+      "log": "Log Message",
+      "copySuccess": "Copied to clipboard",
+      "copyFailed": "Failed to copy",
+      "draftCreated": "Draft communication created",
+      "messageLogged": "Message logged",
+      "createDraftFailed": "Failed to create draft",
+      "logFailed": "Failed to log message"
+    }
+  },
+  "classes": {
+    "sessions": {
+      "title": "Sessions",
+      "subtitle": "Track planned and completed sessions",
+      "new": "New session",
+      "loading": "Loading sessions...",
+      "empty": "No sessions found.",
+      "starts": "Starts",
+      "topic": "Topic",
+      "status": "Status",
+      "open": "Open",
+      "markDone": "Mark done",
+      "cancel": "Cancel",
+      "updated": "Session updated",
+      "updateFailed": "Failed to update session",
+      "loadFailed": "Failed to load sessions",
+      "confirmTitle": "Update session status?",
+      "confirmDescription": "Set session to {{status}}?",
+      "filterClassGroup": "Class group",
+      "filterStatus": "Status",
+      "filterDateFrom": "Date from",
+      "filterDateTo": "Date to",
+      "monthLocked": "Month is locked",
+      "monthLockedDescription": "This month has already been billed. Reopen the month or create an adjustment.",
+      "billingLockedTooltip": "This month is locked because billing was created.",
+      "statusOptions": {
+        "planned": "Planned",
+        "done": "Done",
+        "cancelled": "Cancelled"
+      },
+      "sortOptions": {
+        "newest": "Start (Newest)",
+        "oldest": "Start (Oldest)"
+      }
+    },
+    "groups": {
+      "title": "Class Groups",
+      "subtitle": "Organize your tutoring groups and pricing",
+      "new": "New Class Group",
+      "loading": "Loading class groups...",
+      "loadFailed": "Failed to load class groups",
+      "emptyTitle": "No class groups yet",
+      "emptyDescription": "Create your first group to start scheduling sessions.",
+      "name": "Name",
+      "subject": "Subject",
+      "level": "Level",
+      "pricePerSession": "Price / session",
+      "status": "Status",
+      "updated": "Updated",
+      "open": "Open",
+      "edit": "Edit",
+      "statusOptions": {
+        "active": "Active",
+        "archived": "Archived"
+      },
+      "sortOptions": {
+        "newest": "Updated (Newest)",
+        "oldest": "Updated (Oldest)",
+        "name": "Name (A-Z)"
+      }
+    },
+    "students": {
+      "title": "Students",
+      "subtitle": "Manage student records and guardians",
+      "createTitle": "Create Student",
+      "add": "Add student",
+      "creating": "Creating...",
+      "created": "Student Created",
+      "createSuccess": "Student created. You can now link guardians.",
+      "createFailed": "Failed to create student. Please try again.",
+      "createFirstTip": "Create the student first, then link guardians.",
+      "loading": "Loading students...",
+      "loadFailed": "Failed to load students.",
+      "emptyTitle": "No students yet",
+      "emptyDescription": "Create your first student to start tracking guardians and enrollments.",
+      "record": "Student",
+      "email": "Email",
+      "phone": "Phone",
+      "primaryPayer": "Primary payer",
+      "status": "Status",
+      "updated": "Updated",
+      "open": "Open",
+      "edit": "Edit",
+      "archive": "Archive",
+      "archived": "Student archived",
+      "archiveFailed": "Failed to archive student",
+      "archiveConfirmTitle": "Archive student",
+      "archiveConfirmDescription": "This will archive the student. You can unarchive them later.",
+      "statusOptions": {
+        "active": "Active",
+        "archived": "Archived"
+      },
+      "guardians": {
+        "title": "Guardians",
+        "subtitle": "Link parents or guardians and set the billing payer.",
+        "link": "Link guardian",
+        "empty": "No guardians linked yet. Add one to manage billing responsibility."
+      }
+    },
+    "billing": {
+      "title": "Class Billing",
+      "subtitle": "Preview tuition and create invoices for the selected month.",
+      "createInvoices": "Create invoices for month",
+      "billingMonth": "Billing Month",
+      "refresh": "Refresh",
+      "invoicesCreated": "Created {{count}} invoices",
+      "sendInvoices": "Send invoices",
+      "invoicesSent": "Invoices queued for sending",
+      "sendFailed": "Failed to send invoices",
+      "alreadySent": "Already sent",
+      "sendDialogTitle": "Invoices created",
+      "sendDialogDescription": "Created {{count}} invoices. Do you want to send them now?",
+      "sendDialogYes": "Yes, send",
+      "sendDialogNo": "No",
+      "summaryCreated": "Created {{count}} invoices for {{month}}",
+      "loading": "Loading billing preview...",
+      "loadFailed": "Failed to load preview",
+      "strategy": "Billing Strategy:",
+      "basis": "Billing Basis:",
+      "prepaid": "Prepaid",
+      "arrears": "Arrears",
+      "scheduledBasis": "Scheduled Sessions",
+      "attendedBasis": "Attended Sessions",
+      "arrearsTip": "Only sessions marked as \"DONE\" with attendance are billable",
+      "payerId": "Payer ID:",
+      "sessionsTotal": "sessions total",
+      "classGroup": "Class Group",
+      "sessions": "Sessions",
+      "pricePerSession": "Price / Session",
+      "subtotal": "Subtotal",
+      "invoice": "Invoice",
+      "markSent": "Mark Sent",
+      "markSentSuccess": "Invoice marked as sent",
+      "markSentFailed": "Failed to mark invoice as sent",
+      "customerEmailRequired": "Customer email is required",
+      "generatePrivateLink": "Generate Link",
+      "generateLinkSuccess": "Private link generated",
+      "generateLinkFailed": "Failed to generate private link",
+      "copyLink": "Copy Link",
+      "copyLinkSuccess": "Link copied to clipboard",
+      "copyLinkFailed": "Failed to copy link",
+      "regenerateLink": "Regenerate Link",
+      "regenerateLinkSuccess": "Private link regenerated",
+      "regenerateLinkConfirmTitle": "Regenerate private link?",
+      "regenerateLinkConfirmDescription": "The old link will stop working immediately.",
+      "regenerateLinkConfirmAction": "Regenerate",
+      "linkRegenerated": "Link regenerated",
+      "linkGenerationFailed": "Failed to generate link",
+      "viewInvoice": "View invoice",
+      "invoiceNotCreated": "Not created",
+      "emptyTitle": "No billable sessions",
+      "emptyDescription": "There are no confirmed sessions for the selected month that haven't been billed yet.",
+      "attendedSessionsTip": "Tip: In \"Attended Sessions\" mode, you must mark sessions as DONE and record attendance before they can be billed.",
+      "regenerate": "Regenerate invoices",
+      "regenerateConfirm": "Are you sure you want to regenerate invoices? This will detach existing draft invoices for this month.",
+      "allGroups": "All groups",
+      "selectAllGroups": "Select group"
+    },
+    "settings": {
+      "title": "Classes Settings",
+      "description": "Configure how class invoices are generated for this workspace.",
+      "billingStrategy": "Billing Strategy",
+      "monthStrategy": "Billing month strategy",
+      "billingBasis": "Billing basis",
+      "save": "Save settings",
+      "updated": "Classes settings updated",
+      "updateFailed": "Failed to update classes settings",
+      "placeholderStrategy": "Select billing strategy",
+      "placeholderBasis": "Select billing basis",
+      "strategies": {
+        "prepaid": {
+          "label": "Invoice for current month (prepaid)",
+          "description": "Invoices are generated at the start of the month for scheduled sessions."
+        },
+        "arrears": {
+          "label": "Invoice for previous month (arrears)",
+          "description": "Invoices are generated at the start of the month for attended sessions."
+        }
+      },
+      "attendance": {
+        "title": "Attendance",
+        "description": "Configure attendance behavior",
+        "mode": "Attendance Mode",
+        "manual": {
+          "label": "Manual Attendance",
+          "description": "Teachers must record attendance per session."
+        },
+        "autoFull": {
+          "label": "Auto-Full Attendance",
+          "description": "When a session is marked done, all enrolled students are marked present automatically. Teachers can still edit if needed."
+        }
+      },
+      "bases": {
+        "scheduled": {
+          "label": "Scheduled sessions",
+          "description": "Counts planned/done sessions in the billing month."
+        },
+        "attended": {
+          "label": "Attended sessions",
+          "description": "Counts billable attendance on done sessions."
+        }
+      }
+    }
+  },
+  "purchasing": {
+    "settings": {
+      "title": "Purchasing Settings",
+      "save": "Save Settings",
+      "defaultCurrency": "Default Currency",
+      "defaultPaymentTerms": "Default Payment Terms",
+      "poNumberPrefix": "PO Number Prefix",
+      "defaultApAccount": "Default Accounts Payable Account",
+      "defaultExpenseAccount": "Default Expense Account",
+      "defaultBankAccount": "Default Bank Account",
+      "autoPostBill": "Auto-post on Bill Post",
+      "autoPostBillHelp": "Automatically create accounting entries when a vendor bill is posted",
+      "autoPostPayment": "Auto-post on Payment",
+      "autoPostPaymentHelp": "Automatically create accounting entries when a payment is recorded",
+      "duplicateDetection": "Duplicate Bill Detection",
+      "duplicateDetectionHelp": "Warn when a bill with the same vendor and reference already exists",
+      "approvalRequired": "Approval Required for Bills",
+      "approvalRequiredHelp": "Vendor bills must be approved before they can be posted"
+    },
+    "copilot": {
+      "title": "Purchasing Assistant",
+      "purchaseOrderDraft": "Purchase Order Draft",
+      "vendorBillDraft": "Vendor Bill Draft",
+      "promptBill": "Extract data from a vendor bill text or image",
+      "promptBillLabel": "Extract Bill",
+      "promptPo": "Draft a purchase order for 50 laptops from Dell",
+      "promptPoLabel": "Draft PO",
+      "placeholder": "Ask the purchasing assistant anything..."
+    }
+  },
+  "workspace": {
+    "create": "Create Workspace"
+  },
+  "tenants": {
+    "title": "Tenants",
+    "description": "Manage tenant entitlements and settings.",
+    "listTitle": "Tenant list",
+    "addTenant": "Add tenant",
+    "noTenants": "No tenants found.",
+    "status": "Status",
+    "slug": "Slug",
+    "tenantId": "Tenant ID",
+    "actions": "Actions",
+    "manage": "Manage",
+    "confirmDeactivate": "Are you sure you want to deactivate this tenant? Users will no longer be able to log in.",
+    "confirmActivate": "Are you sure you want to activate this tenant?"
+  }
+}

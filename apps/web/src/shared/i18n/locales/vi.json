@@ -1,0 +1,1572 @@
+{
+  "common": {
+    "active": "Hoạt động",
+    "inactive": "Ngưng hoạt động",
+    "suspended": "Đã tạm ngưng",
+    "activate": "Kích hoạt",
+    "deactivate": "Hủy kích hoạt",
+    "lead": "Tiềm năng",
+    "paused": "Tạm dừng",
+    "archived": "Lưu trữ",
+    "appName": "Corely One ERP",
+    "tagline": "Quản lý doanh nghiệp của bạn, toàn diện.",
+    "loading": "Đang tải...",
+    "select": "Chọn",
+    "optional": "Tùy chọn",
+    "save": "Lưu",
+    "cancel": "Hủy",
+    "delete": "Xóa",
+    "edit": "Sửa",
+    "create": "Tạo",
+    "search": "Tìm kiếm",
+    "filter": "Lọc",
+    "export": "Xuất",
+    "import": "Nhập",
+    "back": "Quay lại",
+    "next": "Tiếp",
+    "confirm": "Xác nhận",
+    "close": "Đóng",
+    "logout": "Đăng xuất",
+    "viewAll": "Xem tất cả",
+    "comingSoon": "Sắp ra mắt",
+    "noResults": "Không tìm thấy kết quả",
+    "selectDate": "Chọn ngày",
+    "noTopic": "Không có chủ đề",
+    "error": "Đã xảy ra lỗi",
+    "success": "Thành công",
+    "currency": "VND",
+    "locale": "vi-VN",
+    "view": "Xem",
+    "status": "Trạng thái",
+    "unknown": "Không rõ",
+    "currencies": {
+      "eur": "Euro",
+      "usd": "Đô la Mỹ",
+      "gbp": "Bảng Anh",
+      "chf": "Franc Thụy Sĩ"
+    },
+    "reset": "Đặt lại",
+    "name": "Tên",
+    "email": "Email",
+    "phone": "Số điện thoại",
+    "notes": "Ghi chú",
+    "details": "Chi tiết",
+    "open": "Đang mở",
+    "closed": "Đã đóng",
+    "tags": "Thẻ",
+    "noTags": "Chưa có thẻ nào.",
+    "for": "Cho",
+    "draft": "Bản nháp",
+    "createdAt": "Đã tạo {{date}}",
+    "empty": "Trống",
+    "amount": "Số tiền",
+    "copy": "Sao chép",
+    "type": "Loại",
+    "description": "Mô tả",
+    "date": "Ngày",
+    "noteOptional": "Ghi chú (Tùy chọn)",
+    "saveChanges": "Lưu thay đổi",
+    "saving": "Đang lưu...",
+    "subject": "Tiêu đề",
+    "message": "Nội dung",
+    "attachments": "Tài liệu đính kèm",
+    "changeStatus": "Thay đổi trạng thái",
+    "current": "Hiện tại",
+    "action": "Hành động",
+    "statusAuditTrail": "Lịch sử thay đổi trạng thái được ghi lại.",
+    "confirmAction": "Xác nhận hành động",
+    "confirmMessage": "Bạn có chắc chắn muốn tiếp tục không?",
+    "reason": "Lý do",
+    "reasonPlaceholder": "Nhập lý do...",
+    "badge": "Huy hiệu",
+    "moreActions": "Thêm thao tác",
+    "dangerZone": "Khu vực nguy hiểm",
+    "goBack": "Quay lại",
+    "phoneShort": "SĐT",
+    "emailShort": "Email",
+    "website": "Website",
+    "bank": "Ngân hàng",
+    "iban": "IBAN",
+    "default": "Mặc định",
+    "created": "Đã tạo",
+    "updated": "Đã cập nhật",
+    "notSet": "Chưa thiết lập",
+    "done": "Xong",
+    "customFields": "Trường tùy chỉnh"
+  },
+  "actions": {
+    "takeAttendance": "Điểm danh",
+    "markDone": "Đánh dấu hoàn tất"
+  },
+  "list": {
+    "searchPlaceholder": "Tìm kiếm...",
+    "sort": "Sắp xếp",
+    "filters": "Bộ lọc",
+    "filtersDescription": "Lọc danh sách bằng cách chọn các tiêu chí cụ thể.",
+    "clearAll": "Xóa tất cả",
+    "noActiveFilters": "Không có bộ lọc nào đang hoạt động",
+    "addFilter": "Thêm bộ lọc",
+    "applyFilters": "Áp dụng bộ lọc",
+    "noResults": "Không tìm thấy mục nào."
+  },
+  "nav": {
+    "dashboard": "Tổng quan",
+    "portfolio": "Hồ sơ năng lực",
+    "rentals": {
+      "properties": "Bất động sản"
+    },
+    "quotes": "Báo giá",
+    "clients": "Khách hàng",
+    "tax": {
+      "overview": "Tổng quan",
+      "filings": "Kê khai",
+      "payments": "Thanh toán",
+      "documents": "Tài liệu",
+      "settings": "Cài đặt thuế"
+    },
+    "assistant": "Trợ lý",
+    "expenses": "Chi phí",
+    "invoices": "Hóa đơn",
+    "tenants": "Tổ chức",
+    "groups": {
+      "core": "Chính",
+      "sales": "Bán hàng",
+      "purchasing": "Mua hàng",
+      "inventory": "Kho",
+      "finance": "Tài chính",
+      "settings": "Cài đặt",
+      "platform": "Nền tảng",
+      "tax": "Thuế",
+      "education": "Giáo dục",
+      "other": "Khác"
+    },
+    "customers": "Khách hàng",
+    "students": "Học viên",
+    "salesQuotes": "Báo giá",
+    "salesOrders": "Đơn bán hàng",
+    "salesInvoices": "Hóa đơn bán hàng",
+    "salesCopilot": "Trợ lý bán hàng",
+    "salesSettings": "Cài đặt bán hàng",
+    "purchaseOrders": "Đơn mua hàng",
+    "vendorBills": "Hóa đơn nhà cung cấp",
+    "purchasingSettings": "Cài đặt mua hàng",
+    "purchasingCopilot": "Trợ lý mua hàng",
+    "settings": "Cài đặt",
+    "projects": "Dự án",
+    "accounting": "Kế toán",
+    "inventory": "Kho",
+    "inventoryProducts": "Kho - Sản phẩm",
+    "inventoryWarehouses": "Kho - Kho hàng",
+    "inventoryStock": "Kho - Tồn kho",
+    "inventoryDocuments": "Kho - Chứng từ",
+    "inventoryReorder": "Kho - Đặt hàng",
+    "inventoryCopilot": "Kho - Trợ lý",
+    "catalogItems": "Mặt hàng danh mục",
+    "importShipments": "Lô hàng",
+    "suppliers": "Nhà cung cấp",
+    "automation": "Tự động hóa",
+    "documents": "Tài liệu",
+    "cms": {
+      "posts": "Bài viết CMS",
+      "comments": "Bình luận CMS"
+    },
+    "hr": "Nhân sự",
+    "workspace": "Cài đặt không gian làm việc",
+    "profile": "Tài khoản & Hồ sơ",
+    "members": "Quản lý thành viên",
+    "roles": "Vai trò & Quyền",
+    "paymentMethods": "Phương thức thanh toán",
+    "taxSettings": "Cài đặt thuế",
+    "cashManagement": "Quản lý tiền mặt",
+    "issues": "Vấn đề",
+    "crmDeals": "Cơ hội",
+    "crmActivities": "Hoạt động",
+    "crmSequences": "Chuỗi",
+    "classes": "Lớp học",
+    "programs": "Chương trình (Combo)",
+    "classSessions": "Buổi học",
+    "classBilling": "Thanh toán lớp học",
+    "website": "Trang web",
+    "platform": "Nền tảng"
+  },
+  "featureFlags": {
+    "app": {
+      "core": {
+        "enabled": "Cốt lõi"
+      },
+      "platform": {
+        "enabled": "Nền tảng"
+      },
+      "invoices": {
+        "enabled": "Hóa đơn"
+      },
+      "crm": {
+        "enabled": "CRM"
+      },
+      "portfolio": {
+        "enabled": "Danh mục"
+      },
+      "issues": {
+        "enabled": "Vấn đề"
+      },
+      "cms": {
+        "enabled": "CMS"
+      },
+      "expenses": {
+        "enabled": "Chi phí"
+      },
+      "parties": {
+        "enabled": "Đối tác"
+      },
+      "ai-copilot": {
+        "enabled": "Trợ lý AI"
+      },
+      "tax": {
+        "enabled": "Thuế"
+      },
+      "cash-management": {
+        "enabled": "Quản lý tiền mặt"
+      },
+      "sales": {
+        "enabled": "Bán hàng"
+      },
+      "workspaces": {
+        "enabled": "Không gian làm việc"
+      },
+      "purchasing": {
+        "enabled": "Mua hàng"
+      },
+      "rentals": {
+        "enabled": "Cho thuê"
+      },
+      "website": {
+        "enabled": "Trang web"
+      }
+    }
+  },
+  "issues": {
+    "title": "Vấn đề",
+    "reportTitle": "Báo cáo vấn đề mới",
+    "unassigned": "Chưa giao",
+    "description": {
+      "empty": "Không có mô tả."
+    },
+    "createdAt": "Đã tạo {{date}}",
+    "status": {
+      "change": "Thay đổi trạng thái",
+      "update": "Cập nhật trạng thái",
+      "updated": "Đã cập nhật trạng thái",
+      "updateFailed": "Không thể cập nhật trạng thái",
+      "resolved": "Đã giải quyết vấn đề",
+      "resolveFailed": "Không thể giải quyết vấn đề",
+      "reopened": "Đã mở lại vấn đề",
+      "reopenFailed": "Không thể mở lại vấn đề"
+    },
+    "actions": {
+      "resolve": "Giải quyết",
+      "reopen": "Mở lại"
+    },
+    "fields": {
+      "title": "Tiêu đề",
+      "priority": "Mức độ ưu tiên",
+      "description": "Mô tả",
+      "siteType": "Loại địa điểm",
+      "siteIdOptional": "ID địa điểm (Tùy chọn)",
+      "customerIdOptional": "ID khách hàng (Tùy chọn)",
+      "manufacturerIdOptional": "ID nhà sản xuất (Tùy chọn)",
+      "transcriptOptional": "Bản ghi âm giọng nói (Tùy chọn)",
+      "site": "Địa điểm",
+      "assignee": "Người được giao"
+    },
+    "placeholders": {
+      "priority": "Chọn mức độ ưu tiên",
+      "siteType": "Chọn loại địa điểm"
+    },
+    "priority": {
+      "low": "Thấp",
+      "medium": "Trung bình",
+      "high": "Cao",
+      "urgent": "Khẩn cấp"
+    },
+    "siteTypes": {
+      "field": "Hiện trường",
+      "customer": "Khách hàng",
+      "manufacturer": "Nhà sản xuất"
+    },
+    "statuses": {
+      "NEW": "Mới",
+      "TRIAGED": "Đã phân loại",
+      "IN_PROGRESS": "Đang xử lý",
+      "WAITING": "Đang chờ",
+      "RESOLVED": "Đã giải quyết",
+      "CLOSED": "Đã đóng",
+      "REOPENED": "Đã mở lại"
+    },
+    "attachments": {
+      "title": "Tài liệu đính kèm",
+      "images": "Hình ảnh",
+      "addImages": "Thêm hình ảnh",
+      "takePicture": "Chụp ảnh",
+      "audio": "Ghi âm",
+      "voiceNote": "Ghi chú giọng nói",
+      "uploaded": "Tài liệu đã tải lên:",
+      "empty": "Không có tài liệu đính kèm.",
+      "transcript": "Bản ghi: {{transcript}}"
+    },
+    "voiceNote": "Ghi chú giọng nói",
+    "startRecording": "Bắt đầu ghi âm",
+    "stopRecording": "Dừng ghi âm",
+    "submitting": "Đang gửi...",
+    "submit": "Gửi vấn đề",
+    "speech": {
+      "liveTranscription": "Đang chuyển giọng nói thành văn bản",
+      "notAvailable": "Nhận dạng giọng nói không khả dụng trên trình duyệt này"
+    },
+    "comments": {
+      "title": "Bình luận",
+      "addTitle": "Thêm bình luận",
+      "add": "Thêm bình luận",
+      "added": "Đã thêm bình luận",
+      "addFailed": "Không thể thêm bình luận",
+      "placeholder": "Viết bình luận...",
+      "empty": "Chưa có bình luận nào."
+    },
+    "activity": {
+      "title": "Lịch sử hoạt động",
+      "empty": "Chưa có hoạt động nào."
+    },
+    "errors": {
+      "microphoneDenied": "Đã từ chối quyền truy cập micro",
+      "cameraDenied": "Đã từ chối quyền truy cập camera",
+      "loadFailed": "Không thể tải chi tiết vấn đề"
+    }
+  },
+  "tax": {
+    "title": "Trung tâm Thuế",
+    "subtitle": "Quản lý hồ sơ thuế, kê khai và tuân thủ",
+    "profile": {
+      "title": "Hồ sơ Thuế",
+      "vatEnabled": "Đã đăng ký Thuế GTGT",
+      "vatEnabledHelp": "Bật tính năng này nếu doanh nghiệp của bạn đã đăng ký thuế GTGT hoặc thuế bán hàng",
+      "country": "Quyền hạn Thuế",
+      "countryHelp": "Chọn quốc gia chính nơi doanh nghiệp của bạn đăng ký thuế",
+      "regime": "Chế độ Thuế GTGT",
+      "usesAdvisor": "Sử dụng Cố vấn Thuế / Kế toán",
+      "usesAdvisorHelp": "Bật nếu bạn làm việc với một chuyên gia bên ngoài để kê khai thuế",
+      "vatIdOptional": "Mã số thuế (Tùy chọn)",
+      "filingFrequency": "Tần suất Kê khai",
+      "accountingMethod": "Phương pháp Kế toán",
+      "taxYearStartMonth": "Tháng Bắt đầu Năm Thuế",
+      "localTaxOffice": "Cơ quan Thuế Địa phương",
+      "save": "Lưu Hồ sơ Thuế"
+    },
+    "countries": {
+      "de": "Đức"
+    },
+    "regimes": {
+      "standardVat": "Thuế GTGT Chuẩn"
+    },
+    "filing": {
+      "quarterly": "Hàng quý"
+    },
+    "accounting": {
+      "cashBasis": "Kế toán Tiền mặt",
+      "cashBasisHelp": "Doanh thu được ghi nhận khi nhận được tiền mặt",
+      "accrualBasisHelp": "Doanh thu được ghi nhận khi phát sinh, bất kể khi nào nhận được tiền mặt"
+    },
+    "placeholders": {
+      "vatId": "Nhập mã số thuế của bạn (ví dụ: DE123456789)",
+      "month": "Chọn tháng",
+      "localTaxOffice": "Nhập tên cơ quan thuế địa phương của bạn"
+    },
+    "consultant": {
+      "title": "Cố vấn Thuế",
+      "save": "Lưu thông tin cố vấn"
+    }
+  },
+  "cashManagement": {
+    "title": "Quản lý tiền mặt",
+    "registers": "Quầy thu",
+    "newRegister": "Quầy thu mới",
+    "addEntry": "Thêm bút toán",
+    "dailyClose": "Chốt quỹ cuối ngày"
+  },
+  "cash": {
+    "title": "Quản lý quỹ tiền mặt",
+    "subtitle": "Theo dõi quầy thu, bút toán và chốt quỹ cuối ngày",
+    "registers": {
+      "add": "Thêm quầy thu",
+      "addTitle": "Tạo quầy thu",
+      "namePlaceholder": "Tên quầy thu",
+      "noLocation": "Chưa có địa điểm",
+      "currentBalance": "Số dư hiện tại",
+      "empty": "Chưa có quầy thu nào",
+      "created": "Đã tạo quầy thu",
+      "createFailed": "Không thể tạo quầy thu"
+    },
+    "detail": {
+      "cashIn": "Thu tiền",
+      "cashOut": "Chi tiền",
+      "dailyCloses": "Chốt quỹ ngày",
+      "updatedBalance": "Số dư cập nhật",
+      "noEntriesFound": "Không tìm thấy bút toán",
+      "noDailyCloses": "Chưa có dữ liệu chốt quỹ ngày",
+      "addCashIn": "Thêm thu tiền",
+      "addCashOut": "Thêm chi tiền",
+      "reasonPlaceholder": "Lý do cho bút toán...",
+      "confirmIn": "Xác nhận thu",
+      "confirmOut": "Xác nhận chi",
+      "entryAdded": "Đã thêm bút toán",
+      "entryAddFailed": "Không thể thêm bút toán",
+      "invalidAmount": "Số tiền không hợp lệ"
+    },
+    "dailyClose": {
+      "title": "Chốt quỹ cuối ngày",
+      "reconcile": "Đối soát: {{register}}",
+      "businessDate": "Ngày kinh doanh",
+      "expectedBalance": "Số dư dự kiến",
+      "countedBalance": "Số dư kiểm đếm",
+      "countedCash": "Tiền mặt kiểm đếm ({{currency}})",
+      "difference": "Chênh lệch",
+      "perfectMatch": "Khớp hoàn toàn",
+      "discrepancyDetected": "Phát hiện chênh lệch",
+      "differenceEntryNote": "Bút toán chênh lệch sẽ được tạo tự động",
+      "notesPlaceholder": "Ghi chú cho lần chốt quỹ này...",
+      "submitClose": "Gửi chốt quỹ",
+      "submitting": "Đang gửi...",
+      "submitted": "Đã gửi chốt quỹ",
+      "submitFailed": "Chốt quỹ thất bại",
+      "enterCountedAmount": "Vui lòng nhập số tiền kiểm đếm"
+    }
+  },
+  "dashboard": {
+    "title": "Tổng quan",
+    "welcome": "Chào mừng trở lại",
+    "revenueThisMonth": "Doanh thu tháng này",
+    "outstandingInvoices": "Hóa đơn chưa thanh toán",
+    "expensesThisMonth": "Chi phí tháng này",
+    "quickActions": "Thao tác nhanh",
+    "recentActivity": "Hoạt động gần đây",
+    "addExpense": "Thêm chi phí",
+    "createInvoice": "Tạo hóa đơn",
+    "createQuote": "Tạo báo giá",
+    "openAssistant": "Mở trợ lý",
+    "fromLastMonth": "so với tháng trước",
+    "invoicesPending": "hóa đơn đang chờ",
+    "expensesCount": "chi phí trong tháng này",
+    "uploadReceipt": "Tải biên lai với AI",
+    "generateWithAi": "Tạo bằng AI",
+    "createNew": "Tạo mới",
+    "askAnything": "Hỏi bất cứ điều gì",
+    "manageTeam": "Quản lý nhóm",
+    "inviteMembers": "Mời thành viên",
+    "noInvoices": "Chưa có hóa đơn nào",
+    "noExpenses": "Chưa có chi phí nào",
+    "teacher": {
+      "welcome": "Bảng điều khiển giáo viên",
+      "subtitle": "Các lớp học và nhiệm vụ của bạn hôm nay",
+      "allClasses": "Tất cả lớp học",
+      "sessionsToday": "Buổi học hôm nay",
+      "sessionsThisWeek": "Buổi học tuần này",
+      "missingAttendance": "Điểm danh còn thiếu",
+      "actionRequired": "Cần xử lý",
+      "unfinished": "Chưa xong",
+      "upcomingSessions": "Buổi học sắp tới",
+      "noUpcoming": "Không tìm thấy buổi học sắp tới.",
+      "needsAttention": "Cần chú ý",
+      "unfinishedSessions": "Buổi học quá khứ chưa xong",
+      "allCaughtUp": "Bạn đã hoàn thành tất cả!",
+      "noActions": "Không có hành động khẩn cấp cho các buổi học trong quá khứ."
+    }
+  },
+  "assistant": {
+    "title": "Trợ lý",
+    "subtitle": "Hỏi bất cứ điều gì, trích xuất biên lai, tạo hóa đơn hoặc yêu cầu tóm tắt nhanh.",
+    "placeholder": "Hỏi tôi bất cứ điều gì...",
+    "emptyStateTitle": "Tôi có thể giúp gì cho bạn?",
+    "emptyStateDescription": "Hỏi bất cứ điều gì, trích xuất biên lai, tạo hóa đơn hoặc yêu cầu tóm tắt nhanh.",
+    "awaitingInputs": "Đang chờ dữ liệu nhập từ bạn...",
+    "approvalRequired": "Yêu cầu phê duyệt ({{toolName}})",
+    "approvalDescription": "Trợ lý muốn sử dụng công cụ '{{toolName}}'. Bạn có muốn cho phép không?",
+    "toolResult": "Kết quả từ {{toolName}}",
+    "toolFailed": "Công cụ {{toolName}} thất bại: {{reason}}",
+    "denied": "Bị từ chối bởi người dùng",
+    "toolCall": "Đang chạy {{toolName}}...",
+    "send": "Gửi",
+    "sending": "Đang gửi...",
+    "suggestions": {
+      "extractReceipt": {
+        "label": "Trích xuất biên lai và tạo chi phí",
+        "value": "Tôi đã tải lên một biên lai. Hãy trích xuất và tạo nháp chi phí."
+      },
+      "invoiceDraft": {
+        "label": "Tạo bản nháp hóa đơn",
+        "value": "Tạo bản nháp hóa đơn cho ACME GmbH cho tháng này."
+      },
+      "summarizeExpenses": {
+        "label": "Tóm tắt chi phí",
+        "value": "Tóm tắt các chi phí của tôi trong 30 ngày qua."
+      },
+      "taxGuidance": {
+        "label": "Hướng dẫn về thuế",
+        "value": "Tôi có thể khấu trừ những gì khi làm tự do ở Việt Nam?"
+      }
+    },
+    "toolCards": {
+      "extractingReceipt": "Đang trích xuất dữ liệu biên lai...",
+      "creatingExpense": "Đang tạo chi phí...",
+      "generatingInvoice": "Đang tạo bản nháp hóa đơn...",
+      "issuingInvoice": "Đang phát hành hóa đơn..."
+    },
+    "disclaimer": "Đây không phải là tư vấn pháp lý hoặc thuế. Vui lòng tham khảo ý kiến chuyên gia thuế cho hướng dẫn cụ thể.",
+    "confirmExpense": "Xác nhận chi tiết chi phí",
+    "invoicePreview": "Xem trước hóa đơn",
+    "openExpense": "Mở chi phí",
+    "openInvoice": "Mở hóa đơn",
+    "issueInvoice": "Phát hành hóa đơn",
+    "userRole": "Bạn",
+    "assistantRole": "Trợ lý",
+    "systemRole": "Hệ thống"
+  },
+  "copilot": {
+    "title": "Trợ lý",
+    "placeholder": "Hỏi tôi bất cứ điều gì...",
+    "confirmation": {
+      "title": "Yêu cầu phê duyệt",
+      "subtitle": "Trợ lý muốn sử dụng '{{toolName}}'. Bạn có muốn cho phép không?"
+    },
+    "toolResult": "Kết quả từ {{toolName}}",
+    "toolFailed": "Công cụ {{toolName}} thất bại: {{reason}}",
+    "denied": "Bị từ chối bởi người dùng",
+    "toolCall": "Đang chạy {{toolName}}...",
+    "roles": {
+      "user": "Bạn",
+      "assistant": "Trợ lý"
+    },
+    "confidence": "Độ tin cậy {{percent}}%",
+    "noStructuredOutput": "Không có dữ liệu cấu trúc",
+    "allowTool": "Trợ lý muốn sử dụng '{{toolName}}'. Bạn có muốn cho phép không?"
+  },
+  "expenses": {
+    "title": "Chi phí",
+    "addExpense": "Thêm chi phí",
+    "noExpenses": "Chưa có chi phí nào",
+    "noExpensesDescription": "Bắt đầu bằng cách thêm chi phí đầu tiên hoặc tải lên biên lai cho trợ lý.",
+    "merchant": "Người bán",
+    "date": "Ngày",
+    "amount": "Số tiền",
+    "category": "Danh mục",
+    "vat": "Thuế GTGT",
+    "project": "Dự án",
+    "receipt": "Biên lai",
+    "notes": "Ghi chú",
+    "categories": {
+      "office_supplies": "Văn phòng phẩm",
+      "software": "Phần mềm",
+      "travel": "Du lịch",
+      "meals": "Ăn uống",
+      "home_office": "Văn phòng tại nhà",
+      "education": "Giáo dục",
+      "hardware": "Phần cứng",
+      "phone_internet": "Điện thoại/Internet",
+      "other": "Khác"
+    }
+  },
+  "invoices": {
+    "title": "Hóa đơn",
+    "createInvoice": "Tạo hóa đơn",
+    "createNewInvoice": "Tạo hóa đơn mới",
+    "noInvoices": "Chưa có hóa đơn nào",
+    "noInvoicesDescription": "Tạo hóa đơn đầu tiên để bắt đầu.",
+    "invoiceNumber": "Số hóa đơn",
+    "invoiceNumberLabel": "Số hóa đơn",
+    "customer": "Khách hàng",
+    "billedTo": "Hóa đơn cho",
+    "date": "Ngày",
+    "invoiceDate": "Ngày hóa đơn",
+    "serviceDate": "Ngày dịch vụ",
+    "dueDate": "Ngày đến hạn",
+    "amount": "Số tiền",
+    "statusLabel": "Trạng thái",
+    "items": "Mục",
+    "description": "Mô tả",
+    "quantity": "Số lượng",
+    "rate": "Đơn giá",
+    "subtotal": "Tổng phụ",
+    "vatAmount": "Thuế GTGT",
+    "total": "Tổng cộng",
+    "totalAmountNet": "Tổng tiền (Chưa thuế)",
+    "totalAmountGross": "Tổng tiền (Bao gồm thuế)",
+    "paymentTerms": "Điều khoản thanh toán",
+    "notes": "Ghi chú",
+    "notesPlaceholder": "Ghi chú nội bộ, không hiển thị cho khách hàng...",
+    "terms": "Điều khoản thanh toán",
+    "termsPlaceholder": "Ví dụ: Vui lòng thanh toán trong vòng 14 ngày...",
+    "addLine": "Thêm dòng",
+    "units": {
+      "h": "giờ",
+      "day": "ngày",
+      "piece": "cái",
+      "service": "dịch vụ"
+    },
+    "generate": "Tạo",
+    "creating": "Đang tạo...",
+    "saving": "Đang lưu...",
+    "selectDate": "Chọn ngày",
+    "selectDateRange": "Chọn khoảng thời gian",
+    "statuses": {
+      "draft": "Nháp",
+      "issued": "Đã phát hành",
+      "sent": "Đã gửi",
+      "paid": "Đã thanh toán",
+      "overdue": "Quá hạn",
+      "canceled": "Đã hủy"
+    },
+    "badges": {
+      "OVERDUE": "Quá hạn",
+      "PARTIALLY_PAID": "Thanh toán một phần",
+      "SENT_DELIVERY": "Đã gửi"
+    },
+    "transitions": {
+      "ISSUED": "Phát hành hóa đơn",
+      "SENT": "Gửi cho khách hàng",
+      "CANCELED": "Hủy hóa đơn"
+    },
+    "actions": {
+      "issue": "Phát hành hóa đơn",
+      "send": "Gửi hóa đơn",
+      "resend": "Gửi lại",
+      "record_payment": "Ghi nhận thanh toán",
+      "download_pdf": "Tải PDF",
+      "send_reminder": "Gửi nhắc nhở",
+      "duplicate": "Sao chép",
+      "export": "Xuất dữ liệu",
+      "view_audit": "Xem lịch sử thay đổi",
+      "cancel": "Hủy hóa đơn"
+    },
+    "pdf": {
+      "pendingTitle": "Đang chuẩn bị bản PDF",
+      "pendingDescription": "Chúng tôi đang khởi tạo bản PDF. Vui lòng thử lại sau giây lát.",
+      "stillGeneratingTitle": "PDF vẫn đang được tạo",
+      "stillGeneratingDescription": "Khi hệ thống tải cao, quá trình có thể lâu hơn. Vui lòng thử lại sau vài giây."
+    },
+    "notifications": {
+      "canceled": "Hóa đơn đã bị hủy",
+      "duplicateSoon": "Tính năng sao chép sắp ra mắt",
+      "exportSoon": "Tính năng xuất dữ liệu sắp ra mắt",
+      "reminderSoon": "Tính năng nhắc nhở sắp ra mắt"
+    },
+    "wizard": {
+      "selectCustomer": "Chọn khách hàng",
+      "addItems": "Thêm mục",
+      "review": "Xem lại & tạo"
+    },
+    "notFound": "Không tìm thấy hóa đơn",
+    "backToList": "Quay lại danh sách",
+    "notFoundDescription": "Hóa đơn bạn tìm kiếm không tồn tại hoặc đã bị xóa.",
+    "titleWithNumber": "Hóa đơn {{number}}",
+    "issued": "Đã phát hành hóa đơn",
+    "canceled": "Đã hủy hóa đơn",
+    "updated": "Hóa đơn đã được cập nhật thành công",
+    "payments": {
+      "recordTitle": "Ghi nhận thanh toán",
+      "recordDescription": "Nhập chi tiết thanh toán cho hóa đơn này.",
+      "dueAmount": "Số tiền còn nợ: {{amount}}",
+      "notePlaceholder": "Mô tả thanh toán (ví dụ: Chuyển khoản, Tiền mặt, ...)",
+      "save": "Ghi nhận thanh toán",
+      "recordFailed": "Không thể ghi nhận thanh toán",
+      "saveFailed": "Không thể lưu thanh toán"
+    },
+    "errors": {
+      "downloadFailed": "Không thể tải xuống PDF",
+      "updateFailed": "Không thể cập nhật hóa đơn",
+      "invalidAmount": "Số tiền không hợp lệ",
+      "actionFailed": "Thao tác thất bại"
+    },
+    "footer": {
+      "taxDetails": "Chi tiết thuế",
+      "vatIdLabel": "Mã số thuế (VAT)",
+      "taxNumberLabel": "Mã số thuế",
+      "addTaxDetails": "Thêm chi tiết thuế",
+      "paymentMethod": "Phương thức thanh toán",
+      "addPaymentMethod": "Thêm phương thức thanh toán",
+      "contactDetails": "Thông tin liên hệ",
+      "addContactDetails": "Thêm thông tin liên hệ",
+      "taxDetailsDescription": "Thông tin thuế của doanh nghiệp hiển thị trên hóa đơn.",
+      "contactDetailsDescription": "Thông tin liên hệ của doanh nghiệp hiển thị ở chân trang.",
+      "selectPaymentMethod": "Chọn phương thức thanh toán",
+      "selectPaymentMethodTitle": "Chọn phương thức thanh toán của bạn",
+      "addNewPaymentMethod": "Thêm phương thức thanh toán mới",
+      "selectedBankAccount": "Tài khoản ngân hàng đã chọn"
+    },
+    "email": {
+      "title": "Gửi hóa đơn",
+      "subtitle": "Gửi hóa đơn này qua email kèm liên kết tới cổng học sinh.",
+      "to": "Người nhận",
+      "toPlaceholder": "khachhang@email.com",
+      "subject": "Hóa đơn {{number}} từ {{brand}}",
+      "sendCopy": "Gửi cho tôi một bản sao",
+      "savedForFuture": "Email này sẽ được lưu vào hồ sơ của {{name}}.",
+      "messagePlaceholder": "Thêm một ghi chú cá nhân...",
+      "deliveryLabel": "Hình thức gửi",
+      "deliveryHint": "Email sẽ bao gồm liên kết cổng học sinh. Người nhận có thể tải PDF hóa đơn từ cổng.",
+      "attachmentsHint": "Hóa đơn PDF sẽ được tự động đính kèm.",
+      "attachmentName": "Hóa đơn-{{number}}.pdf",
+      "attachmentFallback": "Hoa-don.pdf",
+      "sendTest": "Gửi email thử",
+      "send": "Gửi Email",
+      "sending": "Đang gửi...",
+      "sent": "Đã gửi email hóa đơn",
+      "sendFailed": "Không thể gửi email hóa đơn"
+    },
+    "status": {
+      "updateFailed": "Không thể cập nhật trạng thái"
+    },
+    "loading": "Đang tải hóa đơn..."
+  },
+  "customers": {
+    "title": "Khách hàng",
+    "addCustomer": "Thêm khách hàng",
+    "addNewClient": "Thêm khách hàng mới",
+    "noCustomers": "Chưa có khách hàng nào",
+    "noCustomersDescription": "Thêm khách hàng đầu tiên để bắt đầu tạo hóa đơn.",
+    "name": "Tên",
+    "displayName": "Tên hiển thị",
+    "company": "Công ty",
+    "email": "Email",
+    "phone": "Điện thoại",
+    "address": "Địa chỉ",
+    "addressLine1": "Địa chỉ dòng 1",
+    "addressLine2": "Địa chỉ dòng 2",
+    "city": "Thành phố",
+    "postalCode": "Mã bưu điện",
+    "country": "Quốc gia",
+    "vatId": "Mã số thuế",
+    "notes": "Ghi chú",
+    "invoiceHistory": "Lịch sử hóa đơn",
+    "totalRevenue": "Tổng doanh thu",
+    "basicInformation": "Thông tin cơ bản",
+    "billingAddress": "Địa chỉ thanh toán",
+    "placeholders": {
+      "displayName": "Tên công ty hoặc cá nhân",
+      "email": "khachhang@email.com",
+      "phone": "+84 28 12345678",
+      "vatId": "0123456789",
+      "addressLine1": "Số nhà và tên đường",
+      "addressLine2": "Căn hộ, tầng, v.v. (tùy chọn)",
+      "city": "Hồ Chí Minh",
+      "postalCode": "700000",
+      "country": "Việt Nam",
+      "notes": "Ghi chú thêm về khách hàng này",
+      "status": "Chọn trạng thái"
+    },
+    "createDescription": "Tạo khách hàng mới với thông tin liên hệ và thanh toán cơ bản.",
+    "selectCustomer": "Chọn khách hàng",
+    "searchCustomers": "Tìm theo tên, email hoặc mã số thuế...",
+    "searchOrAdd": "Tìm khách hàng hoặc thêm mới",
+    "addNewCustomer": "Thêm khách hàng mới",
+    "noCustomersFound": "Không tìm thấy khách hàng.",
+    "selectExisting": "Tìm kiếm khách hàng hiện có hoặc tạo mới.",
+    "social": {
+      "title": "Hồ sơ mạng xã hội",
+      "add": "Thêm hồ sơ",
+      "empty": "Chưa có hồ sơ mạng xã hội nào."
+    }
+  },
+  "settings": {
+    "title": "Cài đặt",
+    "profile": "Hồ sơ",
+    "business": "Doanh nghiệp",
+    "tax": "Cài đặt thuế",
+    "invoiceSettings": "Cài đặt hóa đơn",
+    "language": "Ngôn ngữ",
+    "theme": "Giao diện",
+    "name": "Tên",
+    "email": "Email",
+    "businessName": "Tên doanh nghiệp",
+    "address": "Địa chỉ",
+    "vatId": "Mã số thuế",
+    "defaultVatRate": "Thuế suất VAT mặc định",
+    "invoicePrefix": "Tiền tố hóa đơn",
+    "invoiceNumberFormat": "Định dạng số hóa đơn",
+    "paymentTermsDays": "Điều khoản thanh toán (ngày)",
+    "themes": {
+      "light": "Sáng",
+      "dark": "Tối",
+      "system": "Hệ thống"
+    },
+    "languages": {
+      "en": "English",
+      "de": "Deutsch",
+      "vi": "Tiếng Việt"
+    }
+  },
+  "time": {
+    "today": "Hôm nay",
+    "yesterday": "Hôm qua",
+    "thisWeek": "Tuần này",
+    "thisMonth": "Tháng này",
+    "lastMonth": "Tháng trước",
+    "thisYear": "Năm nay",
+    "daysAgo": "{{count}} ngày trước"
+  },
+  "dueDate": {
+    "today": "đến hạn hôm nay",
+    "inDays": "còn {{count}} ngày",
+    "inDays_one": "còn 1 ngày",
+    "overdue": "quá hạn {{count}} ngày",
+    "overdue_one": "quá hạn 1 ngày"
+  },
+  "errors": {
+    "loadMenuFailed": "Không thể tải menu"
+  },
+  "accounting": {
+    "entryStatus": {
+      "draft": "Nháp",
+      "posted": "Đã ghi sổ",
+      "reversed": "Đã đảo"
+    },
+    "accountTypes": {
+      "asset": "Tài sản",
+      "liability": "Nợ phải trả",
+      "equity": "Vốn chủ sở hữu",
+      "income": "Doanh thu",
+      "expense": "Chi phí"
+    },
+    "accountSelect": {
+      "placeholder": "Chọn tài khoản...",
+      "searchPlaceholder": "Tìm tài khoản...",
+      "empty": "Không tìm thấy tài khoản."
+    },
+    "journalLines": {
+      "title": "Dòng bút toán",
+      "addLine": "Thêm dòng",
+      "emptyMessage": "Chưa có dòng nào. Nhấn \"{{action}}\" để bắt đầu.",
+      "account": "Tài khoản",
+      "type": "Loại",
+      "debit": "Nợ",
+      "credit": "Có",
+      "memo": "Diễn giải",
+      "memoOptional": "Diễn giải (tùy chọn)",
+      "minimumLines": "Cần tối thiểu 2 dòng",
+      "removeLine": "Xóa dòng",
+      "totals": "Tổng",
+      "imbalance": "Chênh lệch",
+      "balanced": "✓ Cân đối"
+    },
+    "journalEntries": {
+      "title": "Bút toán",
+      "subtitle": "Xem và quản lý tất cả bút toán kế toán",
+      "newEntry": "Bút toán mới",
+      "searchPlaceholder": "Tìm theo diễn giải hoặc số bút toán...",
+      "allStatuses": "Tất cả trạng thái",
+      "entries": "Bút toán",
+      "entriesFound": "Tìm thấy {{count}} bút toán",
+      "entriesFound_one": "Tìm thấy {{count}} bút toán",
+      "entriesFound_other": "Tìm thấy {{count}} bút toán",
+      "loading": "Đang tải bút toán...",
+      "emptyTitle": "Không tìm thấy bút toán",
+      "emptyAction": "Tạo bút toán đầu tiên",
+      "entryNumber": "Số bút toán",
+      "date": "Ngày",
+      "memo": "Diễn giải",
+      "amount": "Số tiền",
+      "linesCount": "{{count}} dòng",
+      "linesCount_one": "{{count}} dòng",
+      "linesCount_other": "{{count}} dòng"
+    },
+    "chartOfAccounts": {
+      "title": "Hệ thống tài khoản",
+      "subtitle": "Quản lý tài khoản kế toán",
+      "newAccount": "Tài khoản mới",
+      "searchPlaceholder": "Tìm theo mã hoặc tên...",
+      "allTypes": "Tất cả loại",
+      "allStatuses": "Tất cả trạng thái",
+      "activeOnly": "Chỉ đang hoạt động",
+      "inactiveOnly": "Chỉ không hoạt động",
+      "accounts": "Tài khoản",
+      "accountsFound": "Tìm thấy {{count}} tài khoản",
+      "accountsFound_one": "Tìm thấy {{count}} tài khoản",
+      "accountsFound_other": "Tìm thấy {{count}} tài khoản",
+      "loading": "Đang tải tài khoản...",
+      "empty": "Không có tài khoản phù hợp",
+      "code": "Mã",
+      "name": "Tên",
+      "type": "Loại",
+      "active": "Hoạt động",
+      "inactive": "Không hoạt động"
+    },
+    "dashboard": {
+      "title": "Kế toán",
+      "subtitle": "Quản lý sổ sách và báo cáo tài chính",
+      "newEntry": "Bút toán mới",
+      "newEntryDescription": "Tạo bút toán",
+      "chartOfAccounts": "Hệ thống tài khoản",
+      "activeAccounts": "Tài khoản đang hoạt động",
+      "journalEntries": "Bút toán",
+      "totalEntries": "Tổng bút toán",
+      "reports": "Báo cáo",
+      "reportsDescription": "Xem báo cáo tài chính",
+      "recentEntries": "Bút toán gần đây",
+      "recentEntriesDescription": "Bút toán mới nhất",
+      "noEntries": "Chưa có bút toán. Tạo bút toán đầu tiên để bắt đầu.",
+      "viewAllEntries": "Xem tất cả bút toán",
+      "quickLinks": "Liên kết nhanh",
+      "quickLinksDescription": "Tác vụ kế toán thường dùng",
+      "viewTrialBalance": "Xem bảng cân đối thử",
+      "viewProfitLoss": "Báo cáo lãi lỗ",
+      "settings": "Cài đặt kế toán"
+    },
+    "reports": {
+      "title": "Báo cáo tài chính",
+      "subtitle": "Truy cập báo cáo để phân tích dữ liệu tài chính",
+      "viewReport": "Xem báo cáo",
+      "aboutTitle": "Về báo cáo tài chính",
+      "aboutLine1": "Tất cả báo cáo được tạo theo thời gian thực từ các bút toán đã ghi sổ. Bút toán nháp không được tính.",
+      "aboutLine2": "Bạn có thể xuất báo cáo sang PDF hoặc Excel và lọc theo khoảng thời gian.",
+      "aboutLine3": "💡 Có sẵn phân tích AI trên từng báo cáo để giúp bạn hiểu xu hướng và bất thường.",
+      "trialBalance": {
+        "title": "Bảng cân đối thử",
+        "description": "Tóm tắt số dư các tài khoản để kiểm tra tổng Nợ bằng tổng Có"
+      },
+      "generalLedger": {
+        "title": "Sổ cái",
+        "description": "Lịch sử giao dịch chi tiết cho từng tài khoản"
+      },
+      "profitLoss": {
+        "title": "Báo cáo lãi lỗ",
+        "description": "Báo cáo kết quả kinh doanh thể hiện doanh thu, chi phí và lợi nhuận ròng"
+      },
+      "balanceSheet": {
+        "title": "Bảng cân đối kế toán",
+        "description": "Ảnh chụp tài sản, nợ phải trả và vốn chủ sở hữu tại một thời điểm"
+      }
+    },
+    "setup": {
+      "title": "Thiết lập kế toán",
+      "subtitle": "Cấu hình kế toán và hệ thống tài khoản để bắt đầu",
+      "basic": {
+        "title": "Thiết lập cơ bản",
+        "description": "Cấu hình các thiết lập kế toán cơ bản"
+      },
+      "baseCurrency": "Tiền tệ cơ sở",
+      "selectCurrency": "Chọn tiền tệ",
+      "baseCurrencyHelp": "Tiền tệ chính cho sổ sách kế toán",
+      "fiscalYearStart": "Bắt đầu năm tài chính",
+      "selectFiscalStart": "Chọn ngày bắt đầu năm tài chính",
+      "fiscalStart": {
+        "jan1": "1 Tháng 1 (Năm dương lịch)",
+        "apr1": "1 Tháng 4",
+        "jul1": "1 Tháng 7",
+        "oct1": "1 Tháng 10"
+      },
+      "fiscalYearHelp": "Thời điểm bắt đầu năm tài chính (ảnh hưởng đến kỳ kế toán)",
+      "periodLocking": "Bật khóa kỳ",
+      "periodLockingHelp": "Ngăn ghi sổ vào các kỳ đã đóng (khuyến nghị dùng khi vận hành)",
+      "chartOfAccountsTitle": "Hệ thống tài khoản",
+      "chartOfAccountsDescription": "Chọn mẫu có sẵn để bắt đầu (bạn có thể thêm tài khoản sau)",
+      "templates": {
+        "minimal": {
+          "label": "Tối giản (5 tài khoản)",
+          "description": "Thiết lập cơ bản cho nhu cầu kế toán rất đơn giản"
+        },
+        "freelancer": {
+          "label": "Freelancer (16 tài khoản)",
+          "description": "Phù hợp cho freelancer và tư vấn độc lập"
+        },
+        "smallBusiness": {
+          "label": "Doanh nghiệp nhỏ (35 tài khoản)",
+          "description": "Thiết lập toàn diện cho doanh nghiệp nhỏ"
+        },
+        "standard": {
+          "label": "Tiêu chuẩn (79 tài khoản) (Khuyến nghị)",
+          "description": "Hệ thống tài khoản đầy đủ cho hầu hết doanh nghiệp"
+        }
+      },
+      "next": {
+        "title": "Tiếp theo sẽ diễn ra",
+        "line1": "Mẫu hệ thống tài khoản đã chọn sẽ được tạo với tất cả tài khoản định sẵn",
+        "line2": "12 kỳ kế toán theo tháng sẽ được tạo cho năm tài chính hiện tại",
+        "line3": "Bạn có thể tùy chỉnh, thêm tài khoản mới và bắt đầu tạo bút toán",
+        "line4": "Tất cả báo cáo tài chính sẽ có sẵn ngay lập tức"
+      },
+      "settingUp": "Đang thiết lập...",
+      "complete": "Hoàn tất thiết lập"
+    },
+    "validation": {
+      "accountRequired": "Cần chọn tài khoản",
+      "amountPositive": "Số tiền phải lớn hơn 0",
+      "invalidDate": "Định dạng ngày không hợp lệ",
+      "memoRequired": "Cần nhập diễn giải",
+      "minimumLines": "Cần tối thiểu 2 dòng",
+      "debitsEqualCredits": "Tổng Nợ phải bằng tổng Có",
+      "accountCodeRequired": "Cần mã tài khoản",
+      "accountCodeMax": "Mã không được quá 20 ký tự",
+      "accountCodeFormat": "Mã chỉ gồm chữ in hoa, số và dấu gạch nối",
+      "accountNameRequired": "Cần tên tài khoản",
+      "accountNameMax": "Tên không được quá 100 ký tự"
+    },
+    "toasts": {
+      "accountCreated": "Đã tạo tài khoản \"{{name}}\"",
+      "accountCreateFailed": "Không thể tạo tài khoản: {{message}}",
+      "accountUpdated": "Đã cập nhật tài khoản \"{{name}}\"",
+      "accountUpdateFailed": "Không thể cập nhật tài khoản: {{message}}",
+      "journalEntryDraftCreated": "Đã tạo bút toán nháp",
+      "journalEntryCreateFailed": "Không thể tạo bút toán: {{message}}",
+      "journalEntryDraftUpdated": "Đã cập nhật bút toán nháp",
+      "journalEntryUpdateFailed": "Không thể cập nhật bút toán: {{message}}",
+      "journalEntryPosted": "Đã ghi sổ bút toán {{entryNumber}}",
+      "journalEntryPostFailed": "Không thể ghi sổ bút toán: {{message}}",
+      "journalEntryReversed": "Đã đảo bút toán. Gốc: {{original}}, Đảo: {{reversal}}",
+      "journalEntryReverseFailed": "Không thể đảo bút toán: {{message}}",
+      "setupCompleted": "Thiết lập kế toán thành công",
+      "setupFailed": "Không thể thiết lập kế toán: {{message}}",
+      "settingsUpdated": "Đã cập nhật cài đặt kế toán",
+      "settingsUpdateFailed": "Không thể cập nhật cài đặt: {{message}}",
+      "periodClosed": "Đã đóng kỳ {{name}}",
+      "periodCloseFailed": "Không thể đóng kỳ: {{message}}",
+      "periodReopened": "Đã mở lại kỳ {{name}}",
+      "periodReopenFailed": "Không thể mở lại kỳ: {{message}}"
+    }
+  },
+  "auth": {
+    "signin": {
+      "title": "Đăng nhập vào tài khoản của bạn",
+      "rememberMe": "Ghi nhớ tôi",
+      "forgotPassword": "Quên mật khẩu?",
+      "cta": "Đăng nhập",
+      "signingIn": "Đang đăng nhập...",
+      "noAccount": "Chưa có tài khoản?"
+    },
+    "signup": {
+      "title": "Tạo tài khoản của bạn",
+      "cta": "Đăng ký",
+      "creating": "Đang tạo tài khoản...",
+      "hasAccount": "Đã có tài khoản?"
+    },
+    "forgot": {
+      "title": "Đặt lại mật khẩu",
+      "subtitle": "Nhập email và chúng tôi sẽ gửi liên kết đặt lại mật khẩu.",
+      "cta": "Gửi liên kết đặt lại",
+      "sending": "Đang gửi liên kết...",
+      "successMessage": "Nếu có tài khoản với {{email}}, chúng tôi đã gửi liên kết đặt lại mật khẩu.",
+      "backToLogin": "Quay lại đăng nhập"
+    },
+    "reset": {
+      "title": "Đặt mật khẩu mới",
+      "cta": "Cập nhật mật khẩu",
+      "updating": "Đang cập nhật mật khẩu...",
+      "successToast": "Đã cập nhật mật khẩu",
+      "missingTokenTitle": "Thiếu mã đặt lại",
+      "missingTokenMessage": "Liên kết đặt lại mật khẩu không hợp lệ hoặc chưa đầy đủ.",
+      "requestNewLink": "Yêu cầu liên kết mới",
+      "confirmLabel": "Xác nhận mật khẩu"
+    },
+    "fields": {
+      "email": "Địa chỉ email",
+      "password": "Mật khẩu"
+    },
+    "placeholders": {
+      "email": "Địa chỉ email",
+      "password": "Mật khẩu",
+      "passwordMin": "Tối thiểu 6 ký tự"
+    },
+    "help": {
+      "passwordMin": "Mật khẩu phải có ít nhất 6 ký tự."
+    },
+    "errors": {
+      "loginFailed": "Email hoặc mật khẩu không hợp lệ",
+      "passwordLength": "Mật khẩu phải có ít nhất 6 ký tự",
+      "passwordMismatch": "Mật khẩu không khớp",
+      "missingResetToken": "Thiếu mã đặt lại",
+      "requestFailed": "Không thể gửi liên kết đặt lại",
+      "resetFailed": "Không thể đặt lại mật khẩu",
+      "signupFailed": "Không thể tạo tài khoản",
+      "networkError": "Lỗi kết nối mạng. Vui lòng kiểm tra lại máy chủ."
+    }
+  },
+  "forms": {
+    "submit": "Gửi",
+    "repeater": {
+      "missingItemFields": "Thiếu trường của mục lặp",
+      "empty": "Chưa có dòng nào",
+      "row": "Dòng {{index}}",
+      "remove": "Xóa",
+      "add": "Thêm dòng"
+    }
+  },
+  "portfolioPublic": {
+    "nav": {
+      "works": "Dự án",
+      "clients": "Khách hàng",
+      "services": "Dịch vụ",
+      "team": "Đội ngũ",
+      "blog": "Blog"
+    },
+    "home": {
+      "welcome": "Chào mừng đến với",
+      "about": "Giới thiệu",
+      "featuredProjects": "Dự án nổi bật",
+      "viewAll": "Xem tất cả",
+      "trustedBy": "Được tin dùng bởi"
+    },
+    "works": {
+      "title": "Dự án",
+      "subtitle": "Một tuyển chọn các dự án gần đây của tôi."
+    },
+    "project": {
+      "backToWorks": "Quay lại Dự án",
+      "links": "Liên kết dự án",
+      "liveDemo": "Demo trực tiếp",
+      "sourceCode": "Mã nguồn",
+      "techStack": "Công nghệ sử dụng"
+    },
+    "common": {
+      "contact": "Liên hệ",
+      "contactMe": "Liên hệ với tôi",
+      "viewDetails": "Xem chi tiết"
+    },
+    "errors": {
+      "notFound": "Không tìm thấy hồ sơ năng lực",
+      "notFoundDesc": "Hồ sơ bạn đang tìm không tồn tại hoặc chưa được công bố.",
+      "error": "Đã xảy ra lỗi",
+      "errorDesc": "Chúng tôi gặp lỗi khi tải hồ sơ này."
+    }
+  },
+  "crm": {
+    "activities": {
+      "title": "Hoạt động",
+      "new": "Hoạt động mới",
+      "emptyTitle": "Không tìm thấy hoạt động nào",
+      "emptyDescription": "Theo dõi các tương tác và nhiệm vụ của bạn tại đây."
+    },
+    "activity": {
+      "newTitle": "Hoạt động mới",
+      "newSubtitle": "Ghi lại một nhiệm vụ, cuộc gọi hoặc cuộc họp.",
+      "create": "Tạo hoạt động",
+      "created": "Đã tạo hoạt động thành công",
+      "createFailed": "Không thể tạo hoạt động",
+      "subject": "Tiêu đề",
+      "subjectPlaceholder": "ví dụ: Theo dõi báo giá",
+      "type": "Loại hoạt động",
+      "selectType": "Chọn loại",
+      "dueAt": "Ngày & Giờ đến hạn",
+      "dueDate": "Ngày đến hạn",
+      "selectDate": "Chọn ngày",
+      "reminderHint": "Hoạt động sẽ được lên lịch vào thời điểm này.",
+      "dealIdOptional": "Liên kết với Cơ hội (Tùy chọn)",
+      "dealIdPlaceholder": "Nhập ID Cơ hội",
+      "partyIdOptional": "Liên kết với Khách hàng (Tùy chọn)",
+      "partyIdPlaceholder": "Nhập ID Khách hàng",
+      "linkRequiredHint": "Liên kết hoạt động này với cơ hội hoặc khách hàng để có bối cảnh tốt hơn.",
+      "notesPlaceholder": "Thêm chi tiết hoặc kết quả tại đây...",
+      "tipTitle": "Mẹo hoạt động",
+      "tipSubtitle": "Cách duy trì sự ngăn nắp",
+      "tipOne": "Ghi lại hoạt động ngay lập tức.",
+      "tipTwo": "Sử dụng tiêu đề mô tả để tham khảo nhanh.",
+      "tipThree": "Liên kết với cơ hội để xem lịch sử đầy đủ.",
+      "subjectRequired": "Tiêu đề là bắt buộc",
+      "linkRequired": "Phải được liên kết với cơ hội hoặc khách hàng",
+      "due": "Hạn: {{date}}",
+      "statuses": {
+        "completed": "Đã hoàn thành",
+        "canceled": "Đã hủy",
+        "scheduled": "Đã lên lịch"
+      },
+      "channel": "Kênh",
+      "direction": "Chiều",
+      "directionOutbound": "Gửi đi",
+      "directionInbound": "Nhận vào",
+      "communicationStatus": "Trạng thái liên lạc",
+      "communicationLogged": "Đã ghi nhận",
+      "communicationDraft": "Bản nháp",
+      "types": {
+        "note": "Ghi chú",
+        "task": "Nhiệm vụ",
+        "call": "Cuộc gọi",
+        "meeting": "Cuộc họp",
+        "communication": "Liên lạc",
+        "system_event": "Sự kiện hệ thống"
+      },
+      "addTitle": "Thêm hoạt động",
+      "addSubtitle": "Ghi nhanh một cập nhật hoặc nhiệm vụ",
+      "pickDate": "Chọn ngày",
+      "time": "Thời gian",
+      "duration": "Thời lượng (phút)",
+      "durationPlaceholder": "VD: 15, 30, 60",
+      "outcome": "Kết quả",
+      "selectOutcome": "Chọn kết quả",
+      "location": "Địa điểm",
+      "locationPlaceholder": "Link Zoom hoặc địa chỉ thực tế",
+      "outcomes": {
+        "connected": "Đã kết nối",
+        "voicemail": "Hộp thư thoại",
+        "noanswer": "Không nhấc máy",
+        "busy": "Bận",
+        "wrongnumber": "Sai số"
+      }
+    },
+    "timeline": {
+      "title": "Dòng thời gian",
+      "subtitle": "Lịch sử hoạt động và tương tác cho cơ hội này",
+      "empty": "Chưa có hoạt động nào được ghi lại.",
+      "due": "Hạn: {{date}}",
+      "stage": "Chuyển sang {{stage}}",
+      "channelMessage": "Tin nhắn {{channel}}",
+      "filters": {
+        "all": "Tất cả",
+        "notes": "Ghi chú",
+        "calls": "Cuộc gọi",
+        "meetings": "Cuộc họp",
+        "tasks": "Nhiệm vụ",
+        "communications": "Liên lạc",
+        "stage": "Giai đoạn"
+      },
+      "duePrefix": "Hạn: "
+    },
+    "deals": {
+      "title": "Cơ hội",
+      "new": "Cơ hội mới",
+      "emptyTitle": "Không tìm thấy cơ hội nào",
+      "emptyDescription": "Bắt đầu theo dõi quy trình bán hàng của bạn bằng cách tạo cơ hội đầu tiên.",
+      "noAmount": "Không có giá trị",
+      "stage": "Giai đoạn",
+      "status": {
+        "open": "Mở",
+        "won": "Thắng",
+        "lost": "Thua"
+      },
+      "statuses": {
+        "open": "Mở",
+        "won": "Thắng",
+        "lost": "Thua"
+      },
+      "newTitle": "Cơ hội mới",
+      "newSubtitle": "Tạo một cơ hội bán hàng mới để theo dõi trong quy trình của bạn.",
+      "create": "Tạo cơ hội",
+      "created": "Đã tạo cơ hội thành công",
+      "createFailed": "Không thể tạo cơ hội",
+      "titleLabel": "Tiêu đề cơ hội",
+      "titlePlaceholder": "ví dụ: Thiết kế Website cho Acme Corp",
+      "customer": "Khách hàng",
+      "customerPlaceholder": "Tìm hoặc chọn khách hàng",
+      "customersLoading": "Đang tải khách hàng...",
+      "customersHint": "Chỉ những khách hàng có quan hệ tích cực mới có thể liên kết với cơ hội.",
+      "stagePlaceholder": "Chọn một giai đoạn",
+      "expectedCloseLabel": "Ngày dự kiến đóng",
+      "selectDate": "Chọn một ngày",
+      "amount": "Giá trị cơ hội",
+      "amountPlaceholder": "0.00",
+      "currency": "Tiền tệ",
+      "currencyPlaceholder": "Chọn tiền tệ",
+      "probabilityLabel": "Xác suất (%)",
+      "probabilityPlaceholder": "ví dụ: 50",
+      "notesPlaceholder": "Thêm các ghi chú nội bộ hoặc bối cảnh về cơ hội này...",
+      "tagsPlaceholder": "ví dụ: khẩn cấp, giá trị cao (phân cách bằng dấu phẩy)",
+      "pipelineTitle": "Trạng thái quy trình",
+      "pipelineDescription": "Cơ hội này sẽ được theo dõi qua các giai đoạn quy trình sau.",
+      "tipsTitle": "Mẹo cơ hội",
+      "tipsSubtitle": "Cách thực hiện tốt nhất cho CRM",
+      "tipsOne": "Giữ tiêu đề cơ hội mô tả nhưng súc tích.",
+      "tipsTwo": "Cập nhật xác suất khi cơ hội tiến triển qua các giai đoạn.",
+      "tipsThree": "Đặt ngày đóng dự kiến thực tế để dự báo tốt hơn.",
+      "quickActions": "Thao tác nhanh",
+      "message": "Tin nhắn",
+      "quickNote": "Ghi chú nhanh",
+      "stages": {
+        "lead": "Tiềm năng",
+        "qualified": "Đủ điều kiện",
+        "proposal": "Báo giá",
+        "negotiation": "Thương lượng",
+        "won": "Thắng",
+        "lost": "Thua"
+      },
+      "validation": {
+        "titleRequired": "Tiêu đề cơ hội là bắt buộc",
+        "customerRequired": "Vui lòng chọn khách hàng",
+        "stageRequired": "Cần chọn giai đoạn",
+        "amountNumber": "Số tiền phải là một con số hợp lệ",
+        "currencyRequired": "Tiền tệ là bắt buộc",
+        "probabilityRange": "Xác suất phải nằm trong khoảng từ 0 đến 100",
+        "probabilityValidation": "Xác suất phải từ 0 đến 100"
+      },
+      "deletedReason": "Đã xóa cơ hội",
+      "loadFailed": "Tải cơ hội thất bại",
+      "loadFailedHint": "Chúng tôi không thể tải chi tiết cơ hội. Vui lòng thử lại.",
+      "backToDeals": "Quay lại danh sách",
+      "markLostTitle": "Đánh dấu Thua",
+      "markLostDescription": "Vui lòng cung cấp lý do tại sao cơ hội này bị thua.",
+      "markLostPlaceholder": "ví dụ: Đối thủ thắng, Cắt giảm ngân sách...",
+      "channelsLoading": "Đang tải kênh...",
+      "noChannels": "Không có kênh nào",
+      "missingContactFields": "Thiếu thông tin liên hệ: {{fields}}",
+      "noteSubject": "Tiêu đề",
+      "noteDetails": "Chi tiết ghi chú...",
+      "addNote": "Thêm ghi chú",
+      "markLost": "Đánh dấu Thua",
+      "deleteTitle": "Xóa cơ hội",
+      "deleteDescription": "Bạn có chắc chắn muốn xóa cơ hội này không? Hành động này không thể hoàn tác.",
+      "delete": "Xóa",
+      "noNotes": "Chưa có ghi chú nào.",
+      "probability": "Xác suất {{probability}}%",
+      "probabilityValue": "{{probability}}%",
+      "expectedClose": "Dự kiến {{date}}",
+      "expectedCloseTitle": "Đóng dự kiến",
+      "markWon": "Đánh dấu Thắng",
+      "edit": "Chỉnh sửa cơ hội",
+      "alreadyClosed": "Cơ hội đã đóng",
+      "relationships": "Mối quan hệ",
+      "party": "Liên hệ liên quan",
+      "owner": "Người phụ trách",
+      "unassigned": "Chưa bộ phận"
+    },
+    "channel": {
+      "messageVia": "Nhắn tin qua {{channel}}",
+      "template": "Mẫu",
+      "chooseTemplate": "Chọn một mẫu",
+      "subject": "Tiêu đề",
+      "message": "Tin nhắn",
+      "log": "Ghi nhận tin nhắn",
+      "copySuccess": "Đã sao chép vào bộ nhớ tạm",
+      "copyFailed": "Không thể sao chép",
+      "draftCreated": "Đã tạo bản nháp liên lạc",
+      "messageLogged": "Đã ghi nhận tin nhắn",
+      "createDraftFailed": "Không thể tạo bản nháp",
+      "logFailed": "Không thể ghi nhận tin nhắn"
+    }
+  },
+  "classes": {
+    "sessions": {
+      "title": "Buổi học",
+      "subtitle": "Theo dõi các buổi học đã lên lịch và đã hoàn thành",
+      "new": "Buổi học mới",
+      "loading": "Đang tải các buổi học...",
+      "empty": "Không tìm thấy buổi học nào.",
+      "starts": "Bắt đầu",
+      "topic": "Chủ đề",
+      "status": "Trạng thái",
+      "open": "Mở",
+      "markDone": "Đánh dấu hoàn thành",
+      "cancel": "Hủy",
+      "updated": "Đã cập nhật buổi học",
+      "updateFailed": "Cập nhật buổi học thất bại",
+      "loadFailed": "Tải buổi học thất bại",
+      "confirmTitle": "Cập nhật trạng thái buổi học?",
+      "confirmDescription": "Đặt buổi học thành {{status}}?",
+      "filterClassGroup": "Nhóm lớp",
+      "filterStatus": "Trạng thái",
+      "filterDateFrom": "Từ ngày",
+      "filterDateTo": "Đến ngày",
+      "monthLocked": "Tháng đã bị khóa",
+      "monthLockedDescription": "Tháng này đã được quyết toán. Vui lòng mở lại tháng hoặc tạo điều chỉnh.",
+      "billingLockedTooltip": "Tháng này đã bị khóa vì hóa đơn đã được tạo.",
+      "statusOptions": {
+        "planned": "Đã lên lịch",
+        "done": "Đã xong",
+        "cancelled": "Đã hủy"
+      },
+      "sortOptions": {
+        "newest": "Bắt đầu (Mới nhất)",
+        "oldest": "Bắt đầu (Cũ nhất)"
+      }
+    },
+    "groups": {
+      "title": "Nhóm lớp",
+      "subtitle": "Tổ chức các nhóm lớp và học phí",
+      "new": "Nhóm lớp mới",
+      "loading": "Đang tải các nhóm lớp...",
+      "loadFailed": "Không thể tải các nhóm lớp",
+      "emptyTitle": "Chưa có nhóm lớp nào",
+      "emptyDescription": "Tạo nhóm lớp đầu tiên để bắt đầu lên lịch các buổi học.",
+      "name": "Tên",
+      "subject": "Môn học",
+      "level": "Trình độ",
+      "pricePerSession": "Giá / buổi",
+      "status": "Trạng thái",
+      "updated": "Cập nhật",
+      "open": "Mở",
+      "edit": "Sửa",
+      "statusOptions": {
+        "active": "Đang hoạt động",
+        "archived": "Đã lưu trữ"
+      },
+      "sortOptions": {
+        "newest": "Cập nhật (Mới nhất)",
+        "oldest": "Cập nhật (Cũ nhất)",
+        "name": "Tên (A-Z)"
+      }
+    },
+    "students": {
+      "title": "Học sinh",
+      "subtitle": "Quản lý hồ sơ học sinh và người giám hộ",
+      "createTitle": "Tạo học sinh",
+      "add": "Thêm học sinh",
+      "creating": "Đang tạo...",
+      "created": "Đã tạo học sinh",
+      "createSuccess": "Đã tạo học sinh thành công. Hiện tại bạn có thể liên kết với người giám hộ.",
+      "createFailed": "Không thể tạo học sinh. Vui lòng thử lại.",
+      "createFirstTip": "Tạo học sinh trước, sau đó liên kết với người giám hộ.",
+      "loading": "Đang tải danh sách học sinh...",
+      "loadFailed": "Không thể tải danh sách học sinh.",
+      "emptyTitle": "Chưa có học sinh nào",
+      "emptyDescription": "Tạo học sinh đầu tiên để bắt đầu theo dõi người giám hộ và việc nhập học.",
+      "record": "Học sinh",
+      "email": "Email",
+      "phone": "Điện thoại",
+      "primaryPayer": "Người thanh toán chính",
+      "status": "Trạng thái",
+      "updated": "Cập nhật",
+      "open": "Mở",
+      "edit": "Sửa",
+      "archive": "Lưu trữ",
+      "archived": "Đã lưu trữ học sinh",
+      "archiveFailed": "Không thể lưu trữ học sinh",
+      "archiveConfirmTitle": "Lưu trữ học sinh",
+      "archiveConfirmDescription": "Hành động này sẽ lưu trữ học sinh. Bạn có thể khôi phục sau.",
+      "statusOptions": {
+        "active": "Đang hoạt động",
+        "archived": "Đã lưu trữ"
+      },
+      "guardians": {
+        "title": "Người giám hộ",
+        "subtitle": "Liên kết cha mẹ hoặc người giám hộ và thiết lập người thanh toán.",
+        "link": "Liên kết người giám hộ",
+        "empty": "Chưa có người giám hộ nào được liên kết. Thêm một người để quản lý trách nhiệm thanh toán."
+      }
+    },
+    "billing": {
+      "title": "Quyết toán học phí",
+      "subtitle": "Xem trước và tạo hóa đơn học phí cho tháng đã chọn.",
+      "createInvoices": "Tạo hóa đơn cho tháng",
+      "billingMonth": "Tháng quyết toán",
+      "refresh": "Tải lại",
+      "invoicesCreated": "Đã tạo {{count}} hóa đơn",
+      "sendInvoices": "Gửi hóa đơn",
+      "invoicesSent": "Đã đưa hóa đơn vào hàng đợi gửi",
+      "sendFailed": "Gửi hóa đơn thất bại",
+      "alreadySent": "Đã gửi",
+      "sendDialogTitle": "Đã tạo hóa đơn",
+      "sendDialogDescription": "Đã tạo {{count}} hóa đơn. Bạn có muốn gửi ngay không?",
+      "sendDialogYes": "Có, gửi",
+      "sendDialogNo": "Không",
+      "summaryCreated": "Đã tạo {{count}} hóa đơn cho tháng {{month}}",
+      "loading": "Đang tải xem trước quyết toán...",
+      "loadFailed": "Không thể tải xem trước",
+      "strategy": "Chiến lược thanh toán:",
+      "basis": "Căn cứ thanh toán:",
+      "prepaid": "Trả trước",
+      "arrears": "Trả sau",
+      "scheduledBasis": "Buổi học đã lên lịch",
+      "attendedBasis": "Buổi học đã tham gia",
+      "arrearsTip": "Chỉ các buổi học được đánh dấu \"ĐÃ XONG\" và có điểm danh mới được tính học phí",
+      "payerId": "ID người trả:",
+      "sessionsTotal": "tổng số buổi",
+      "classGroup": "Nhóm lớp",
+      "sessions": "Số buổi",
+      "pricePerSession": "Giá / Buổi",
+      "subtotal": "Tạm tính",
+      "markSent": "Đánh dấu đã gửi",
+      "markSentSuccess": "Đã đánh dấu hóa đơn là đã gửi",
+      "markSentFailed": "Không thể đánh dấu hóa đơn là đã gửi",
+      "customerEmailRequired": "Cần có email khách hàng",
+      "generatePrivateLink": "Tạo link riêng tư",
+      "generateLinkSuccess": "Đã tạo link riêng tư",
+      "generateLinkFailed": "Không thể tạo link riêng tư",
+      "copyLink": "Sao chép link",
+      "copyLinkSuccess": "Đã sao chép link",
+      "copyLinkFailed": "Không thể sao chép link",
+      "regenerateLink": "Tạo lại link",
+      "regenerateLinkSuccess": "Đã tạo lại link riêng tư",
+      "regenerateLinkConfirmTitle": "Tạo lại link riêng tư?",
+      "regenerateLinkConfirmDescription": "Link cũ sẽ ngừng hoạt động ngay lập tức.",
+      "regenerateLinkConfirmAction": "Tạo lại",
+      "linkRegenerated": "Đã tạo lại liên kết",
+      "linkGenerationFailed": "Không thể tạo liên kết",
+      "viewInvoice": "Xem hóa đơn",
+      "emptyTitle": "Không có buổi học nào cần quyết toán",
+      "emptyDescription": "Không có buổi học nào đã xác nhận trong tháng được chọn mà chưa được xuất hóa đơn.",
+      "attendedSessionsTip": "Mẹo: Ở chế độ \"Trả sau\", bạn phải đánh dấu buổi học ĐÃ XONG và thực hiện điểm danh trước khi có thể quyết toán học phí.",
+      "regenerate": "Tạo lại hóa đơn",
+      "regenerateConfirm": "Bạn có chắc chắn muốn tạo lại hóa đơn không? Hành động này sẽ gỡ bỏ các hóa đơn nháp hiện có trong tháng này."
+    },
+    "settings": {
+      "title": "Cài đặt Nhóm lớp",
+      "description": "Cấu hình cách tạo hóa đơn lớp học cho workspace này.",
+      "billingStrategy": "Chiến lược thanh toán",
+      "monthStrategy": "Chiến lược tháng thanh toán",
+      "billingBasis": "Căn cứ thanh toán",
+      "save": "Lưu cài đặt",
+      "updated": "Đã cập nhật cài đặt nhóm lớp",
+      "updateFailed": "Cập nhật cài đặt nhóm lớp thất bại",
+      "placeholderStrategy": "Chọn chiến lược thanh toán",
+      "placeholderBasis": "Chọn căn cứ thanh toán",
+      "strategies": {
+        "prepaid": {
+          "label": "Hóa đơn cho tháng hiện tại (trả trước)",
+          "description": "Hóa đơn được tạo vào đầu tháng cho các buổi học đã lên lịch."
+        },
+        "arrears": {
+          "label": "Hóa đơn cho tháng trước (trả sau)",
+          "description": "Hóa đơn được tạo vào đầu tháng cho các buổi học đã tham gia."
+        }
+      },
+      "bases": {
+        "scheduled": {
+          "label": "Buổi học đã lên lịch",
+          "description": "Tính các buổi học đã lên lịch/đã xong trong tháng thanh toán."
+        },
+        "attended": {
+          "label": "Buổi học đã tham gia",
+          "description": "Tính điểm danh có thể tính phí trên các buổi học đã hoàn thành."
+        }
+      }
+    }
+  },
+  "purchasing": {
+    "settings": {
+      "title": "Cài đặt mua hàng",
+      "save": "Lưu cài đặt",
+      "defaultCurrency": "Tiền tệ mặc định",
+      "defaultPaymentTerms": "Điều khoản thanh toán mặc định",
+      "poNumberPrefix": "Tiền tố số PO",
+      "defaultApAccount": "Tài khoản phải trả mặc định",
+      "defaultExpenseAccount": "Tài khoản chi phí mặc định",
+      "defaultBankAccount": "Tài khoản ngân hàng mặc định",
+      "autoPostBill": "Tự động ghi sổ khi đăng hóa đơn",
+      "autoPostBillHelp": "Tự động tạo bút toán kế toán khi hóa đơn nhà cung cấp được đăng",
+      "autoPostPayment": "Tự động ghi sổ khi thanh toán",
+      "autoPostPaymentHelp": "Tự động tạo bút toán kế toán khi thanh toán được ghi lại",
+      "duplicateDetection": "Phát hiện hóa đơn trùng lặp",
+      "duplicateDetectionHelp": "Cảnh báo khi hóa đơn từ cùng nhà cung cấp và số tham chiếu đã tồn tại",
+      "approvalRequired": "Yêu cầu phê duyệt hóa đơn",
+      "approvalRequiredHelp": "Hóa đơn nhà cung cấp phải được phê duyệt trước khi có thể đăng"
+    },
+    "copilot": {
+      "title": "Trợ lý mua hàng",
+      "purchaseOrderDraft": "Bản nháp đơn mua hàng",
+      "vendorBillDraft": "Bản nháp hóa đơn nhà cung cấp",
+      "promptBill": "Trích xuất dữ liệu từ văn bản hoặc hình ảnh hóa đơn nhà cung cấp",
+      "promptBillLabel": "Trích xuất hóa đơn",
+      "promptPo": "Soạn nháp đơn mua hàng cho 50 laptop từ Dell",
+      "promptPoLabel": "Soạn PO",
+      "placeholder": "Hỏi trợ lý mua hàng bất cứ điều gì..."
+    }
+  },
+  "workspace": {
+    "create": "Tạo không gian làm việc"
+  },
+  "tenants": {
+    "title": "Tổ chức (Tenants)",
+    "description": "Quản lý quyền và cài đặt của tổ chức.",
+    "listTitle": "Danh sách tổ chức",
+    "addTenant": "Thêm tổ chức",
+    "noTenants": "Không tìm thấy tổ chức nào.",
+    "status": "Trạng thái",
+    "slug": "Slug",
+    "tenantId": "ID Tổ chức",
+    "actions": "Hành động",
+    "manage": "Quản lý",
+    "confirmDeactivate": "Bạn có chắc chắn muốn hủy kích hoạt tổ chức này không? Người dùng sẽ không thể đăng nhập được nữa.",
+    "confirmActivate": "Bạn có chắc chắn muốn kích hoạt tổ chức này không?"
+  }
+}

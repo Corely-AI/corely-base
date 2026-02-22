@@ -1,0 +1,118 @@
+import { z } from "zod";
+import { utcInstantSchema } from "../shared/local-date.schema";
+
+export const PartyRoleTypeSchema = z.enum([
+  "CUSTOMER",
+  "SUPPLIER",
+  "EMPLOYEE",
+  "CONTACT",
+  "STUDENT",
+  "GUARDIAN",
+]);
+export type PartyRoleType = z.infer<typeof PartyRoleTypeSchema>;
+
+export const PartyKindSchema = z.enum(["INDIVIDUAL", "ORGANIZATION"]);
+export type PartyKind = z.infer<typeof PartyKindSchema>;
+
+export const PartyRelationshipTypeSchema = z.enum(["WORKS_FOR", "SUBSIDIARY_OF", "PARTNER_OF"]);
+export type PartyRelationshipType = z.infer<typeof PartyRelationshipTypeSchema>;
+
+export const SocialPlatformSchema = z.enum([
+  "linkedin",
+  "facebook",
+  "instagram",
+  "x",
+  "github",
+  "tiktok",
+  "youtube",
+  "other",
+]);
+export type SocialPlatform = z.infer<typeof SocialPlatformSchema>;
+
+export const ContactPointTypeSchema = z.enum(["EMAIL", "PHONE", "SOCIAL"]);
+export type ContactPointType = z.infer<typeof ContactPointTypeSchema>;
+
+export const PartyLifecycleStatusSchema = z.enum(["LEAD", "ACTIVE", "PAUSED", "ARCHIVED"]);
+export type PartyLifecycleStatus = z.infer<typeof PartyLifecycleStatusSchema>;
+
+export const ContactPointSchema = z.discriminatedUnion("type", [
+  z.object({
+    type: z.literal("EMAIL"),
+    value: z.string(),
+    isPrimary: z.boolean(),
+  }),
+  z.object({
+    type: z.literal("PHONE"),
+    value: z.string(),
+    isPrimary: z.boolean(),
+  }),
+  z.object({
+    type: z.literal("SOCIAL"),
+    value: z.string().url(),
+    platform: SocialPlatformSchema,
+    label: z.string().optional(),
+    isPrimary: z.boolean(),
+  }),
+]);
+
+export const PartySocialContactPointSchema = z.object({
+  type: z.literal("SOCIAL"),
+  platform: SocialPlatformSchema,
+  url: z.string().url(),
+  label: z.string().optional(),
+  isPrimary: z.boolean().optional(),
+});
+export type PartySocialContactPoint = z.infer<typeof PartySocialContactPointSchema>;
+
+export const PartySocialLinksSchema = z.array(PartySocialContactPointSchema);
+
+export const PartyContactPointSchema = z.object({
+  type: ContactPointTypeSchema,
+  value: z.string(),
+  platform: SocialPlatformSchema.optional(),
+  label: z.string().optional(),
+  isPrimary: z.boolean(),
+});
+export type ContactPoint = z.infer<typeof ContactPointSchema>;
+
+export const AddressSchema = z.object({
+  line1: z.string(),
+  line2: z.string().optional(),
+  city: z.string().optional(),
+  postalCode: z.string().optional(),
+  country: z.string().optional(),
+});
+
+export type Address = z.infer<typeof AddressSchema>;
+
+export const PartyDtoSchema = z.object({
+  id: z.string(),
+  tenantId: z.string(),
+  // Core Identity
+  kind: PartyKindSchema.default("INDIVIDUAL"),
+  displayName: z.string(),
+  // Individual Fields
+  firstName: z.string().nullable().optional(),
+  lastName: z.string().nullable().optional(),
+  jobTitle: z.string().nullable().optional(),
+  department: z.string().nullable().optional(),
+  // Organization Fields
+  organizationName: z.string().nullable().optional(),
+  industry: z.string().nullable().optional(),
+  website: z.string().nullable().optional(),
+  // Common
+  roles: z.array(PartyRoleTypeSchema),
+  vatId: z.string().nullable(),
+  notes: z.string().nullable(),
+  tags: z.array(z.string()),
+  email: z.string().email().nullable().optional(), // primary email (derived from contactPoints)
+  phone: z.string().nullable().optional(), // primary phone (derived from contactPoints)
+  billingAddress: AddressSchema.nullable().optional(), // billing address (derived from addresses)
+  lifecycleStatus: PartyLifecycleStatusSchema,
+  archivedAt: utcInstantSchema.nullable(),
+  createdAt: utcInstantSchema,
+  updatedAt: utcInstantSchema,
+});
+
+export type PartyDto = z.infer<typeof PartyDtoSchema>;
+export type PartyDTO = PartyDto;
