@@ -11,6 +11,7 @@ import { TraceIdMiddleware } from "./shared/trace/trace-id.middleware";
 import { TraceIdService } from "./shared/trace/trace-id.service";
 import { RequestContextInterceptor } from "./shared/request-context";
 import { PublicWorkspacePathMiddleware, PublicWorkspaceResolver } from "./shared/public";
+import { AiCopilotModule } from "./modules/ai-copilot/ai-copilot.module";
 
 @Module({
   controllers: [AppController],
@@ -31,6 +32,7 @@ import { PublicWorkspacePathMiddleware, PublicWorkspaceResolver } from "./shared
     PlatformModule,
     PlatformEntitlementsModule,
     WorkspacesModule,
+    AiCopilotModule,
   ],
 })
 export class AppModule implements NestModule {

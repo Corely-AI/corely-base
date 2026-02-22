@@ -15,6 +15,7 @@
     "@corely/email": "workspace:*",
     "@corely/email-templates": "workspace:*",
     "@corely/kernel": "workspace:*",
+    "@corely/prompts": "workspace:*",
 
     "@corely/public-urls": "workspace:*",
     "@corely/storage": "workspace:*",
