@@ -24,9 +24,6 @@ model LegalEntity {
   // Relations
   tenant      Tenant      @relation(fields: [tenantId], references: [id], onDelete: Cascade)
   workspaces  Workspace[]
-  bankAccounts BankAccount[]
-  paymentMethods PaymentMethod[]
-  invoices    Invoice[]
 
   @@index([tenantId])
   @@index([tenantId, kind])
@@ -52,21 +49,12 @@ model Workspace {
   updatedAt             DateTime                  @updatedAt @db.Timestamptz(6)
   deletedAt             DateTime?                 @db.Timestamptz(6)
 
-  // JSON fields for workspace-specific settings
-  invoiceSettings Json? // WorkspaceInvoiceSettings: { prefix?, nextNumber?, defaultPaymentTermsDays? }
-
   // Relations
   tenant      Tenant                @relation(fields: [tenantId], references: [id], onDelete: Cascade)
   legalEntity LegalEntity           @relation(fields: [legalEntityId], references: [id], onDelete: Restrict)
   memberships WorkspaceMembership[]
   invites     WorkspaceInvite[]
   domains     WorkspaceDomain[]
-  registers   Register[]
-  shiftSessions ShiftSession[]
-  posSaleIdempotency PosSaleIdempotency[]
-  cashRegisters     CashRegister[]
-  cashEntries       CashEntry[]
-  cashDayCloses     CashDayClose[]
 
   @@unique([tenantId, name])
   @@index([tenantId])
@@ -162,8 +150,6 @@ enum WorkspaceInviteStatus {
 enum WorkspaceOnboardingStatus {
   NEW
   PROFILE
-  TAX
-  BANK
   DONE
   @@schema("platform")
 }

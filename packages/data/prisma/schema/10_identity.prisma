@@ -24,9 +24,6 @@ model Tenant {
   menuOverrides     TenantMenuOverride[]
   featureOverrides  TenantFeatureOverride[]
   seededRecordMeta  SeededRecordMeta[]
-  cashRegisters     CashRegister[]
-  cashEntries       CashEntry[]
-  cashDayCloses     CashDayClose[]
 
   @@index([createdAt])
   @@schema("identity")
@@ -42,7 +39,6 @@ model User {
   status       String   @default("ACTIVE") // ACTIVE, INACTIVE, DELETED
   createdAt    DateTime @default(now()) @db.Timestamptz(6)
   updatedAt    DateTime @updatedAt @db.Timestamptz(6)
-  partyId      String?
 
   // Relations
   memberships         Membership[]
@@ -53,7 +49,6 @@ model User {
 
   @@index([email])
   @@index([createdAt])
-  @@index([partyId])
   @@schema("identity")
 }
 

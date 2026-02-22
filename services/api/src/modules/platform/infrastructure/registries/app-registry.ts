@@ -4,6 +4,7 @@ import type { AppRegistryPort } from "../../application/ports/app-registry.port"
 import { coreAppManifest } from "../../core.manifest";
 import { platformAppManifest } from "../../platform.manifest";
 import { workspacesAppManifest } from "../../../workspaces/workspaces.manifest";
+import { todosAppManifest } from "../../../todos/todos.manifest";
 
 @Injectable()
 export class AppRegistry implements AppRegistryPort {
@@ -35,5 +36,6 @@ export class AppRegistry implements AppRegistryPort {
     this.register(coreAppManifest);
     this.register(platformAppManifest);
     this.register(workspacesAppManifest);
+    this.register(todosAppManifest);
   }
 }

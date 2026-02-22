@@ -5,12 +5,14 @@ import { WorkspaceOnboardingPage } from "../../modules/workspaces";
 import { RequireAuth } from "./require-auth";
 import { appSettingsRoutes } from "./app-settings-routes";
 import { CopilotPage } from "../../routes/copilot";
+import { todoRoutes } from "../../modules/todos/routes";
 
 export const appShellRoutes = (
   <Route element={<RequireAuth />}>
     <Route element={<AppShell />}>
       <Route path="/onboarding" element={<WorkspaceOnboardingPage />} />
       <Route path="/copilot" element={<CopilotPage />} />
+      {todoRoutes}
       {appSettingsRoutes}
     </Route>
   </Route>
