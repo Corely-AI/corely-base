@@ -103,7 +103,6 @@ export class UpgradeWorkspaceUseCase {
         taxId: updated!.legalEntity?.taxId,
         address: updated!.legalEntity?.address as any,
         bankAccount: updated!.legalEntity?.bankAccount as any,
-        invoiceSettings: updated!.invoiceSettings as any,
         onboardingStatus: updated!.onboardingStatus as any,
         onboardingCompletedAt: updated!.onboardingCompletedAt?.toISOString(),
         createdAt: updated!.createdAt.toISOString(),

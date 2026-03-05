@@ -40,7 +40,6 @@ export class ListWorkspacesUseCase {
         website: ws.legalEntity?.website,
         address: ws.legalEntity?.address as any,
         bankAccount: ws.legalEntity?.bankAccount as any,
-        invoiceSettings: ws.invoiceSettings as any,
         onboardingStatus: ws.onboardingStatus as any,
         onboardingCompletedAt: ws.onboardingCompletedAt?.toISOString(),
         createdAt: ws.createdAt.toISOString(),

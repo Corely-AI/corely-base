@@ -92,7 +92,6 @@ export class PrismaWorkspaceRepository implements WorkspaceRepositoryPort {
         publicEnabled: input.publicEnabled ?? false,
         publicModules: input.publicModules ?? null,
         onboardingStatus: (input.onboardingStatus || "NEW") as any,
-        invoiceSettings: input.invoiceSettings || null,
       },
     });
 
@@ -173,7 +172,6 @@ export class PrismaWorkspaceRepository implements WorkspaceRepositoryPort {
         publicModules: input.publicModules,
         onboardingStatus: input.onboardingStatus as any,
         onboardingCompletedAt: input.onboardingCompletedAt,
-        invoiceSettings: input.invoiceSettings,
       },
     });
 
@@ -343,7 +341,6 @@ export class PrismaWorkspaceRepository implements WorkspaceRepositoryPort {
       publicModules: (workspace.publicModules as Record<string, boolean> | null) ?? undefined,
       onboardingStatus: workspace.onboardingStatus,
       onboardingCompletedAt: workspace.onboardingCompletedAt || undefined,
-      invoiceSettings: workspace.invoiceSettings || undefined,
       createdAt: workspace.createdAt,
       updatedAt: workspace.updatedAt,
       deletedAt: workspace.deletedAt || undefined,

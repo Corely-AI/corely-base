@@ -69,7 +69,6 @@ export class CreateWorkspaceUseCase {
       publicEnabled: command.publicEnabled ?? false,
       publicModules: command.publicModules ?? null,
       onboardingStatus: "PROFILE",
-      invoiceSettings: command.invoiceSettings,
     });
 
     // Create owner membership for the creator
@@ -97,7 +96,6 @@ export class CreateWorkspaceUseCase {
         taxId: legalEntity.taxId,
         address: legalEntity.address as any,
         bankAccount: legalEntity.bankAccount as any,
-        invoiceSettings: workspace.invoiceSettings as any,
         onboardingStatus: workspace.onboardingStatus as any,
         onboardingCompletedAt: workspace.onboardingCompletedAt?.toISOString() || undefined,
         createdAt: workspace.createdAt.toISOString(),

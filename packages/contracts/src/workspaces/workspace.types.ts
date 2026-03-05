@@ -38,20 +38,6 @@ export const WorkspaceBankAccountSchema = z.object({
 });
 export type WorkspaceBankAccount = z.infer<typeof WorkspaceBankAccountSchema>;
 
-export const WorkspaceInvoiceSettingsSchema = z.object({
-  prefix: z.string().optional(),
-  nextNumber: z.number().int().positive().optional(),
-  defaultPaymentTermsDays: z.number().int().nonnegative().optional(),
-  reminderPolicy: z
-    .object({
-      startAfterDays: z.number().int().nonnegative().default(7),
-      maxReminders: z.number().int().nonnegative().default(3),
-      sendOnlyOnWeekdays: z.boolean().default(true),
-    })
-    .optional(),
-});
-export type WorkspaceInvoiceSettings = z.infer<typeof WorkspaceInvoiceSettingsSchema>;
-
 export const WorkspacePublicModulesSchema = z.record(z.boolean());
 export type WorkspacePublicModules = z.infer<typeof WorkspacePublicModulesSchema>;
 
@@ -73,7 +59,6 @@ export const WorkspaceProfileSchema = z.object({
   email: z.union([z.string().email(), z.literal("")]).optional(),
   website: z.union([z.string().url(), z.literal("")]).optional(),
   bankAccount: WorkspaceBankAccountSchema.optional(),
-  invoiceSettings: WorkspaceInvoiceSettingsSchema.optional(),
   publicEnabled: z.boolean().optional(),
   publicModules: WorkspacePublicModulesSchema.optional(),
 });

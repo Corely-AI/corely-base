@@ -127,9 +127,6 @@ export class UpdateWorkspaceUseCase {
     if (command.publicModules !== undefined) {
       workspaceUpdates.publicModules = command.publicModules;
     }
-    if (command.invoiceSettings !== undefined) {
-      workspaceUpdates.invoiceSettings = command.invoiceSettings;
-    }
 
     if (Object.keys(workspaceUpdates).length > 0) {
       await this.workspaceRepo.updateWorkspace(
@@ -164,7 +161,6 @@ export class UpdateWorkspaceUseCase {
         website: updated!.legalEntity?.website,
         address: updated!.legalEntity?.address as any,
         bankAccount: updated!.legalEntity?.bankAccount as any,
-        invoiceSettings: updated!.invoiceSettings as any,
         onboardingStatus: updated!.onboardingStatus as any,
         onboardingCompletedAt: updated!.onboardingCompletedAt?.toISOString(),
         createdAt: updated!.createdAt.toISOString(),

@@ -6,15 +6,42 @@ import type { IdempotencyStoragePort, StoredResponse } from "../../ports/idempot
 export class PrismaIdempotencyStorageAdapter implements IdempotencyStoragePort {
   constructor(@Inject(PrismaService) private readonly prisma: PrismaService) {}
 
+  private get idempotencyDelegate():
+    | {
+        findUnique: (...args: any[]) => Promise<any>;
+        findFirst: (...args: any[]) => Promise<any>;
+        upsert: (...args: any[]) => Promise<any>;
+        update: (...args: any[]) => Promise<any>;
+        create: (...args: any[]) => Promise<any>;
+      }
+    | null {
+    const delegate = (this.prisma as unknown as { idempotencyKey?: unknown }).idempotencyKey;
+    if (!delegate || typeof delegate !== "object") {
+      return null;
+    }
+    return delegate as {
+      findUnique: (...args: any[]) => Promise<any>;
+      findFirst: (...args: any[]) => Promise<any>;
+      upsert: (...args: any[]) => Promise<any>;
+      update: (...args: any[]) => Promise<any>;
+      create: (...args: any[]) => Promise<any>;
+    };
+  }
+
   async get(
     actionKey: string,
     tenantId: string | null,
     key: string
   ): Promise<StoredResponse | null> {
+    const delegate = this.idempotencyDelegate;
+    if (!delegate) {
+      return null;
+    }
+
     // When tenantId is null, we can't use findUnique with the compound key
     // so we use findFirst instead
     const existing = tenantId
-      ? await this.prisma.idempotencyKey.findUnique({
+      ? await delegate.findUnique({
           where: {
             tenantId_actionKey_key: {
               tenantId,
@@ -23,7 +50,7 @@ export class PrismaIdempotencyStorageAdapter implements IdempotencyStoragePort {
             },
           },
         })
-      : await this.prisma.idempotencyKey.findFirst({
+      : await delegate.findFirst({
           where: {
             tenantId: null,
             actionKey,
@@ -46,10 +73,15 @@ export class PrismaIdempotencyStorageAdapter implements IdempotencyStoragePort {
     key: string,
     response: StoredResponse
   ): Promise<void> {
+    const delegate = this.idempotencyDelegate;
+    if (!delegate) {
+      return;
+    }
+
     // When tenantId is null, we can't use upsert with the compound key
     // so we need to handle it differently
     if (tenantId) {
-      await this.prisma.idempotencyKey.upsert({
+      await delegate.upsert({
         where: {
           tenantId_actionKey_key: {
             tenantId,
@@ -71,7 +103,7 @@ export class PrismaIdempotencyStorageAdapter implements IdempotencyStoragePort {
       });
     } else {
       // For null tenantId, check if it exists first, then create or update
-      const existing = await this.prisma.idempotencyKey.findFirst({
+      const existing = await delegate.findFirst({
         where: {
           tenantId: null,
           actionKey,
@@ -80,7 +112,7 @@ export class PrismaIdempotencyStorageAdapter implements IdempotencyStoragePort {
       });
 
       if (existing) {
-        await this.prisma.idempotencyKey.update({
+        await delegate.update({
           where: { id: existing.id },
           data: {
             responseJson: JSON.stringify(response.body ?? null),
@@ -88,7 +120,7 @@ export class PrismaIdempotencyStorageAdapter implements IdempotencyStoragePort {
           },
         });
       } else {
-        await this.prisma.idempotencyKey.create({
+        await delegate.create({
           data: {
             tenantId: null,
             actionKey,

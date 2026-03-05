@@ -52,7 +52,6 @@ export class GetWorkspaceUseCase {
         taxId: workspace.legalEntity?.taxId,
         address: workspace.legalEntity?.address as any,
         bankAccount: workspace.legalEntity?.bankAccount as any,
-        invoiceSettings: workspace.invoiceSettings as any,
         onboardingStatus: workspace.onboardingStatus as any,
         onboardingCompletedAt: workspace.onboardingCompletedAt?.toISOString(),
         createdAt: workspace.createdAt.toISOString(),

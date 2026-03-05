@@ -17,12 +17,6 @@ export interface WorkspaceBankAccount {
   routingNumber?: string;
 }
 
-export interface WorkspaceInvoiceSettings {
-  prefix?: string;
-  nextNumber?: number;
-  defaultPaymentTermsDays?: number;
-}
-
 export interface LegalEntity {
   id: string;
   tenantId: string;
@@ -51,7 +45,6 @@ export interface Workspace {
   publicModules?: Record<string, boolean>;
   onboardingStatus: WorkspaceOnboardingStatus;
   onboardingCompletedAt?: Date;
-  invoiceSettings?: WorkspaceInvoiceSettings;
   createdAt: Date;
   updatedAt: Date;
   deletedAt?: Date;

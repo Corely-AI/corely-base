@@ -30,7 +30,6 @@ export interface CreateWorkspaceInput {
   publicEnabled?: boolean;
   publicModules?: Record<string, boolean> | null;
   onboardingStatus?: string;
-  invoiceSettings?: any;
 }
 
 export interface UpdateWorkspaceInput {
@@ -40,7 +39,6 @@ export interface UpdateWorkspaceInput {
   publicModules?: Record<string, boolean> | null;
   onboardingStatus?: string;
   onboardingCompletedAt?: Date;
-  invoiceSettings?: any;
 }
 
 export interface UpdateLegalEntityInput {
