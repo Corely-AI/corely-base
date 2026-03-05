@@ -11,7 +11,7 @@ import {
   UseGuards,
   UseInterceptors,
 } from "@nestjs/common";
-import { Request } from "express";
+import type { Request } from "express";
 import {
   CreateTodoInputSchema,
   UpdateTodoInputSchema,

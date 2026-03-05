@@ -20,7 +20,10 @@ import {
 import { AuthGuard } from "./auth.guard";
 import { RbacGuard, RequirePermission } from "./rbac.guard";
 import { CurrentTenantId, CurrentUserId } from "./current-user.decorator";
-import { RequireWorkspaceCapability, WorkspaceCapabilityGuard } from "../../../platform";
+import {
+  RequireWorkspaceCapability,
+  WorkspaceCapabilityGuard,
+} from "../../../platform/guards/workspace-capability.guard";
 import { ListRolesUseCase } from "../../application/use-cases/list-roles.usecase";
 import { CreateRoleUseCase } from "../../application/use-cases/create-role.usecase";
 import { UpdateRoleUseCase } from "../../application/use-cases/update-role.usecase";

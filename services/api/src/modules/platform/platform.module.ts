@@ -1,5 +1,6 @@
 import { Module, OnModuleInit, forwardRef } from "@nestjs/common";
 import { DataModule } from "@corely/data";
+import { AUDIT_PORT } from "@corely/kernel";
 import { KernelModule } from "../../shared/kernel/kernel.module";
 import { IdentityModule } from "../identity/identity.module";
 import { WorkspacesModule } from "../workspaces/workspaces.module";
@@ -49,6 +50,7 @@ import { TENANT_APP_INSTALL_REPOSITORY_TOKEN } from "./application/ports/tenant-
 import { TENANT_TEMPLATE_INSTALL_REPOSITORY_TOKEN } from "./application/ports/tenant-template-install-repository.port";
 import { TENANT_MENU_OVERRIDE_REPOSITORY_TOKEN } from "./application/ports/tenant-menu-override-repository.port";
 import { SEEDED_RECORD_META_REPOSITORY_TOKEN } from "./application/ports/seeded-record-meta-repository.port";
+import { PrismaAuditAdapter } from "../../shared/infrastructure/persistence/prisma-audit.adapter";
 
 import { PlatformEntitlementsModule } from "../platform-entitlements/platform-entitlements.module";
 
@@ -100,6 +102,11 @@ import { PlatformEntitlementsModule } from "../platform-entitlements/platform-en
     {
       provide: SEEDED_RECORD_META_REPOSITORY_TOKEN,
       useExisting: PrismaSeededRecordMetaRepositoryAdapter,
+    },
+    PrismaAuditAdapter,
+    {
+      provide: AUDIT_PORT,
+      useExisting: PrismaAuditAdapter,
     },
 
     // Application Services

@@ -1,6 +1,6 @@
 import { Inject, Injectable, NotFoundException } from "@nestjs/common";
 import { UpdateTodoInput, TodoDto } from "@corely/contracts";
-import { TODO_REPOSITORY_PORT, TodoRepositoryPort } from "../ports/todo-repository.port";
+import { TODO_REPOSITORY_PORT, type TodoRepositoryPort } from "../ports/todo-repository.port";
 import { Todo } from "../../domain/todo.entity";
 
 @Injectable()

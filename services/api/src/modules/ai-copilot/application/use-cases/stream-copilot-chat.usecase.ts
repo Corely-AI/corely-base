@@ -2,7 +2,7 @@ import { nanoid } from "nanoid";
 import { createHash } from "crypto";
 import { SpanStatusCode } from "@opentelemetry/api";
 import { createUIMessageStream, pipeUIMessageStreamToResponse } from "ai";
-import { type Response } from "express";
+import type { Response } from "express";
 
 import { type CopilotUIMessage } from "../../domain/types/ui-message";
 import { type AgentRunRepositoryPort } from "../ports/agent-run-repository.port";

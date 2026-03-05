@@ -1,5 +1,5 @@
 import { Inject, Injectable, NotFoundException } from "@nestjs/common";
-import { TODO_REPOSITORY_PORT, TodoRepositoryPort } from "../ports/todo-repository.port";
+import { TODO_REPOSITORY_PORT, type TodoRepositoryPort } from "../ports/todo-repository.port";
 
 @Injectable()
 export class DeleteTodoUseCase {
