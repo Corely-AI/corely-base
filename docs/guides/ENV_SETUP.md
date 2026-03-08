@@ -81,6 +81,53 @@ The e2e environment uses different ports to avoid conflicts:
 
 ## Required Environment Variables
 
+### Database Targets
+
+The app supports both plain Postgres and Supabase-hosted Postgres.
+All application tables now live in the `public` schema.
+
+- `DATABASE_URL`: runtime database connection used by the app
+- `DIRECT_DATABASE_URL`: optional direct/admin connection used by Prisma CLI for migrate, introspection, and baselining
+
+Examples:
+
+```bash
+# Local Postgres
+DATABASE_URL=postgresql://corely:corely@localhost:5434/corely?schema=public
+
+# Supabase runtime
+DATABASE_URL=postgres://postgres.[PROJECT_REF]:[PASSWORD]@aws-0-[REGION].pooler.supabase.com:5432/postgres?sslmode=require
+
+# Supabase Prisma CLI / admin
+DIRECT_DATABASE_URL=postgresql://postgres:[PASSWORD]@db.[PROJECT_REF].supabase.co:5432/postgres?sslmode=require
+```
+
+### Vercel API Deployment
+
+When deploying the NestJS API to Vercel:
+
+- set the project Root Directory to `services/api`
+- use the `NestJS` framework preset
+- provide `DATABASE_URL` in Vercel environment variables
+- keep `DIRECT_DATABASE_URL` for Prisma CLI and admin workflows you run outside Vercel
+
+For this monorepo, the API project must be allowed to read workspace packages outside the root directory.
+If your Vercel project was created with older defaults, enable source access outside the root directory in the project settings.
+
+### Vercel Frontend Deployment
+
+When deploying the Vite frontend to Vercel:
+
+- set the project Root Directory to `apps/web`
+- use the `Vite` framework preset
+- use `dist` as the output directory
+- provide the required `VITE_*` environment variables
+
+Deep-link refreshes are supported by the SPA rewrite in `apps/web/vercel.json`, which rewrites unmatched paths to `index.html`.
+
+For this monorepo, the frontend project must be allowed to read workspace packages outside the root directory.
+If your Vercel project was created with older defaults, enable source access outside the root directory in the project settings.
+
 ### Development (.env.dev)
 
 **Required for basic functionality:**

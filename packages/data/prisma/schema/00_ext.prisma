@@ -22,7 +22,6 @@ model ExtKv {
 
   @@unique([tenantId, moduleId, scope, key])
   @@index([tenantId, moduleId])
-  @@schema("ext")
 }
 
 // Entity Attributes
@@ -41,7 +40,6 @@ model ExtEntityAttr {
   @@unique([tenantId, moduleId, entityType, entityId, attrKey])
   @@index([tenantId, entityType, entityId])
   @@index([tenantId, moduleId])
-  @@schema("ext")
 }
 
 // Entity Links
@@ -62,5 +60,4 @@ model ExtEntityLink {
   @@index([tenantId, fromEntityType, fromEntityId])
   @@index([tenantId, toEntityType, toEntityId])
   @@index([tenantId, moduleId, linkType])
-  @@schema("ext")
 }

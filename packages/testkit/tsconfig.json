@@ -1,0 +1,29 @@
+{
+  "extends": "@corely/tsconfig/node.json",
+  "compilerOptions": {
+    "strict": false,
+    "exactOptionalPropertyTypes": false,
+    "skipLibCheck": true,
+    "paths": {
+      "@corely/testkit": ["./src/index.ts"],
+      "@corely/testkit/*": ["./src/*"],
+      "@corely/data": ["../data/src/index.ts"],
+      "@corely/data/*": ["../data/src/*"],
+      "@corely/contracts": ["../contracts/src/index.ts"],
+      "@corely/contracts/*": ["../contracts/src/*"],
+      "@corely/domain": ["../domain/src/index.ts"],
+      "@corely/domain/*": ["../domain/src/*"],
+      "@corely/kernel": ["../kernel/src/index.ts"],
+      "@corely/kernel/*": ["../kernel/src/*"],
+      "@corely/storage": ["../storage/src/index.ts"],
+      "@corely/storage/*": ["../storage/src/*"],
+      "@corely/public-urls": ["../public-urls/src/index.ts"],
+      "@corely/public-urls/*": ["../public-urls/src/*"],
+      "@corely/config": ["../config/src/index.ts"],
+      "@corely/config/*": ["../config/src/*"],
+      "@/*": ["../../services/api/src/*"],
+      "@shared/*": ["../../services/api/src/shared/*"]
+    }
+  },
+  "include": ["src"]
+}

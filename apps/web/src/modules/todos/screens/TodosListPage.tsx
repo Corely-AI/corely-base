@@ -87,13 +87,19 @@ export const TodosListPage: React.FC = () => {
         </TableHeader>
         <TableBody>
           {data?.items?.map((todo) => (
-            <TableRow key={todo.id}>
+            <TableRow key={todo.id} data-testid={`todo-row-${todo.id}`}>
               <TableCell>
                 <Button
                   variant="ghost"
                   size="icon"
                   onClick={() => handleToggle(todo)}
                   disabled={completeMutation.isPending || reopenMutation.isPending}
+                  aria-label={
+                    todo.status === "done"
+                      ? `Reopen ${todo.title}`
+                      : `Mark ${todo.title} as complete`
+                  }
+                  data-testid={`todo-toggle-${todo.id}`}
                 >
                   {todo.status === "done" ? (
                     <CheckCircle2 className="h-5 w-5 text-green-600" />
@@ -126,7 +132,13 @@ export const TodosListPage: React.FC = () => {
               </TableCell>
               <TableCell className="text-right">
                 <div className="flex justify-end gap-1">
-                  <Button variant="ghost" size="icon" onClick={() => navigate(`/todos/${todo.id}/edit`)}>
+                  <Button
+                    variant="ghost"
+                    size="icon"
+                    onClick={() => navigate(`/todos/${todo.id}/edit`)}
+                    aria-label={`Edit ${todo.title}`}
+                    data-testid={`todo-edit-${todo.id}`}
+                  >
                     <Edit2 className="h-4 w-4" />
                   </Button>
                   <Button
@@ -134,6 +146,8 @@ export const TodosListPage: React.FC = () => {
                     size="icon"
                     onClick={() => deleteMutation.mutate(todo.id)}
                     className="text-destructive hover:text-destructive"
+                    aria-label={`Delete ${todo.title}`}
+                    data-testid={`todo-delete-${todo.id}`}
                   >
                     <Trash2 className="h-4 w-4" />
                   </Button>
@@ -143,7 +157,11 @@ export const TodosListPage: React.FC = () => {
           ))}
           {!isLoading && !data?.items?.length && (
             <TableRow>
-              <TableCell colSpan={5} className="py-20 text-center text-muted-foreground">
+              <TableCell
+                colSpan={5}
+                className="py-20 text-center text-muted-foreground"
+                data-testid="todos-empty-state"
+              >
                 <div className="flex flex-col items-center gap-2">
                   <AlertCircle className="h-10 w-10 text-muted-foreground/50" />
                   <p>No tasks found. Create one to get started!</p>

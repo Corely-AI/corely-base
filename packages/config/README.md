@@ -40,6 +40,7 @@ export class SomeService {
 
   doSomething() {
     const dbUrl = this.envService.get("DATABASE_URL");
+    const directDbUrl = this.envService.get("DIRECT_DATABASE_URL");
     const isDev = this.envService.isDevelopment();
     // All environment variables are type-safe and validated
   }
@@ -56,6 +57,7 @@ const env = loadEnv();
 const validatedEnv = validateEnv(env);
 
 console.log(validatedEnv.DATABASE_URL);
+console.log(validatedEnv.DIRECT_DATABASE_URL);
 console.log(validatedEnv.NODE_ENV);
 ```
 
@@ -82,7 +84,8 @@ Key variables include:
 
 - `NODE_ENV`: Environment name (development, production, test)
 - `PORT`: Server port
-- `DATABASE_URL`: PostgreSQL connection string
+- `DATABASE_URL`: Runtime PostgreSQL connection string
+- `DIRECT_DATABASE_URL`: Optional direct/admin PostgreSQL connection string for Prisma CLI
 - `JWT_SECRET`: JWT signing secret
 - And more...
 
@@ -141,6 +144,7 @@ function validateEnv(env: Record<string, unknown>): Env;
 NODE_ENV=development
 PORT=3000
 DATABASE_URL=postgresql://...
+DIRECT_DATABASE_URL=postgresql://...
 JWT_SECRET=your-secret
 ```
 
@@ -159,7 +163,7 @@ Environment variables are automatically loaded from .env files.
 
 ```bash
 gcloud run services update api \
-  --set-env-vars="NODE_ENV=production,DATABASE_URL=..." \
+  --set-env-vars="NODE_ENV=production,DATABASE_URL=...,DIRECT_DATABASE_URL=..." \
   --region=...
 ```
 

@@ -6,7 +6,6 @@ enum CustomFieldType {
   SELECT
   MULTI_SELECT
   MONEY
-  @@schema("platform")
 }
 
 model CustomFieldDefinition {
@@ -28,7 +27,6 @@ model CustomFieldDefinition {
 
   @@unique([tenantId, entityType, key])
   @@index([tenantId, entityType])
-  @@schema("platform")
 }
 
 model CustomFieldIndex {
@@ -52,7 +50,6 @@ model CustomFieldIndex {
   @@index([tenantId, entityType, valueNumber])
   @@index([tenantId, entityType, valueDate])
   @@index([tenantId, entityType, valueBool])
-  @@schema("platform")
 }
 
 model EntityLayout {
@@ -64,7 +61,6 @@ model EntityLayout {
   updatedAt  DateTime @updatedAt
 
   @@unique([tenantId, entityType])
-  @@schema("platform")
 }
 
 model DimensionType {
@@ -86,7 +82,6 @@ model DimensionType {
 
   @@unique([tenantId, code])
   @@index([tenantId, isActive, sortOrder])
-  @@schema("platform")
 }
 
 model DimensionValue {
@@ -105,7 +100,6 @@ model DimensionValue {
 
   @@unique([tenantId, typeId, code])
   @@index([tenantId, typeId, isActive, sortOrder])
-  @@schema("platform")
 }
 
 model EntityDimension {
@@ -123,5 +117,4 @@ model EntityDimension {
   @@unique([tenantId, entityType, entityId, typeId, valueId])
   @@index([tenantId, entityType, entityId])
   @@index([tenantId, entityType, typeId, valueId])
-  @@schema("platform")
 }

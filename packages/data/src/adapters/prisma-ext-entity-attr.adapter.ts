@@ -13,7 +13,7 @@ import type {
 /**
  * Prisma adapter for ExtEntityAttr (Entity Attributes)
  *
- * Implements the ExtEntityAttrPort interface using Prisma to access the ext.entity_attr table.
+ * Implements the ExtEntityAttrPort interface using Prisma to access the ExtEntityAttr table.
  * Provides module-scoped custom attributes on core entities without schema changes.
  *
  * See: docs/architecture/DATABASE_PERSISTENCE_STRATEGY.md

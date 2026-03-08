@@ -26,7 +26,6 @@ model Tenant {
   seededRecordMeta  SeededRecordMeta[]
 
   @@index([createdAt])
-  @@schema("identity")
 }
 
 // === USERS ===
@@ -51,7 +50,6 @@ model User {
   @@index([email])
   @@index([createdAt])
   @@index([partyId])
-  @@schema("identity")
 }
 
 // === MULTI-TENANCY MEMBERSHIP ===
@@ -59,7 +57,6 @@ model User {
 enum RoleScope {
   HOST
   TENANT
-  @@schema("identity")
 }
 
 model Membership {
@@ -79,7 +76,6 @@ model Membership {
   @@index([userId])
   @@index([roleId])
   @@index([tenantId, createdAt])
-  @@schema("identity")
 }
 
 // === RBAC ===
@@ -105,7 +101,6 @@ model Role {
   @@unique([tenantId, name])
   @@index([tenantId])
   @@index([tenantId, systemKey])
-  @@schema("identity")
 }
 
 model Permission {
@@ -118,13 +113,11 @@ model Permission {
   rolePermissions RolePermission[]
 
   @@index([key])
-  @@schema("identity")
 }
 
 enum PermissionEffect {
   ALLOW
   DENY
-  @@schema("identity")
 }
 
 model RolePermission {
@@ -139,7 +132,6 @@ model RolePermission {
   @@unique([roleId, permissionId])
   @@index([roleId])
   @@index([permissionId])
-  @@schema("identity")
 }
 
 model RolePermissionGrant {
@@ -159,7 +151,6 @@ model RolePermissionGrant {
   @@unique([tenantId, roleId, permissionKey])
   @@index([tenantId, roleId])
   @@index([permissionKey])
-  @@schema("identity")
 }
 
 // === SESSIONS / TOKENS ===
@@ -181,7 +172,6 @@ model RefreshToken {
   @@index([tenantId])
   @@index([userId, expiresAt])
   @@index([tokenHash])
-  @@schema("identity")
 }
 
 model PasswordResetToken {
@@ -197,7 +187,6 @@ model PasswordResetToken {
 
   @@index([userId, createdAt])
   @@index([tokenHash])
-  @@schema("identity")
 }
 
 // === PORTAL OTP ===
@@ -219,7 +208,6 @@ model PortalOtpCode {
   @@index([tenantId, workspaceId, emailNormalized])
   @@index([tenantId, workspaceId, emailNormalized, expiresAt])
   @@index([expiresAt])
-  @@schema("identity")
 }
 
 model PortalSession {
@@ -239,7 +227,6 @@ model PortalSession {
   @@index([tenantId, workspaceId, userId])
   @@index([refreshTokenHash])
   @@index([expiresAt])
-  @@schema("identity")
 }
 
 // === API KEYS ===
@@ -258,5 +245,4 @@ model ApiKey {
   @@unique([tenantId, name])
   @@index([tenantId])
   @@index([keyHash])
-  @@schema("identity")
 }

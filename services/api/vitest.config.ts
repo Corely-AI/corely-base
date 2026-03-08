@@ -66,7 +66,6 @@ export default defineConfig({
       "@corely/storage": path.resolve(__dirname, "../..", "packages/storage/src"),
       "@corely/public-urls": path.resolve(__dirname, "../..", "packages/public-urls/src"),
       "@corely/testkit": path.resolve(__dirname, "../..", "packages/testkit/src"),
-      "@corely/data": path.resolve(__dirname, "../..", "packages/data/src"),
     },
   },
 });

@@ -41,6 +41,7 @@
     "@types/cookie-parser": "^1.4.10",
     "ai": "catalog:",
     "bcrypt": "catalog:",
+    "bcryptjs": "catalog:",
     "bullmq": "catalog:",
     "class-validator": "catalog:",
     "cookie-parser": "^1.4.7",

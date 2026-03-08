@@ -14,5 +14,4 @@ model Todo {
   @@index([workspaceId])
   @@index([tenantId, status])
   @@map("todos")
-  @@schema("public")
 }

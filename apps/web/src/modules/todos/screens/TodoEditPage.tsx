@@ -109,7 +109,11 @@ export const TodoEditPage: React.FC = () => {
               <div className="space-y-2">
                 <Label htmlFor="priority">Priority</Label>
                 <Select name="priority" defaultValue={todo?.priority || "medium"}>
-                  <SelectTrigger>
+                  <SelectTrigger
+                    id="priority"
+                    aria-label="Priority"
+                    data-testid="todo-priority-trigger"
+                  >
                     <SelectValue />
                   </SelectTrigger>
                   <SelectContent>
@@ -135,7 +139,11 @@ export const TodoEditPage: React.FC = () => {
               <div className="space-y-2">
                 <Label htmlFor="status">Status</Label>
                 <Select name="status" defaultValue={todo?.status}>
-                  <SelectTrigger>
+                  <SelectTrigger
+                    id="status"
+                    aria-label="Status"
+                    data-testid="todo-status-trigger"
+                  >
                     <SelectValue />
                   </SelectTrigger>
                   <SelectContent>

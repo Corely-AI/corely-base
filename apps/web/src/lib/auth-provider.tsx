@@ -3,9 +3,12 @@ import { useQueryClient } from "@tanstack/react-query";
 import {
   authClient,
   type CurrentUserResponse,
+  type RequestEmailCodeData,
+  type RequestEmailCodeResponse,
   type SignUpData,
   type SignInData,
   type AuthResponse,
+  type VerifyEmailCodeData,
 } from "./auth-client";
 import { setActiveWorkspaceId } from "@/shared/workspaces/workspace-store";
 import { setPublicWorkspaceSlug } from "@/shared/public-workspace";
@@ -17,6 +20,8 @@ interface AuthContextType {
   isAuthenticated: boolean;
   signup: (data: SignUpData) => Promise<AuthResponse>;
   signin: (data: SignInData) => Promise<AuthResponse>;
+  requestEmailCode: (data: RequestEmailCodeData) => Promise<RequestEmailCodeResponse>;
+  verifyEmailCode: (data: VerifyEmailCodeData) => Promise<AuthResponse>;
   logout: () => Promise<void>;
   switchTenant: (tenantId: string | null) => Promise<AuthResponse>;
   refresh: () => Promise<void>;
@@ -101,6 +106,36 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
     }
   };
 
+  const requestEmailCode = async (
+    data: RequestEmailCodeData
+  ): Promise<RequestEmailCodeResponse> => {
+    try {
+      setError(null);
+      return await authClient.requestEmailCode(data);
+    } catch (err) {
+      const message = err instanceof Error ? err.message : "Request code failed";
+      setError(message);
+      throw err;
+    }
+  };
+
+  const verifyEmailCode = async (data: VerifyEmailCodeData): Promise<AuthResponse> => {
+    try {
+      setError(null);
+      const result = await authClient.verifyEmailCode(data);
+      const currentUser = await authClient.getCurrentUser();
+      const workspaceId =
+        currentUser.activeWorkspaceId ?? currentUser.activeTenantId ?? data.tenantId ?? null;
+      setActiveWorkspaceId(workspaceId);
+      setUser(currentUser);
+      return result;
+    } catch (err) {
+      const message = err instanceof Error ? err.message : "Verify code failed";
+      setError(message);
+      throw err;
+    }
+  };
+
   const logout = async (): Promise<void> => {
     let logoutError: unknown;
     try {
@@ -160,6 +195,8 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
     isAuthenticated: !!user,
     signup,
     signin,
+    requestEmailCode,
+    verifyEmailCode,
     logout,
     switchTenant,
     refresh,

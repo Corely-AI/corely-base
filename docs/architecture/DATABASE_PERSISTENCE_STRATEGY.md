@@ -1,8 +1,10 @@
 # Corely Database Persistence Strategy
 
-**Version:** 2.1 - Implemented  
+**Version:** 2.1 - Historical  
 **Date:** 2026-02-01  
-**Status:** Active
+**Status:** Archived
+
+> Historical note: the current implementation no longer uses custom PostgreSQL schemas. All Prisma-managed tables and enums now live in the `public` schema for both plain Postgres and Supabase targets. The multi-schema design below is retained for reference only and should not be used for new work.
 
 ---
 

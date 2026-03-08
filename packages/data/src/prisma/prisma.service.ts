@@ -1,6 +1,7 @@
 import { Injectable, Logger, OnModuleInit, OnModuleDestroy } from "@nestjs/common";
 import { PrismaClient } from "@prisma/client";
 import { PrismaPg } from "@prisma/adapter-pg";
+import { attachDatabasePool } from "@vercel/functions";
 import { Pool } from "pg";
 
 /**
@@ -32,6 +33,8 @@ export class PrismaService extends PrismaClient implements OnModuleInit, OnModul
       connectionString: url,
       connectionTimeoutMillis: connectTimeoutMs,
     });
+    // Let Vercel drain pooled connections before suspending the function instance.
+    attachDatabasePool(pool);
 
     const adapter = new PrismaPg(pool);
 

@@ -19,7 +19,6 @@ model AgentRun {
   @@index([tenantId, createdAt])
   @@index([tenantId, createdByUserId, lastMessageAt(sort: Desc)])
   @@index([tenantId, createdByUserId, createdAt(sort: Desc)])
-  @@schema("platform")
 }
 
 model Message {
@@ -36,7 +35,6 @@ model Message {
 
   @@index([tenantId, runId, createdAt])
   @@index([tenantId, createdAt(sort: Desc)])
-  @@schema("platform")
 }
 
 model ToolExecution {
@@ -56,5 +54,4 @@ model ToolExecution {
   run AgentRun @relation(fields: [runId], references: [id], onDelete: Cascade)
 
   @@unique([tenantId, runId, toolCallId])
-  @@schema("platform")
 }

@@ -6,6 +6,7 @@ This folder contains maintenance scripts for the API. All scripts run in Node/TS
 
 - `pnpm` installed
 - `DATABASE_URL` set in your environment or `.env` at repo root
+- Optional: `DIRECT_DATABASE_URL` for Prisma CLI migrate/introspection workflows
 
 ### Load `.env` (recommended)
 
@@ -59,6 +60,15 @@ Load `.env` or export `DATABASE_URL` before running:
 
 ```bash
 export DATABASE_URL="postgresql://user:pass@host:5432/db"
+```
+
+### Prisma CLI on Supabase
+
+For `prisma migrate`, `prisma db pull`, and similar commands against Supabase, set a direct admin URL as well:
+
+```bash
+export DATABASE_URL="postgres://postgres.[PROJECT_REF]:[PASSWORD]@aws-0-[REGION].pooler.supabase.com:5432/postgres?sslmode=require"
+export DIRECT_DATABASE_URL="postgresql://postgres:[PASSWORD]@db.[PROJECT_REF].supabase.co:5432/postgres?sslmode=require"
 ```
 
 ### ESM errors (`require is not defined`)

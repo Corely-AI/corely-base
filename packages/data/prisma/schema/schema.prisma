@@ -5,10 +5,8 @@ generator client {
   provider = "prisma-client-js"
   // Ensure Prisma ships engines for local dev and alpine arm64 builds
   binaryTargets = ["native", "linux-musl-openssl-3.0.x", "linux-musl"]
-  previewFeatures = ["prismaSchemaFolder"]
 }
 
 datasource db {
   provider = "postgresql"
-  schemas  = ["public", "identity", "platform", "ext", "workflow"]
 }

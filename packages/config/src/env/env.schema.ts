@@ -16,6 +16,10 @@ export const envSchema = z.object({
   // POSTGRES DATABASE
   // ============================================================================
   DATABASE_URL: z.string().url("DATABASE_URL must be a valid PostgreSQL connection string"),
+  DIRECT_DATABASE_URL: z
+    .string()
+    .url("DIRECT_DATABASE_URL must be a valid PostgreSQL connection string")
+    .optional(),
 
   // ============================================================================
   // REDIS CACHE & QUEUE
@@ -218,6 +222,7 @@ export type Env = z.infer<typeof envSchema>;
  */
 export const SECRET_ENV_KEYS: ReadonlySet<keyof Env> = new Set([
   "DATABASE_URL",
+  "DIRECT_DATABASE_URL",
   "REDIS_URL",
   "OPENAI_API_KEY",
   "ANTHROPIC_API_KEY",

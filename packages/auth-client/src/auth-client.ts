@@ -15,6 +15,28 @@ export interface SignInData {
   workspaceId?: string;
 }
 
+export type EmailCodeMode = "login" | "signup";
+
+export interface RequestEmailCodeData {
+  email: string;
+  mode: EmailCodeMode;
+  tenantId?: string | null;
+}
+
+export interface RequestEmailCodeResponse {
+  message: string;
+  status: "code_sent" | "cooldown" | "needs_signup" | "needs_login" | "workspace_access_required";
+  canProceed: boolean;
+  nextAction?: "enter_code" | "signup" | "login";
+  cooldownSeconds?: number;
+}
+
+export interface VerifyEmailCodeData extends RequestEmailCodeData {
+  code: string;
+  tenantName?: string;
+  userName?: string;
+}
+
 export interface AuthResponse {
   accessToken: string;
   refreshToken: string;
@@ -23,12 +45,14 @@ export interface AuthResponse {
   tenantId?: string | null;
   tenantName?: string;
   workspaceId?: string;
+  membershipId?: string;
 }
 
 export interface CurrentUserResponse {
   userId: string;
   email: string;
   name: string | null;
+  isSuperAdmin: boolean;
   activeTenantId?: string | null;
   activeWorkspaceId?: string;
   memberships: Array<{
@@ -138,6 +162,35 @@ export class AuthClient {
       return result;
     } catch (error) {
       // Normalize error to extract proper message from ProblemDetails
+      throw normalizeError(error);
+    }
+  }
+
+  async requestEmailCode(data: RequestEmailCodeData): Promise<RequestEmailCodeResponse> {
+    try {
+      return await request<RequestEmailCodeResponse>({
+        url: `${this.apiUrl}/auth/request-code`,
+        method: "POST",
+        body: data,
+      });
+    } catch (error) {
+      throw normalizeError(error);
+    }
+  }
+
+  async verifyEmailCode(data: VerifyEmailCodeData): Promise<AuthResponse> {
+    try {
+      const result = await request<AuthResponse>({
+        url: `${this.apiUrl}/auth/verify-code`,
+        method: "POST",
+        body: data,
+        idempotencyKey: createIdempotencyKey(),
+      });
+      await this.storeTokens(result.accessToken, result.refreshToken);
+      const workspaceId = result.workspaceId ?? result.tenantId ?? data.tenantId ?? null;
+      await this.storage.setActiveWorkspaceId(workspaceId);
+      return result;
+    } catch (error) {
       throw normalizeError(error);
     }
   }

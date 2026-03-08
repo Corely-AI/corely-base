@@ -13,7 +13,7 @@ import type {
 /**
  * Prisma adapter for ExtKv (Key-Value Storage)
  *
- * Implements the ExtKvPort interface using Prisma to access the ext.kv table.
+ * Implements the ExtKvPort interface using Prisma to access the ExtKv table.
  * Provides tenant-scoped and module-scoped key-value storage for small modules.
  *
  * See: docs/architecture/DATABASE_PERSISTENCE_STRATEGY.md

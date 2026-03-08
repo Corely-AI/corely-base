@@ -28,7 +28,6 @@ model LegalEntity {
   @@index([tenantId])
   @@index([tenantId, kind])
   @@index([tenantId, createdAt])
-  @@schema("platform")
 }
 
 // === WORKSPACES ===
@@ -62,7 +61,6 @@ model Workspace {
   @@index([tenantId, createdAt])
   @@index([tenantId, onboardingStatus])
   @@index([deletedAt])
-  @@schema("platform")
 }
 
 model WorkspaceDomain {
@@ -75,7 +73,6 @@ model WorkspaceDomain {
   workspace Workspace @relation(fields: [workspaceId], references: [id], onDelete: Cascade)
 
   @@index([workspaceId])
-  @@schema("platform")
 }
 
 model WorkspaceMembership {
@@ -95,7 +92,6 @@ model WorkspaceMembership {
   @@index([userId])
   @@index([workspaceId, status])
   @@index([userId, status])
-  @@schema("platform")
 }
 
 model WorkspaceInvite {
@@ -118,7 +114,6 @@ model WorkspaceInvite {
   @@index([token])
   @@index([status, expiresAt])
   @@index([workspaceId, status])
-  @@schema("platform")
 }
 
 // === ENUMS ===
@@ -129,14 +124,12 @@ enum WorkspaceMembershipRole {
   MEMBER
   ACCOUNTANT
   VIEWER
-  @@schema("platform")
 }
 
 enum WorkspaceMembershipStatus {
   ACTIVE
   INVITED
   DISABLED
-  @@schema("platform")
 }
 
 enum WorkspaceInviteStatus {
@@ -144,12 +137,10 @@ enum WorkspaceInviteStatus {
   ACCEPTED
   EXPIRED
   CANCELED
-  @@schema("platform")
 }
 
 enum WorkspaceOnboardingStatus {
   NEW
   PROFILE
   DONE
-  @@schema("platform")
 }

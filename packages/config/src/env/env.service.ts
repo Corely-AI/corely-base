@@ -33,6 +33,10 @@ export class EnvService {
     return this.config.DATABASE_URL;
   }
 
+  get DIRECT_DATABASE_URL(): string | undefined {
+    return this.config.DIRECT_DATABASE_URL;
+  }
+
   get REDIS_URL(): string | undefined {
     return this.config.REDIS_URL;
   }

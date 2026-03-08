@@ -13,7 +13,7 @@ import type {
 /**
  * Prisma adapter for ExtEntityLink (Entity Links)
  *
- * Implements the ExtEntityLinkPort interface using Prisma to access the ext.entity_link table.
+ * Implements the ExtEntityLinkPort interface using Prisma to access the ExtEntityLink table.
  * Provides module-scoped relationships between entities without schema changes.
  *
  * See: docs/architecture/DATABASE_PERSISTENCE_STRATEGY.md

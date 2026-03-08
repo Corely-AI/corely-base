@@ -9,6 +9,10 @@ import { WebStorageAdapter } from "./storage-adapter";
 
 // Re-export types from shared package
 export type {
+  EmailCodeMode,
+  RequestEmailCodeData,
+  RequestEmailCodeResponse,
+  VerifyEmailCodeData,
   SignUpData,
   SignInData,
   AuthResponse,
@@ -57,6 +61,17 @@ class WebAuthClient {
     const result = await this.client.signin(data);
     const workspaceId =
       result.workspaceId ?? result.tenantId ?? data.workspaceId ?? data.tenantId ?? null;
+    setActiveWorkspaceId(workspaceId);
+    return result;
+  }
+
+  async requestEmailCode(data: Parameters<AuthClient["requestEmailCode"]>[0]) {
+    return this.client.requestEmailCode(data);
+  }
+
+  async verifyEmailCode(data: Parameters<AuthClient["verifyEmailCode"]>[0]) {
+    const result = await this.client.verifyEmailCode(data);
+    const workspaceId = result.workspaceId ?? result.tenantId ?? data.tenantId ?? null;
     setActiveWorkspaceId(workspaceId);
     return result;
   }

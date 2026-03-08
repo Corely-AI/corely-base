@@ -56,3 +56,10 @@ Recommended hosting providers:
 - AWS S3 + CloudFront
 
 Note: `apps/web/vercel.json` applies the Vercel rewrite that sends all paths to `index.html`, preventing 404s on deep-link refreshes.
+
+For Vercel in this monorepo:
+
+1. Set the project Root Directory to `apps/web`
+2. Use the `Vite` framework preset
+3. Keep `dist` as the output directory
+4. Ensure the project can read workspace packages outside `apps/web`

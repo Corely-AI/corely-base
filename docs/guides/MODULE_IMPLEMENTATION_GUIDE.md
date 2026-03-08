@@ -193,7 +193,7 @@ mkdir -p src/modules/{module}/{domain,infrastructure,application}
 **Before writing code, define how your data is stored.**
 
 - **Small Module?** Use `ExtKvService` (Tier 2). No new tables needed.
-- **Medium Module?** Create tables in a domain bucket (Tier 1).
+- **Medium Module?** Create tables in the shared `public` schema.
 
 **File: `packages/data/prisma/schema/99_my_module.prisma`**
 
@@ -203,7 +203,6 @@ model MyEntity {
   tenantId  String
   // ... fields
 
-  @@schema("platform") // 👈 Must assign to a domain bucket
   @@index([tenantId])
 }
 ```

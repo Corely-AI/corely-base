@@ -58,13 +58,18 @@ export const TodoDetailPage: React.FC = () => {
           <ChevronLeft className="h-4 w-4 mr-1" /> Back to list
         </Button>
         <div className="flex gap-2">
-          <Button variant="outline" onClick={() => navigate(`/todos/${todo.id}/edit`)}>
+          <Button
+            variant="outline"
+            onClick={() => navigate(`/todos/${todo.id}/edit`)}
+            aria-label={`Edit ${todo.title}`}
+          >
             <Edit2 className="h-4 w-4 mr-2" /> Edit
           </Button>
           <Button
             variant="ghost"
             onClick={() => deleteMutation.mutate(todo.id)}
             className="text-destructive hover:text-destructive"
+            aria-label={`Delete ${todo.title}`}
           >
             <Trash2 className="h-4 w-4" />
           </Button>
@@ -88,6 +93,7 @@ export const TodoDetailPage: React.FC = () => {
             size="lg"
             variant={todo.status === "done" ? "outline" : "default"}
             disabled={completeMutation.isPending || reopenMutation.isPending}
+            aria-label={todo.status === "done" ? `Reopen ${todo.title}` : `Complete ${todo.title}`}
             onClick={() =>
               todo.status === "done" ? reopenMutation.mutate(todo.id) : completeMutation.mutate(todo.id)
             }
