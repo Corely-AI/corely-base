@@ -4,6 +4,10 @@ export type { TokenStorage } from "./storage/storage.interface";
 export type {
   SignUpData,
   SignInData,
+  EmailCodeMode,
+  RequestEmailCodeData,
+  RequestEmailCodeResponse,
+  VerifyEmailCodeData,
   AuthResponse,
   CurrentUserResponse,
   AuthClientConfig,

@@ -1,0 +1,39 @@
+{
+  "name": "@corely/todo",
+  "private": true,
+  "version": "0.0.0",
+  "license": "AGPL-3.0-only",
+  "type": "module",
+  "dependencies": {
+    "@corely/api-client": "workspace:*",
+    "@corely/auth-client": "workspace:*",
+    "@corely/contracts": "workspace:*",
+    "@corely/ui": "workspace:*",
+    "@tanstack/react-query": "catalog:",
+    "lucide-react": "^0.462.0",
+    "react": "catalog:",
+    "react-dom": "catalog:",
+    "react-router-dom": "^6.30.1"
+  },
+  "devDependencies": {
+    "@corely/tailwind-preset": "workspace:*",
+    "@corely/vite-config": "workspace:*",
+    "@types/node": "catalog:",
+    "@types/react": "catalog:",
+    "@types/react-dom": "catalog:",
+    "@vitejs/plugin-react-swc": "catalog:",
+    "autoprefixer": "catalog:",
+    "postcss": "catalog:",
+    "tailwindcss": "catalog:",
+    "tailwindcss-animate": "^1.0.7",
+    "typescript": "catalog:",
+    "vite": "catalog:"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "typecheck": "tsc --noEmit && tsc -p tsconfig.node.json --noEmit"
+  },
+  "author": "Ha Doan <ha@oneway8x.com>"
+}

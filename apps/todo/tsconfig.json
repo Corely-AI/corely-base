@@ -1,0 +1,33 @@
+{
+  "extends": "@corely/tsconfig/react.json",
+  "compilerOptions": {
+    "target": "ES2020",
+    "lib": ["ES2020", "DOM", "DOM.Iterable"],
+    "types": ["./src/types/react-query"],
+    "allowImportingTsExtensions": true,
+    "moduleDetection": "force",
+    "noEmit": true,
+    "strict": false,
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
+    "noImplicitAny": false,
+    "noFallthroughCasesInSwitch": false,
+    "exactOptionalPropertyTypes": false,
+    "ignoreDeprecations": "5.0",
+    "baseUrl": "..",
+    "paths": {
+      "@/*": ["todo/src/*"],
+      "@corely/auth-client": ["../packages/auth-client/src/index.ts"],
+      "@corely/api-client": ["../packages/api-client/src/index.ts"],
+      "@corely/contracts": ["../packages/contracts/src/index.ts"],
+      "@corely/ui": ["../packages/ui/src/index.ts"]
+    }
+  },
+  "include": [
+    "src",
+    "../../packages/api-client/src",
+    "../../packages/auth-client/src",
+    "../../packages/contracts/src",
+    "../../packages/ui/src"
+  ]
+}
