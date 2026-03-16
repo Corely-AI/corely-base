@@ -24,6 +24,11 @@ model Tenant {
   menuOverrides     TenantMenuOverride[]
   featureOverrides  TenantFeatureOverride[]
   seededRecordMeta  SeededRecordMeta[]
+  billingAccounts   BillingAccount[]
+  billingSubscriptions BillingSubscription[]
+  billingTrials     BillingTrial[]
+  billingUsageCounters BillingUsageCounter[]
+  billingProviderEvents BillingProviderEvent[]
 
   @@index([createdAt])
 }

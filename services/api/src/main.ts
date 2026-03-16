@@ -5,6 +5,7 @@ import { NestFactory } from "@nestjs/core";
 import type { NestExpressApplication } from "@nestjs/platform-express";
 import * as path from "path";
 import { SwaggerModule, DocumentBuilder } from "@nestjs/swagger";
+import type { Request } from "express";
 import { json, urlencoded } from "express";
 import cookieParser from "cookie-parser";
 import { AppModule } from "./app.module";
@@ -26,8 +27,23 @@ async function bootstrap() {
     bodyParser: false,
   });
 
-  app.use(json({ limit: "50mb" }));
-  app.use(urlencoded({ limit: "50mb", extended: true }));
+  app.use(
+    json({
+      limit: "50mb",
+      verify: (req, _res, buf) => {
+        (req as Request & { rawBody?: Buffer }).rawBody = Buffer.from(buf);
+      },
+    })
+  );
+  app.use(
+    urlencoded({
+      limit: "50mb",
+      extended: true,
+      verify: (req, _res, buf) => {
+        (req as Request & { rawBody?: Buffer }).rawBody = Buffer.from(buf);
+      },
+    })
+  );
   app.use(cookieParser());
 
   logger.log(

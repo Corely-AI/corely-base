@@ -3,6 +3,7 @@ import type { AppManifest } from "@corely/contracts";
 import type { AppRegistryPort } from "../../application/ports/app-registry.port";
 import { coreAppManifest } from "../../core.manifest";
 import { platformAppManifest } from "../../platform.manifest";
+import { billingAppManifest } from "../../../billing/billing.manifest";
 import { workspacesAppManifest } from "../../../workspaces/workspaces.manifest";
 import { todosAppManifest } from "../../../todos/todos.manifest";
 
@@ -35,6 +36,7 @@ export class AppRegistry implements AppRegistryPort {
   loadManifests(): void {
     this.register(coreAppManifest);
     this.register(platformAppManifest);
+    this.register(billingAppManifest);
     this.register(workspacesAppManifest);
     this.register(todosAppManifest);
   }

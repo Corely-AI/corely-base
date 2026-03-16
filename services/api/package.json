@@ -55,6 +55,7 @@
     "resend": "catalog:",
     "rxjs": "catalog:",
     "sanitize-html": "^2.13.0",
+    "stripe": "^20.4.0",
     "swagger-ui-express": "^5.0.1",
     "zod": "catalog:"
   },

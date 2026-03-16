@@ -12,6 +12,7 @@ import { TraceIdService } from "./shared/trace/trace-id.service";
 import { RequestContextInterceptor } from "./shared/request-context";
 import { PublicWorkspacePathMiddleware, PublicWorkspaceResolver } from "./shared/public";
 import { AiCopilotModule } from "./modules/ai-copilot/ai-copilot.module";
+import { BillingModule } from "./modules/billing/billing.module";
 import { TodoModule } from "./modules/todos/todos.module";
 
 @Module({
@@ -34,6 +35,7 @@ import { TodoModule } from "./modules/todos/todos.module";
     PlatformEntitlementsModule,
     WorkspacesModule,
     AiCopilotModule,
+    BillingModule,
     TodoModule,
   ],
 })
