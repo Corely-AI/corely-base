@@ -54,6 +54,7 @@ model Workspace {
   memberships WorkspaceMembership[]
   invites     WorkspaceInvite[]
   domains     WorkspaceDomain[]
+  integrationConnections IntegrationConnection[]
 
   @@unique([tenantId, name])
   @@index([tenantId])

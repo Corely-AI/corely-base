@@ -100,6 +100,7 @@ export * from "./identity";
 export * from "./errors";
 export * from "./platform";
 export * from "./billing";
+export * from "./integrations";
 export * from "./copilot/collect-inputs.schema";
 export * from "./copilot/chat.schema";
 export * from "./copilot/chat-history.schema";

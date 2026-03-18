@@ -289,6 +289,10 @@ export class EnvService {
     return this.config.STRIPE_WEBHOOK_SECRET;
   }
 
+  get INTEGRATIONS_SECRET_KEY(): string | undefined {
+    return this.config.INTEGRATIONS_SECRET_KEY;
+  }
+
   get STRIPE_BILLING_PRICE_STARTER_MONTHLY(): string | undefined {
     return this.config.STRIPE_BILLING_PRICE_STARTER_MONTHLY;
   }

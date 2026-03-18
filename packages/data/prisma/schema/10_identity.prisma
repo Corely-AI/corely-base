@@ -29,6 +29,7 @@ model Tenant {
   billingTrials     BillingTrial[]
   billingUsageCounters BillingUsageCounter[]
   billingProviderEvents BillingProviderEvent[]
+  integrationConnections IntegrationConnection[]
 
   @@index([createdAt])
 }
