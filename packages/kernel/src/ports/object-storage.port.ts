@@ -1,9 +1,19 @@
-export type SignedUpload = {
-  url: string;
-  method: "PUT";
-  requiredHeaders?: Record<string, string>;
-  expiresAt: Date;
-};
+export type SignedUpload =
+  | {
+      mode: "single_put";
+      url: string;
+      method: "PUT";
+      requiredHeaders?: Record<string, string>;
+      expiresAt: Date;
+    }
+  | {
+      mode: "vercel_blob_client_upload";
+      pathname: string;
+      uploadUrl: string;
+      access: "public" | "private";
+      contentType: string;
+      expiresAt: Date;
+    };
 
 export type SignedDownload = {
   url: string;
@@ -21,7 +31,7 @@ export interface ObjectStoragePort {
   /**
    * Get the provider name
    */
-  provider(): "gcs" | "s3" | "azure";
+  provider(): "gcs" | "s3" | "azure" | "vercel_blob";
 
   /**
    * Get the bucket name

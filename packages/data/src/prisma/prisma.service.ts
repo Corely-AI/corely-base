@@ -1,4 +1,3 @@
-import { Injectable, Logger, OnModuleInit, OnModuleDestroy } from "@nestjs/common";
 import { PrismaClient } from "@prisma/client";
 import { PrismaPg } from "@prisma/adapter-pg";
 import { attachDatabasePool } from "@vercel/functions";
@@ -6,11 +5,9 @@ import { Pool } from "pg";
 
 /**
  * Singleton PrismaService managing the PrismaClient lifecycle.
- * This is the ONLY place where PrismaClient should be instantiated.
+ * This is the only place where PrismaClient should be instantiated.
  */
-@Injectable()
-export class PrismaService extends PrismaClient implements OnModuleInit, OnModuleDestroy {
-  private readonly logger = new Logger(PrismaService.name);
+export class PrismaService extends PrismaClient {
   private readonly pool: Pool;
   private readonly skipConnect: boolean;
   private readonly connectTimeoutMs: number;
@@ -45,8 +42,8 @@ export class PrismaService extends PrismaClient implements OnModuleInit, OnModul
     this.connectTimeoutMs = connectTimeoutMs;
   }
 
-  async onModuleInit() {
-    console.log(`[PrismaService] onModuleInit called (skipConnect=${this.skipConnect})`);
+  async connect() {
+    console.log(`[PrismaService] connect called (skipConnect=${this.skipConnect})`);
     if (this.skipConnect) {
       console.log("[PrismaService] Skipping connection (SKIP_PRISMA_CONNECT=true)");
       return;
@@ -77,12 +74,12 @@ export class PrismaService extends PrismaClient implements OnModuleInit, OnModul
     });
   }
 
-  async onModuleDestroy() {
-    this.logger.log("[destroy] Disconnecting...");
+  async disconnect() {
+    console.log("[PrismaService] Disconnecting...");
     if (!this.skipConnect) {
       await this.$disconnect();
     }
     await this.pool?.end();
-    this.logger.log("[destroy] Disconnected");
+    console.log("[PrismaService] Disconnected");
   }
 }

@@ -1,74 +1,40 @@
-# Corely — Boundaries (Hard Rules)
+# Corely — Boundaries
 
-This doc defines the hard architecture boundaries for the modular monolith.
-These rules are enforced by tooling and code review.
+## App boundaries (`apps/app`)
 
-## Frontend (apps/web)
+Allowed:
 
-Allowed imports:
-
-- `app/*` → `modules/*`, `shared/*`
-- `modules/*` → `shared/*`
-- `shared/*` → no module imports
-- `apps/*` → `packages/ui` for shared design-system components
+- `src/app/*` -> `src/modules/*`, `src/shared/*`, `src/server/*`
+- `src/modules/*` -> `src/shared/*`, package dependencies
+- `app/api/*` -> `src/server/*`, package dependencies
 
 Forbidden:
 
-- `shared/*` importing `modules/*`
-- `modules/*` deep-importing another module's internals
-- `apps/*` importing UI/components from another app (use `@corely/ui`)
+- `src/shared/*` importing `src/modules/*`
+- page components importing Prisma directly
+- route handlers implementing business rules inline
 
-Examples:
+## Module package boundaries (`packages/modules/*`)
 
-- ✅ `import { CustomersPage } from "@/modules/customers"`
-- ❌ `import { customerFormSchema } from "@/modules/customers/schemas/customer-form.schema"`
+Allowed:
 
-## Backend (services/api)
+- `application/*` -> `domain/*`, contract types, ports
+- `infrastructure/*` -> application ports, domain, persistence clients
 
-Module structure (incremental target):
+Forbidden:
 
-```
-<module>/
-  domain/
-  application/
-  infrastructure/
-  adapters/
-  index.ts
-```
+- imports from `next/*`
+- imports from `react`
+- imports from `apps/app/*`
 
-Rules:
+## Persistence boundaries
 
-- Controllers call application use cases only.
-- Prisma access happens only in `infrastructure/` or `adapters/`.
-- Modules do not read or write another module's tables directly.
-- Cross-module collaboration uses:
-  - contracts (`@corely/contracts`)
-  - domain events via outbox
-  - explicit ports (rare; document when used)
+- Prisma schema and migrations live under `packages/data/prisma`
+- Prisma access must stay inside adapters/runtime helpers
+- contracts and UI must not import Prisma types directly
 
-## Worker (services/worker)
+## Public contract boundaries
 
-Rules:
-
-- Consume outbox events only.
-- Any DB access should be encapsulated in infrastructure adapters.
-- Deliveries are idempotent (handlers must guard against re-sends).
-- Tick is the single source of truth for scheduled work.
-- Background mode must repeatedly call tick; no duplicated scheduler logic outside tick runners.
-
-## Outbox & Idempotency
-
-- All domain events are written to outbox in the same transaction as state change.
-- Worker retries outbox with backoff (default 3 attempts).
-- Command endpoints require idempotency keys and deterministic retries.
-
-## Kernel (packages/kernel)
-
-Kernel contains stable primitives used by 2+ modules:
-
-- Party and role types
-- Tenant/workspace identifiers
-- Outbox and idempotency primitives
-- Cross-cutting ports (logger/clock/uow/audit/outbox)
-
-Kernel has no Nest/Prisma/React imports.
+- `packages/contracts` defines request/response payloads
+- route handlers serialize to contract shapes
+- client code should consume contract DTOs, not internal entities

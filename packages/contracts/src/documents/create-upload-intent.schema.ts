@@ -15,13 +15,23 @@ export const CreateUploadIntentInputSchema = z.object({
   ttlSeconds: z.number().int().positive().optional(),
 });
 
-export const SignedUploadSchema = z.object({
-  mode: z.literal("single_put"),
-  url: z.string(),
-  method: z.literal("PUT"),
-  requiredHeaders: z.record(z.string()).optional(),
-  expiresAt: utcInstantSchema,
-});
+export const SignedUploadSchema = z.union([
+  z.object({
+    mode: z.literal("single_put"),
+    url: z.string(),
+    method: z.literal("PUT"),
+    requiredHeaders: z.record(z.string()).optional(),
+    expiresAt: utcInstantSchema,
+  }),
+  z.object({
+    mode: z.literal("vercel_blob_client_upload"),
+    pathname: z.string().min(1),
+    uploadUrl: z.string(),
+    access: z.enum(["public", "private"]),
+    contentType: z.string().min(1),
+    expiresAt: utcInstantSchema,
+  }),
+]);
 
 export const CreateUploadIntentOutputSchema = z.object({
   document: DocumentDtoSchema,

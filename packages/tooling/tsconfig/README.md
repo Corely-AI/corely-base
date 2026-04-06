@@ -10,7 +10,7 @@ Base configuration with strict type checking, compiler options, and project stan
 
 ### `node.json`
 
-For Node.js backend services (API, worker):
+For Node.js packages, background jobs, and server-side tooling:
 
 ```json
 {
@@ -25,7 +25,7 @@ For Node.js backend services (API, worker):
 
 ### `react.json`
 
-For React/Vite frontend applications:
+For React applications, including Next.js client component work:
 
 ```json
 {

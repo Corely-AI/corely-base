@@ -1,7 +1,7 @@
 packages:
   - apps/*
-  - services/*
   - packages/*
+  - packages/modules/*
   - packages/tooling/*
 
 catalog:
@@ -10,11 +10,7 @@ catalog:
   "@ai-sdk/react": ^3.0.118
   "@ai-sdk/ui-utils": ^1.2.11
   "@eslint/js": ^9.32.0
-  "@nestjs/common": ^11.1.9
-  "@nestjs/core": ^11.1.9
-  "@nestjs/platform-express": ^11.1.9
-  "@nestjs/swagger": ^8.0.0
-  "@nestjs/testing": ^11.1.9
+  "@google-cloud/storage": ^7.18.0
   "@playwright/test": ^1.48.0
   "@prisma/adapter-pg": ^7.2.0
   "@prisma/client": ^7.2.0
@@ -35,8 +31,8 @@ catalog:
   "@types/react": ^18.3.23
   "@types/react-dom": ^18.3.7
   "@types/supertest": ^6.0.3
+  "@vercel/blob": ^2.0.0
   "@vercel/functions": ^2.2.13
-  "@vitejs/plugin-react-swc": ^3.11.0
   "@vitest/coverage-v8": ^2.1.4
   ai: ^6.0.116
   autoprefixer: ^10.4.21
@@ -78,13 +74,11 @@ catalog:
   turndown-plugin-gfm: ^1.0.2
   typescript: ^5.9.3
   typescript-eslint: ^8.38.0
-  vite: ^5.4.19
   vitest: ^2.1.4
   xstate: ^5.13.2
   zod: ^3.25.76
 
 onlyBuiltDependencies:
-  - "@nestjs/core"
   - "@prisma/client"
   - "@prisma/engines"
   - "@scarf/scarf"

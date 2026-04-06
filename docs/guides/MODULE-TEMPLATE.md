@@ -1,51 +1,42 @@
-# Corely — Module Template
+# Module Template
 
-Use this lightweight template when adding a new backend module. Keep it small and evolve incrementally.
+## 1. Shared package
 
-## Backend module (services/api/src/modules/<module>)
+Create a module package under:
 
-```
-<module>/
-  adapters/
-    http/
-      <module>.controller.ts
-  application/
-    ports/
-      <module>-repository.port.ts
-      <module>-query.port.ts
-    use-cases/
-      create-<entity>.usecase.ts
-      update-<entity>.usecase.ts
-  domain/
-    <entity>.aggregate.ts
-    <entity>.types.ts
-  infrastructure/
-    adapters/
-      prisma-<entity>-repository.adapter.ts
-  <module>.module.ts
-  index.ts
+```text
+packages/modules/<module>/
+  src/
+    domain/
+    application/
+      ports/
+      use-cases/
+    infrastructure/
+    index.ts
 ```
 
-Guidelines:
+## 2. Next.js transport
 
-- `domain/` has no Nest/Prisma imports.
-- `application/` depends on ports only.
-- `infrastructure/` implements ports and talks to Prisma.
-- `adapters/http` calls use cases and maps HTTP DTOs.
+Expose the module through:
 
-## Frontend module (apps/web/src/modules/<module>)
-
-```
-<module>/
-  components/
-  hooks/
-  screens/
-  routes.tsx
-  index.ts
+```text
+apps/app/app/api/<module>/
 ```
 
-Guidelines:
+Keep route handlers thin:
 
-- Export only public screens/routes/hooks from `index.ts`.
-- Keep module-specific components inside the module.
-- Promote to `shared/` only when used by 2+ modules.
+- parse request
+- validate input
+- resolve runtime dependencies
+- call use cases
+- return contract DTOs
+
+## 3. UI module
+
+Create feature UI in:
+
+```text
+apps/app/src/modules/<module>/
+```
+
+Keep `shared/*` reusable and module-agnostic.

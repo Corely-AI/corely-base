@@ -3,7 +3,7 @@
  * dist/ is already newer than src/. This makes repeated `dev:api` starts
  * near-instant when packages haven't changed.
  *
- * Usage: node scripts/build-deps-if-stale.mjs @corely/api
+ * Usage: node scripts/build-deps-if-stale.mjs @corely/app
  */
 import fs from "node:fs/promises";
 import path from "node:path";

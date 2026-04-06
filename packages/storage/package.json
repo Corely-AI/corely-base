@@ -19,19 +19,13 @@
   ],
   "dependencies": {
     "@corely/kernel": "workspace:*",
-    "@google-cloud/storage": "^7.7.0"
-  },
-  "peerDependencies": {
-    "@nestjs/common": "^10.0.0"
-  },
-  "peerDependenciesMeta": {
-    "@nestjs/common": {
-      "optional": true
-    }
+    "@google-cloud/storage": "catalog:",
+    "@vercel/blob": "catalog:"
   },
   "scripts": {
     "build": "tsdown",
     "dev": "tsdown --watch",
     "typecheck": "tsc -p tsconfig.json --noEmit"
-  }
+  },
+  "author": "Ha Doan <ha@oneway8x.com>"
 }

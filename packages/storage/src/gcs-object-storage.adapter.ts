@@ -1,4 +1,9 @@
-import type { ObjectStoragePort, SignedDownload, SignedUpload, HeadObject } from "@corely/kernel";
+import type {
+  HeadObject,
+  ObjectStoragePort,
+  SignedDownload,
+  SignedUpload,
+} from "@corely/kernel/ports/object-storage.port";
 import type { GcsClient } from "./gcs.client";
 
 export class GcsObjectStorageAdapter implements ObjectStoragePort {
@@ -28,7 +33,9 @@ export class GcsObjectStorageAdapter implements ObjectStoragePort {
       expires,
       contentType: args.contentType,
     });
+
     return {
+      mode: "single_put",
       url,
       method: "PUT",
       requiredHeaders: { "content-type": args.contentType },
@@ -47,16 +54,20 @@ export class GcsObjectStorageAdapter implements ObjectStoragePort {
       action: "read",
       expires,
     });
+
     return { url, expiresAt: new Date(expires) };
   }
 
   async headObject(args: { tenantId: string; objectKey: string }): Promise<HeadObject> {
     const file = this.client.bucket(this.bucketName).file(args.objectKey);
     const [exists] = await file.exists();
+
     if (!exists) {
       return { exists: false };
     }
+
     const [metadata] = await file.getMetadata();
+
     return {
       exists: true,
       ...(metadata.size ? { sizeBytes: Number(metadata.size) } : {}),
@@ -73,6 +84,7 @@ export class GcsObjectStorageAdapter implements ObjectStoragePort {
   }): Promise<{ etag?: string; sizeBytes: number }> {
     const file = this.client.bucket(this.bucketName).file(args.objectKey);
     await file.save(args.bytes, { contentType: args.contentType, resumable: false });
+
     return { sizeBytes: args.bytes.length };
   }
 

@@ -40,18 +40,7 @@ const SOURCE_EXTENSIONS = new Set([
 ]);
 const SOURCE_SUFFIXES = [".d.ts", ".d.mts", ".d.cts"];
 const E2E_TEST_SUFFIXES = [".e2e.test.ts", ".e2e.test.tsx", ".e2e.spec.ts", ".e2e.spec.tsx"];
-const EXCLUDED_FILES = new Set([
-  "apps/web/src/lib/classes-api.ts",
-  "packages/web-shared/src/lib/classes-api.ts",
-  "apps/web/src/modules/classes/screens/cohorts/cohort-detail.screen.tsx",
-  "apps/web/src/modules/classes/screens/programs/program-detail.screen.tsx",
-  "services/api/src/modules/classes/__tests__/idempotency.spec.ts",
-  "services/api/src/modules/classes/classes.module.ts",
-  "services/api/src/modules/classes/infrastructure/prisma/classes.repository.billing.ts",
-  "services/api/src/modules/classes/infrastructure/prisma/classes.repository.ts",
-  "packages/web-features/src/modules/tax/screens/FilingsListPage.tsx",
-  "packages/web-features/src/modules/tax/screens/TaxPaymentsPage.tsx",
-]);
+const EXCLUDED_FILES = new Set([]);
 
 const execGit = (args) =>
   execFileSync("git", args, { encoding: "utf8", maxBuffer: 1024 * 1024 * 50 }).trim();
@@ -78,15 +67,6 @@ const isExcludedFromLineLimit = (file) => {
     return true;
   }
   if (normalized.startsWith("apps/e2e/")) {
-    return true;
-  }
-  if (normalized.startsWith("services/api/src/modules/test-harness/")) {
-    return true;
-  }
-  if (normalized.startsWith("apps/web/src/modules/crm/screens/")) {
-    return true;
-  }
-  if (normalized.startsWith("packages/web-features/src/modules/crm/screens/")) {
     return true;
   }
   return E2E_TEST_SUFFIXES.some((suffix) => normalized.endsWith(suffix));

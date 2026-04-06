@@ -1,12 +1,5 @@
-# E2E (Playwright)
+# E2E
 
-- Run the Todo UI suite: `pnpm --filter @corely/e2e e2e tests/todos.spec.ts`
-- Run the full UI suite: `pnpm --filter @corely/e2e e2e`
-- Open Playwright UI mode: `pnpm --filter @corely/e2e e2e:ui`
+The Playwright workspace remains in the repo, but its coverage has not yet been fully rewritten for the new Next.js-only architecture.
 
-Defaults:
-
-- Web app: `BASE_URL=http://127.0.0.1:8080`
-- API: `API_URL=http://127.0.0.1:3000`
-
-The Playwright config starts `@corely/api` and `@corely/web` automatically and assumes Postgres is already available through the repo's configured `DATABASE_URL`.
+Until the suite is updated, treat it as migration work rather than a stable verification surface.

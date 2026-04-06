@@ -4,7 +4,7 @@ import { utcInstantSchema } from "../shared/local-date.schema";
 export const FileKindSchema = z.enum(["ORIGINAL", "DERIVED", "GENERATED"]);
 export type FileKind = z.infer<typeof FileKindSchema>;
 
-export const StorageProviderSchema = z.enum(["gcs", "s3", "azure"]);
+export const StorageProviderSchema = z.enum(["gcs", "s3", "azure", "vercel_blob"]);
 export type StorageProvider = z.infer<typeof StorageProviderSchema>;
 
 export const FileDtoSchema = z.object({

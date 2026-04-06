@@ -2,7 +2,9 @@ import { defineConfig } from "tsdown";
 
 export default defineConfig({
   entry: ["src/index.ts"],
-  format: ["cjs", "esm"],
+  format: ["esm", "cjs"],
   dts: true,
-  clean: true,
+  outDir: "dist",
+  clean: process.argv.includes("--watch") ? false : true,
+  treeshake: true,
 });

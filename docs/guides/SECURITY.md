@@ -1,20 +1,16 @@
-# Security Policy
+# Security
 
-Please report security issues privately.
+## Current baseline
 
-## Reporting
+- keep secrets in environment variables
+- do not expose database credentials to client code
+- validate route handler input with contract schemas
+- centralize error serialization in server helpers
 
-Email **ha@oneway8x.com** with:
+## Multi-tenant caution
 
-- A clear description of the issue
-- Steps to reproduce
-- Affected services/modules
-- Any relevant logs or trace IDs
+The new app still uses local fallback tenant/workspace context for the first extracted slice. Before broader rollout:
 
-## Response expectations
-
-We aim to acknowledge reports within 72 hours and provide a timeline for fixes.
-
-## Scope
-
-This policy covers code in this repository. Enterprise Packs are governed by their commercial agreement.
+- replace fallback context with authenticated tenant resolution
+- enforce workspace scoping in route handlers
+- remove any local-development shortcuts from production
